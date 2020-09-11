@@ -3,30 +3,83 @@
 
 // ---------------------------------------------------------------------
 
-// Import Auro tokens
 @import "./node_modules/@alaskaairux/orion-design-tokens/dist/tokens/SCSSVariables";
 @import "./node_modules/@alaskaairux/orion-design-tokens/dist/tokens/SassCustomProperties";
 
 @import "./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/breakpoints";
 @import "./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/core";
-
-// container styles - defines the look of the outer custom componet
-// :host {
-//   ...
-// }
-
-// layout styles - define any layout specifications for UI that is contained WITHIN the component
-// never define layout that would cause effect on element ouside the scope of this component
+@import "./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/animation";
 
 
-// component shape styles
-// .auro-pane {
-//   ...
-// }
+:host(.focus-visible) {
+  .auro-pane {
+    border-color: var(--auro-color-border-active-on-light)
+  }
 
-.testClass {
-  color:  var(--auro-color-border-error-on-light);
-  border: 1px solid var(--auro-color-border-error-on-light);
-  display: inline-block;
-  padding: var(--auro-text-body-size-default);
+  .auro-pane--selected {
+    box-shadow: inset 0 0 0 3px var(--auro-color-base-white);
+  } 
+}
+
+.auro-pane {
+  @include auro_transition(all, 0.15s, ease);
+
+  font-family: var(--auro-font-family-default);
+  font-size: var(--auro-text-body-size-default);
+  font-weight: var(--auro-text-body-default-weight);
+  padding: 1.5rem 0.75rem;
+  background: var(--auro-color-base-gray-100);
+  border: 2px solid var(--auro-color-base-gray-200);
+  border-radius: 2.5rem;
+  cursor: pointer;
+
+  &:hover {
+    background: var(--auro-color-border-active-on-light);
+    border-color: var(--auro-color-border-active-on-light);
+  }
+
+  &:active {
+    background: var(--auro-color-ui-active-on-light);
+    border-color: var(--auro-color-ui-active-on-light);
+    transform: scale(0.95);
+  }
+
+  &:disabled {
+    background: none;
+    border-color: transparent;
+    cursor: not-allowed;
+    transform: unset;
+
+    .day-of-week, .date {
+      color: var(--auro-color-text-secondary-on-light);
+    }
+  }
+}
+
+.auro-pane--selected {
+  background: var(--auro-color-ui-active-on-light);
+  border-color: var(--auro-color-ui-active-on-light);
+}
+
+.auro-pane:hover:not([disabled]),
+.auro-pane:active,
+.auro-pane--selected {
+  .day-of-week, .date  {
+    color: var(--auro-color-base-white);
+  }
+}
+
+
+.day-of-week {
+  color: var(--auro-color-ui-default-on-light);
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: -0.2px;
+  line-height: 1.75rem;
+}
+
+.date {
+  color: var(--auro-color-text-secondary-on-light);
+  font-weight: 300;
+  line-height: 1.5rem;
 }
