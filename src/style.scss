@@ -3,35 +3,44 @@
 
 // ---------------------------------------------------------------------
 
-@import "./node_modules/@alaskaairux/orion-design-tokens/dist/tokens/SCSSVariables";
-@import "./node_modules/@alaskaairux/orion-design-tokens/dist/tokens/SassCustomProperties";
+@import './node_modules/@alaskaairux/orion-design-tokens/dist/tokens/SCSSVariables';
+@import './node_modules/@alaskaairux/orion-design-tokens/dist/tokens/SassCustomProperties';
 
-@import "./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/breakpoints";
-@import "./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/core";
-@import "./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/animation";
+@import './node_modules/@alaskaairux/orion-web-core-style-sheets/dist/breakpoints';
+@import './node_modules/@alaskaairux/orion-web-core-style-sheets/dist/core';
+@import './node_modules/@alaskaairux/orion-web-core-style-sheets/dist/animation';
 
+:host {
+  display: inline-block;
+}
 
 :host(.focus-visible) {
   .auro-pane {
-    border-color: var(--auro-color-border-active-on-light)
+    border-color: var(--auro-color-border-active-on-light);
   }
 
   .auro-pane--selected {
     box-shadow: inset 0 0 0 3px var(--auro-color-base-white);
-  } 
+  }
 }
 
 .auro-pane {
   @include auro_transition(all, 0.15s, ease);
 
   font-family: var(--auro-font-family-default);
-  font-size: var(--auro-text-body-size-default);
   font-weight: var(--auro-text-body-default-weight);
-  padding: 1.5rem 0.75rem;
   background: var(--auro-color-base-gray-100);
   border: 2px solid var(--auro-color-base-gray-200);
   border-radius: 2.5rem;
+  width: 4.25rem;
+  height: 5.625rem;
   cursor: pointer;
+
+  @include auro_breakpoint--sm {
+    font-size: var(--auro-text-body-size-default);
+    width: 5rem;
+    height: 6.5rem;
+  }
 
   &:hover {
     background: var(--auro-color-border-active-on-light);
@@ -50,7 +59,8 @@
     cursor: not-allowed;
     transform: unset;
 
-    .day-of-week, .date {
+    .day-of-week,
+    .date {
       color: var(--auro-color-text-secondary-on-light);
     }
   }
@@ -62,24 +72,35 @@
 }
 
 .auro-pane:hover:not([disabled]),
-.auro-pane:active,
+.auro-pane:active:not([disabled]),
 .auro-pane--selected {
-  .day-of-week, .date  {
+  .day-of-week,
+  .date {
     color: var(--auro-color-base-white);
   }
 }
 
-
 .day-of-week {
   color: var(--auro-color-ui-default-on-light);
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 500;
-  letter-spacing: -0.2px;
-  line-height: 1.75rem;
+  line-height: 1.625rem;
+
+  @include auro_breakpoint--sm {
+    font-size: 1.25rem;
+    letter-spacing: -0.2px;
+    line-height: 1.75rem;
+  }
 }
 
 .date {
   color: var(--auro-color-text-secondary-on-light);
+  font-size: 0.875rem;
   font-weight: 300;
-  line-height: 1.5rem;
+  line-height: 1.25rem;
+
+  @include auro_breakpoint--sm {
+    font-size: var(--auro-text-body-size-default);
+    line-height: 1.5rem;
+  }
 }
