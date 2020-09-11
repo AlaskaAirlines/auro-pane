@@ -24,6 +24,9 @@ class AuroPane extends LitElement {
   constructor() {
     super();
 
+    /**
+     * @private
+     */
     this.weekdays = [
       'Sun',
       'Mon',
@@ -34,6 +37,9 @@ class AuroPane extends LitElement {
       'Sat'
     ];
 
+    /**
+     * @private
+     */
     this.months = [
       'Jan',
       'Feb',
@@ -65,6 +71,11 @@ class AuroPane extends LitElement {
     `;
   }
 
+  /**
+   * Internal method to parse the date attribute
+   * @private
+   * @returns {Object} object containing day, date, and month
+   */
   parseDateString() {
     const dateFormatLength = 10;
 
@@ -85,6 +96,11 @@ class AuroPane extends LitElement {
     return {};
   }
 
+  /**
+   * Internal method that determines how to display the price attribute
+   * @private
+   * @returns {TemplateResult} price HTML
+   */
   getPrice() {
     if (this.price) {
       const priceClasses = {
@@ -96,6 +112,14 @@ class AuroPane extends LitElement {
     }
 
     return html``;
+  }
+
+  /**
+   * Programatically focuses the component
+   * @return {void}
+   */
+  focus() {
+    this.renderRoot.querySelector('button').focus();
   }
 
   render() {
