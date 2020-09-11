@@ -14,8 +14,9 @@ import styleCss from './style-css.js';
 /**
  * auro-pane provides users a way to ...
  *
- * @attr {String} date - Sets date for display. Format should be yyyy-mm-dd.
+ * @attr {String} date - Sets date for parsing and display. Format should be yyyy-mm-dd.
  * @attr {Boolean} disabled - Disables the pane and overrides price to be --.
+ * @attr {String} price - Sets price for display. Displayed as is.
  * @attr {Boolean} selected - Sets pane state to selected.
  */
 
@@ -53,6 +54,7 @@ class AuroPane extends LitElement {
     return {
       date: { type: String },
       disabled: { type: Boolean },
+      price: { type: String },
       selected: { type: Boolean }
     };
   }
@@ -66,7 +68,6 @@ class AuroPane extends LitElement {
   parseDateString() {
     const dateFormatLength = 10;
 
-    /* eslint-disable no-magic-numbers, sort-vars */
     if (this.date && this.date.length === dateFormatLength) {
       // Using substring instead of date parsing due to browser inconsistencies
       const year = this.date.substring(0, 4),
@@ -74,30 +75,43 @@ class AuroPane extends LitElement {
         date = this.date.substring(8),
         parsedDate = new Date(year, month - 1, date);
 
-
       return {
         day: this.weekdays[parsedDate.getUTCDay()],
         date: parsedDate.getUTCDate(),
         month: this.months[parsedDate.getUTCMonth()]
       };
     }
-    /* eslint-enable no-magic-numbers, sort-vars */
 
     return {};
   }
 
+  getPrice() {
+    if (this.price) {
+      const priceClasses = {
+        'price': true,
+        'price--long': this.price.length > 6
+      };
+
+      return html`<div class="${classMap(priceClasses)}">${this.disabled ? "––" : this.price}</div>`
+    }
+
+    return html``;
+  }
+
   render() {
-    const classes = {
+    const buttonClasses = {
       'auro-pane': true,
       'auro-pane--selected': this.selected,
       'auro-pane--disabled': this.disabled
-    },
-      parsedDate = this.parseDateString();
+    };
+
+    const parsedDate = this.parseDateString();
 
     return html`
-      <button class="${classMap(classes)}" ?disabled="${this.disabled}">
+      <button class="${classMap(buttonClasses)}" ?disabled="${this.disabled}">
         <div class="day-of-week">${parsedDate.day}</div>
         <div class="date">${parsedDate.month} ${parsedDate.date}</div>
+        ${this.getPrice()}
       </button>
     `;
   }
