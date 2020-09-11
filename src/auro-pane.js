@@ -4,6 +4,7 @@
 // ---------------------------------------------------------------------
 
 import { LitElement, html, css } from "lit-element";
+import { classMap } from "lit-html/directives/class-map";
 
 // Import touch detection lib
 import "focus-visible/dist/focus-visible.min.js";
@@ -25,7 +26,8 @@ class AuroPane extends LitElement {
   // function to define props used within the scope of thie component
   static get properties() {
     return {
-      cssClass:   { type: String }
+      selected: { type: Boolean },
+      disabled: { type: Boolean }
     };
   }
 
@@ -37,10 +39,17 @@ class AuroPane extends LitElement {
 
   // function that renders the HTML and CSS into  the scope of the component
   render() {
+    const classes = {
+      'auro-pane': true,
+      'auro-pane--selected': this.selected,
+      'auro-pane--disabled': this.disabled
+    };
+
     return html`
-      <div class=${this.cssClass}>
-        <slot></slot>
-      </div>
+      <button class="${classMap(classes)}" ?disabled="${this.disabled}">
+        <div class="day-of-week">Wed</div>
+        <div class="date">Sep 20</div>
+      </button>
     `;
   }
 }
