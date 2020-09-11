@@ -1,6 +1,6 @@
 ## auro-pane
 
-`<auro-pane>` is a [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) for the purpose of ...
+`<auro-pane>` is a [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) that displays selectable shoulder dates and associated prices.
 
 ## UI development browser support
 
@@ -33,13 +33,13 @@ Any update to the Auro Design Tokens will be immediately reflected with browsers
 Defining the component dependency within each component that is using the `<auro-pane>` component.
 
 ```javascript
-import "@alaskaairuxauro-pane";
+import "@alaskaairux/auro-pane";
 ```
 
 **Reference component in HTML**
 
 ```html
-<auro-pane>Hello World</auro-pane>
+<auro-pane date="2020-11-08"></auro-pane>
 ```
 
 ## Install bundled assets from CDN
@@ -52,8 +52,8 @@ In cases where the project is not able to process JS assets, there are pre-proce
 <link rel="stylesheet" href="https://unpkg.com/@alaskaairux/orion-design-tokens@:version/dist/tokens/CSSTokenProperties.css" />
 <link rel="stylesheet" href="https://unpkg.com/@alaskaairux/orion-web-core-style-sheets@:version/dist/bundled/baseline.css" />
 
-<script src="https://unpkg.com/@alaskaairuxauro-pane@:version/dist/polyfills.js"></script>
-<script src="https://unpkg.com/@alaskaairuxauro-pane@:version/dist/auro-pane__bundled.js"></script>
+<script src="https://unpkg.com/@alaskaairux/auro-pane@:version/dist/polyfills.js"></script>
+<script src="https://unpkg.com/@alaskaairux/auro-pane@:version/dist/auro-pane__bundled.js"></script>
 ```
 
 ### polyfills.js
@@ -69,16 +69,29 @@ The `polyfills.js` is packaged with this component, but **IT IS NOT NEEDED** to 
 
 The `<auro-pane>` element should be used in situations where users may:
 
-* ...
-* ...
-* ...
+* Select a date to see available flight options
+* See multiple dates with price and availability information
 
 ## API Code Examples
 
-Default auro-pane
-
+### Display date
 ```html
-<auro-pane>Hello World</auro-pane>
+<auro-pane date="2020-09-10"></auro-pane>
+```
+
+### Display date and price
+```html
+<auro-pane date="2020-09-10" price="$500"></auro-pane>
+```
+
+### Display selected date
+```html
+<auro-pane date="2020-09-10" selected></auro-pane>
+```
+
+### Display disabled date
+```html
+<auro-pane date="2020-09-10" disabled></auro-pane>
 ```
 
 ## Development
