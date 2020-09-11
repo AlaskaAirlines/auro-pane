@@ -60,7 +60,8 @@
     transform: unset;
 
     .day-of-week,
-    .date {
+    .date,
+    .price {
       color: var(--auro-color-text-secondary-on-light);
     }
   }
@@ -75,7 +76,8 @@
 .auro-pane:active:not([disabled]),
 .auro-pane--selected {
   .day-of-week,
-  .date {
+  .date,
+  .price {
     color: var(--auro-color-base-white);
   }
 }
@@ -101,6 +103,27 @@
 
   @include auro_breakpoint--sm {
     font-size: var(--auro-text-body-size-default);
+    line-height: 1.5rem;
+  }
+}
+
+.price {
+  color: #0074ca;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+
+  @include auro_breakpoint--sm {
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+  }
+}
+
+.price.price--long {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  
+  @include auro_breakpoint--sm {
+    font-size: 1rem;
     line-height: 1.5rem;
   }
 }
