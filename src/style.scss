@@ -27,17 +27,24 @@
 .auro-pane {
   @include auro_transition(all, 0.15s, ease);
 
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 26px 20px;
+  padding-top: 22px;
+  height: 90px;
+  width: 68px;
+
   font-family: var(--auro-font-family-default);
   font-weight: var(--auro-text-body-default-weight);
   background: var(--auro-color-base-gray-100);
   border: 2px solid var(--auro-color-base-gray-200);
   border-radius: 40px;
-  height: 90px;
-  width: 68px;
   cursor: pointer;
 
   @include auro_breakpoint--sm {
     font-size: var(--auro-text-body-size-default);
+    grid-template-rows: 28px 24px;
+    padding-top: 26px;
     height: 104px;
     width: 80px;
   }
@@ -76,32 +83,24 @@
   height: 96px;
   width: 72px;
   border-radius: 44px;
+  grid-template-rows: 22px 20px 20px;
+  padding-top: 16px;
 
   @include auro_breakpoint--sm {
     height: 120px;
     width: 88px;
+    padding-top: 24px;
+    grid-template-rows: 24px 20px 26px;
   }
 
   .day-of-week {
     color: #222222;
     font-size: 16px;
     line-height: 24px;
-    margin-top: 4px;
 
     @include auro_breakpoint--sm {
       font-size: 18px;
       line-height: 26px;
-    }
-  }
-
-  .date {
-    font-size: 14px;
-    line-height: 20px;
-    margin-top: -2px;
-
-    @include auro_breakpoint--sm {
-      font-size: 14px;
-      line-height: 20px;
     }
   }
 }
@@ -118,8 +117,8 @@
 
 .day-of-week {
   color: var(--auro-color-ui-default-on-light);
-  font-size: 18px;
   font-weight: 500;
+  font-size: 18px;
   line-height: 26px;
 
   @include auro_breakpoint--sm {
@@ -150,7 +149,7 @@
   color: #0074ca;
   font-size: 14px;
   line-height: 20px;
-  margin-top: 5px;
+  margin-top: 4px;
 
   @include auro_breakpoint--sm {
     font-size: 18px;
@@ -161,10 +160,9 @@
 .price.price--long {
   font-size: 12px;
   line-height: 16px;
-  margin-top: 7px;
   
   @include auro_breakpoint--sm {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 24px;
   }
 }
