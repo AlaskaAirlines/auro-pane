@@ -24,14 +24,6 @@
 
     <demo-snippet>
       <template>
-        <auro-pane date="2020-11-08" price="$283"></auro-pane>
-        <auro-pane date="2020-11-09" price="$383"></auro-pane>
-        <auro-pane date="2020-11-10" price="$10,999" selected></auro-pane>
-        <auro-pane date="2020-11-11" price="$10,999" disabled></auro-pane>
-      </template>
-    </demo-snippet>
-    <demo-snippet>
-      <template>
         <auro-pane date="2020-11-08"></auro-pane>
         <auro-pane date="2020-11-09"></auro-pane>
         <auro-pane date="2020-11-10" selected></auro-pane>
@@ -40,8 +32,8 @@
         <auro-pane date="2020-11-13" disabled></auro-pane>
         <auro-pane date="2020-11-14"></auro-pane>
         <script>
-          const panes = document.querySelectorAll('auro-pane');
-          let selectedPane = document.querySelector('auro-pane[selected]');
+          const panes = document.querySelectorAll('auro-pane:not([price])');
+          let selectedPane = document.querySelector('auro-pane:not([price])[selected]');
           panes.forEach((pane) => {
             pane.addEventListener('click', () => {
               selectedPane.selected = false;
@@ -52,6 +44,28 @@
         </script>
       </template>
     </demo-snippet>
+    <demo-snippet>
+      <template>
+        <auro-pane date="2020-11-08" price="20k+"></auro-pane>
+        <auro-pane date="2020-11-09" price="$288"></auro-pane>
+        <auro-pane date="2020-11-10" price="$20,000"></auro-pane>
+        <auro-pane date="2020-11-11" price="$50,000" disabled></auro-pane>
+        <script>
+          const pricePanes = document.querySelectorAll('auro-pane[price]');
+          let selectedPricePane = document.querySelector('auro-pane[price][selected]');
+          pricePanes.forEach((pane) => {
+            pane.addEventListener('click', () => {
+              if (selectedPricePane) {
+                selectedPricePane.selected = false;
+              }
+              pane.selected = true;
+              selectedPricePane = pane;
+            });
+          });
+        </script>
+      </template>
+    </demo-snippet>
+
   </div>
 </body>
 
