@@ -31,15 +31,15 @@
   font-weight: var(--auro-text-body-default-weight);
   background: var(--auro-color-base-gray-100);
   border: 2px solid var(--auro-color-base-gray-200);
-  border-radius: 2.5rem;
-  width: 4.25rem;
-  height: 5.625rem;
+  border-radius: 40px;
+  height: 90px;
+  width: 68px;
   cursor: pointer;
 
   @include auro_breakpoint--sm {
     font-size: var(--auro-text-body-size-default);
-    width: 5rem;
-    height: 6.5rem;
+    height: 104px;
+    width: 80px;
   }
 
   &:hover {
@@ -72,6 +72,40 @@
   border-color: var(--auro-color-ui-active-on-light);
 }
 
+.auro-pane--priced {
+  height: 96px;
+  width: 72px;
+  border-radius: 44px;
+
+  @include auro_breakpoint--sm {
+    height: 120px;
+    width: 88px;
+  }
+
+  .day-of-week {
+    color: #222222;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 4px;
+
+    @include auro_breakpoint--sm {
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+
+  .date {
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: -2px;
+
+    @include auro_breakpoint--sm {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
+
 .auro-pane:hover:not([disabled]),
 .auro-pane:active:not([disabled]),
 .auro-pane--selected {
@@ -84,46 +118,53 @@
 
 .day-of-week {
   color: var(--auro-color-ui-default-on-light);
-  font-size: 1.125rem;
+  font-size: 18px;
   font-weight: 500;
-  line-height: 1.625rem;
+  line-height: 26px;
 
   @include auro_breakpoint--sm {
-    font-size: 1.25rem;
+    font-size: 20px;
+    line-height: 28px;
     letter-spacing: -0.2px;
-    line-height: 1.75rem;
   }
 }
 
 .date {
   color: var(--auro-color-text-secondary-on-light);
-  font-size: 0.875rem;
-  font-weight: 300;
-  line-height: 1.25rem;
+  font-size: 14px;
+  line-height: 20px;
 
   @include auro_breakpoint--sm {
-    font-size: var(--auro-text-body-size-default);
-    line-height: 1.5rem;
+    font-size: 16px;
+    line-height: 24px;
   }
+}
+
+// Needed to separate words when read by screen reader
+.day-of-week::after,
+.date::after {
+  content : ' '
 }
 
 .price {
   color: #0074ca;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 5px;
 
   @include auro_breakpoint--sm {
-    font-size: 1.125rem;
-    line-height: 1.625rem;
+    font-size: 18px;
+    line-height: 26px;
   }
 }
 
 .price.price--long {
-  font-size: 0.75rem;
-  line-height: 1rem;
+  font-size: 12px;
+  line-height: 16px;
+  margin-top: 7px;
   
   @include auro_breakpoint--sm {
-    font-size: 1rem;
-    line-height: 1.5rem;
+    font-size: 16px;
+    line-height: 24px;
   }
 }

@@ -126,7 +126,8 @@ class AuroPane extends LitElement {
     const buttonClasses = {
       'auro-pane': true,
       'auro-pane--selected': this.selected,
-      'auro-pane--disabled': this.disabled
+      'auro-pane--disabled': this.disabled,
+      'auro-pane--priced': this.price
     };
 
     const parsedDate = this.parseDateString();
