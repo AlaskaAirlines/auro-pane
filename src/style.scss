@@ -30,8 +30,10 @@
   @include auro_transition(all, 0.15s, ease);
 
   // fallback for browsers that don't support grid
+  // also Safari, which does not support display: grid on buttons
   display: flex; 
   flex-direction: column;
+  align-items: center;
 
   @supports (display: grid) {
     display: grid;
@@ -59,9 +61,11 @@
     width: 80px;
   }
 
-  &:hover {
-    background: var(--auro-color-border-active-on-light);
-    border-color: var(--auro-color-border-active-on-light);
+  @media (hover: hover) {
+    &:hover {
+      background: var(--auro-color-border-active-on-light);
+      border-color: var(--auro-color-border-active-on-light);
+    }
   }
 
   &:active {
