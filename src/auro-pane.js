@@ -105,7 +105,8 @@ class AuroPane extends LitElement {
     if (this.price) {
       const priceClasses = {
         'price': true,
-        'price--long': this.price.length > 6
+        'price--long': this.price.length > 6,
+        'child': true
       };
 
       return html`<span class="${classMap(priceClasses)}">${this.disabled ? "––" : this.price}</span>`
@@ -134,8 +135,8 @@ class AuroPane extends LitElement {
 
     return html`
       <button class="${classMap(buttonClasses)}" ?disabled="${this.disabled}">
-        <span class="day-of-week">${parsedDate.day}</span>
-        <span class="date">${parsedDate.month} ${parsedDate.date}</span>
+        <span class="day-of-week child">${parsedDate.day}</span>
+        <span class="date child">${parsedDate.month} ${parsedDate.date}</span>
         ${this.getPrice()}
       </button>
     `;

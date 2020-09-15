@@ -65,6 +65,10 @@
     &:hover {
       background: var(--auro-color-border-active-on-light);
       border-color: var(--auro-color-border-active-on-light);
+
+      .child {
+        color: var(--auro-color-base-white);
+      }
     }
   }
 
@@ -80,9 +84,7 @@
     cursor: not-allowed;
     transform: unset;
 
-    .day-of-week,
-    .date,
-    .price {
+    .child {
       pointer-events: none;
       color: var(--auro-color-text-secondary-on-light);
     }
@@ -120,12 +122,9 @@
   }
 }
 
-.pane:hover:not([disabled]),
 .pane:active:not([disabled]),
 .pane--selected {
-  .day-of-week,
-  .date,
-  .price {
+  .child {
     color: var(--auro-color-base-white);
   }
 }
@@ -155,8 +154,7 @@
 }
 
 // Separate the words when read by screen reader
-.day-of-week::after,
-.date::after {
+.child::after {
   content : ' ';
 }
 
