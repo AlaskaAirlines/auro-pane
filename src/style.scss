@@ -38,27 +38,27 @@
   @supports (display: grid) {
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 26px 20px;
+    grid-template-rows: 1.625rem 1.25rem;
   }
   
-  padding-top: 22px;
-  height: 90px;
-  width: 68px;
+  padding-top: 1.375rem;
+  height: 5.625rem;
+  min-width: 4.25rem;
 
   font-family: var(--auro-font-family-default);
   font-weight: var(--auro-text-body-default-weight);
   background: var(--auro-color-base-gray-100);
   border: 2px solid;
   border-color: var(--auro-color-base-gray-200);
-  border-radius: 40px;
+  border-radius: 2.5rem;
   cursor: pointer;
 
   @include auro_breakpoint--sm {
     font-size: var(--auro-text-body-size-default);
-    grid-template-rows: 28px 24px;
-    padding-top: 26px;
-    height: 104px;
-    width: 80px;
+    grid-template-rows: 1.75rem 1.5rem;
+    padding-top: 1.625rem;
+    height: 6.5rem;
+    min-width: 5rem;
   }
 
   @media (hover: hover) {
@@ -97,27 +97,27 @@
 }
 
 .pane--priced {
-  height: 96px;
-  width: 72px;
-  border-radius: 44px;
-  grid-template-rows: 22px 20px 20px;
-  padding-top: 16px;
+  height: 6rem;
+  min-width: 4.5rem;
+  border-radius: 2.75rem;
+  grid-template-rows: 1.375rem 1.25rem 1.25rem;
+  padding-top: var(--auro-size-md);
 
   @include auro_breakpoint--sm {
-    height: 120px;
-    width: 88px;
-    padding-top: 24px;
-    grid-template-rows: 24px 20px 26px;
+    height: 7.5rem;
+    min-width: 5.5rem;
+    padding-top: var(--auro-size-lg);
+    grid-template-rows: 1.5rem 1.25rem 1.625rem;
   }
 
   .day-of-week {
-    color: #222222;
-    font-size: 16px;
-    line-height: 24px;
+    color: var(--auro-color-text-primary-on-light);
+    font-size: var(--auro-text-body-size-default);
+    line-height: var(--auro-text-body-height-default);
 
     @include auro_breakpoint--sm {
-      font-size: 18px;
-      line-height: 26px;
+      font-size: var(--auro-text-body-size-lg);
+      line-height: var(--auro-text-body-height-lg);
     }
   }
 }
@@ -131,25 +131,24 @@
 
 .day-of-week {
   color: var(--auro-color-ui-default-on-light);
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 26px;
+  font-size: var(--auro-text-body-size-lg);
+  line-height: var(--auro-text-body-height-lg);
 
   @include auro_breakpoint--sm {
-    font-size: 20px;
-    line-height: 28px;
-    letter-spacing: -0.2px;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    letter-spacing: var(--auro-text-heading-default-spacing);
   }
 }
 
 .date {
   color: var(--auro-color-text-secondary-on-light);
-  font-size: 14px;
-  line-height: 20px;
+  font-size: var(--auro-text-body-size-sm);
+  line-height: var(--auro-text-body-height-sm);
 
   @include auro_breakpoint--sm {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: var(--auro-text-body-size-default);
+    line-height: var(--auro-text-body-height-default);
   }
 }
 
@@ -159,23 +158,23 @@
 }
 
 .price {
-  color: #0074ca;
-  font-size: 14px;
-  line-height: 20px;
-  margin-top: 4px;
+  color: var(--auro-color-ui-default-on-light);
+  font-size: var(--auro-text-body-size-sm);
+  line-height: var(--auro-text-body-height-sm);
+  margin-top: var(--auro-size-xxs);
 
   @include auro_breakpoint--sm {
-    font-size: 18px;
-    line-height: 26px;
+    font-size: var(--auro-text-body-size-lg);
+    line-height: var(--auro-text-body-height-lg);
   }
 }
 
 .price.price--long {
-  font-size: 12px;
-  line-height: 16px;
+  font-size: var(--auro-text-body-size-xs);
+  line-height: var(--auro-text-body-height-xs);
   
   @include auro_breakpoint--sm {
-    font-size: 14px;
-    line-height: 24px;
+    font-size: var(--auro-text-body-size-sm);
+    line-height: var(--auro-text-body-height-default);
   }
 }
