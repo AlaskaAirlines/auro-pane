@@ -12,7 +12,7 @@ import styleCss from './style-css.js';
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
- * auro-pane provides users a way to ...
+ * auro-pane displays shoulder date information
  *
  * @attr {String} date - Sets date for parsing and display. Format should be yyyy-mm-dd.
  * @attr {Boolean} disabled - Disables the pane and overrides price to be --.
@@ -108,7 +108,7 @@ class AuroPane extends LitElement {
         'price--long': this.price.length > 6
       };
 
-      return html`<div class="${classMap(priceClasses)}">${this.disabled ? "––" : this.price}</div>`
+      return html`<span class="${classMap(priceClasses)}">${this.disabled ? "––" : this.price}</span>`
     }
 
     return html``;
@@ -124,18 +124,18 @@ class AuroPane extends LitElement {
 
   render() {
     const buttonClasses = {
-      'auro-pane': true,
-      'auro-pane--selected': this.selected,
-      'auro-pane--disabled': this.disabled,
-      'auro-pane--priced': this.price
+      'pane': true,
+      'pane--selected': this.selected,
+      'pane--disabled': this.disabled,
+      'pane--priced': this.price
     };
 
     const parsedDate = this.parseDateString();
 
     return html`
       <button class="${classMap(buttonClasses)}" ?disabled="${this.disabled}">
-        <div class="day-of-week">${parsedDate.day}</div>
-        <div class="date">${parsedDate.month} ${parsedDate.date}</div>
+        <span class="day-of-week">${parsedDate.day}</span>
+        <span class="date">${parsedDate.month} ${parsedDate.date}</span>
         ${this.getPrice()}
       </button>
     `;

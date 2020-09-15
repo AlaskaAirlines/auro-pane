@@ -1,6 +1,6 @@
 # auro-pane
 
-auro-pane provides users a way to display shoulder date information
+auro-pane displays shoulder date information
 
 ## Properties
 

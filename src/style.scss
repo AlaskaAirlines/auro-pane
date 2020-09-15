@@ -15,21 +15,30 @@
 }
 
 :host(.focus-visible) {
-  .auro-pane {
+  .pane {
     border-color: var(--auro-color-border-active-on-light);
   }
 
-  .auro-pane--selected {
-    box-shadow: inset 0 0 0 3px var(--auro-color-base-white);
+  .pane--selected {
+    // hardcode the token to prevent ShadyCSS from breaking IE11
+    // see https://auro.alaskaair.com/support/shadycss
+    box-shadow: inset 0 0 0 3px #fff;
   }
 }
 
-.auro-pane {
+.pane {
   @include auro_transition(all, 0.15s, ease);
 
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: 26px 20px;
+  // fallback for browsers that don't support grid
+  display: flex; 
+  flex-direction: column;
+
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 26px 20px;
+  }
+  
   padding-top: 22px;
   height: 90px;
   width: 68px;
@@ -37,7 +46,8 @@
   font-family: var(--auro-font-family-default);
   font-weight: var(--auro-text-body-default-weight);
   background: var(--auro-color-base-gray-100);
-  border: 2px solid var(--auro-color-base-gray-200);
+  border: 2px solid;
+  border-color: var(--auro-color-base-gray-200);
   border-radius: 40px;
   cursor: pointer;
 
@@ -69,17 +79,18 @@
     .day-of-week,
     .date,
     .price {
+      pointer-events: none;
       color: var(--auro-color-text-secondary-on-light);
     }
   }
 }
 
-.auro-pane--selected {
+.pane--selected {
   background: var(--auro-color-ui-active-on-light);
   border-color: var(--auro-color-ui-active-on-light);
 }
 
-.auro-pane--priced {
+.pane--priced {
   height: 96px;
   width: 72px;
   border-radius: 44px;
@@ -105,9 +116,9 @@
   }
 }
 
-.auro-pane:hover:not([disabled]),
-.auro-pane:active:not([disabled]),
-.auro-pane--selected {
+.pane:hover:not([disabled]),
+.pane:active:not([disabled]),
+.pane--selected {
   .day-of-week,
   .date,
   .price {
@@ -139,10 +150,10 @@
   }
 }
 
-// Needed to separate words when read by screen reader
+// Separate the words when read by screen reader
 .day-of-week::after,
 .date::after {
-  content : ' '
+  content : ' ';
 }
 
 .price {
