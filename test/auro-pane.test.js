@@ -39,6 +39,7 @@ describe('auro-pane', () => {
     `);
 
     expect(getButtonText(el)).to.equal("Wed Sep 9 $100");
+    expect(isPanePricedClassPresent(el)).to.be.true;
   })
 
   it('does not display price when disabled', async () => {
@@ -47,6 +48,16 @@ describe('auro-pane', () => {
     `);
 
     expect(getButtonText(el)).to.equal("Wed Sep 9 ––");
+    expect(isPanePricedClassPresent(el)).to.be.true;
+  })
+
+  it('allows empty price when disabled', async () => {
+    const el = await fixture(html`
+      <auro-pane date="2020-09-09" price="" disabled></auro-pane>
+    `);
+
+    expect(getButtonText(el)).to.equal("Wed Sep 9 ––");
+    expect(isPanePricedClassPresent(el)).to.be.true;
   })
 
 });
@@ -55,4 +66,9 @@ function getButtonText(el) {
   const button = el.shadowRoot.querySelector('button');
   const buttonText = button.textContent.replace(/\s+/g, " ").trim();
   return buttonText;
+}
+
+function isPanePricedClassPresent(el) {
+  const button = el.shadowRoot.querySelector('button');
+  return button.classList.contains('pane--priced');
 }
