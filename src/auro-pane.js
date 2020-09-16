@@ -102,7 +102,7 @@ class AuroPane extends LitElement {
    * @returns {TemplateResult} price HTML
    */
   getPrice() {
-    if (this.price) {
+    if (this.price !== undefined) {
       const priceClasses = {
         'price': true,
         'price--long': this.price.length > 6,
@@ -128,7 +128,7 @@ class AuroPane extends LitElement {
       'pane': true,
       'pane--selected': this.selected,
       'pane--disabled': this.disabled,
-      'pane--priced': this.price
+      'pane--priced': this.price !== undefined
     };
 
     const parsedDate = this.parseDateString();
