@@ -60,6 +60,30 @@ describe('auro-pane', () => {
     expect(isPanePricedClassPresent(el)).to.be.true;
   })
 
+  it('sets tabindex and aria-hidden', async () => {
+    const el = await fixture(html`
+      <auro-pane date="2020-09-09" tabindex="-1" aria-hidden="true"></auro-pane>
+    `);
+
+    const button = el.shadowRoot.querySelector('button');
+    expect(button.getAttribute('tabindex')).to.equal('-1');
+    expect(button.getAttribute('aria-hidden')).to.equal('true');
+  })
+
+  it('removes tabindex and aria-hidden when removed from parent', async () => {
+    const el = await fixture(html`
+      <auro-pane date="2020-09-09" tabindex="-1" aria-hidden="true"></auro-pane>
+    `);
+
+    const button = el.shadowRoot.querySelector('button');
+    el.removeAttribute('tabindex');
+    el.removeAttribute('aria-hidden');
+    await el.updateComplete;
+
+    expect(button.hasAttribute('tabindex')).to.be.false;
+    expect(button.hasAttribute('aria-hidden')).to.be.false;
+  })
+
 });
 
 function getButtonText(el) {

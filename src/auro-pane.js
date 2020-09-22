@@ -5,6 +5,7 @@
 
 import { LitElement, html, css } from 'lit-element';
 import { classMap } from 'lit-html/directives/class-map';
+import { ifDefined } from 'lit-html/directives/if-defined';
 
 // Import touch detection lib
 import 'focus-visible/dist/focus-visible.min.js';
@@ -14,10 +15,12 @@ import styleCss from './style-css.js';
 /**
  * auro-pane displays shoulder date information
  *
+ * @attr {String} ariaHidden - Sets aria-hidden on the inner button.
  * @attr {String} date - Sets date for parsing and display. Format should be yyyy-mm-dd.
  * @attr {Boolean} disabled - Disables the pane and overrides price to be --.
  * @attr {String} price - Sets price for display. Displayed as is.
  * @attr {Boolean} selected - Sets pane state to selected.
+ * @attr {Number} tabIndex - Sets tabindex on the inner button.
  */
 
 class AuroPane extends LitElement {
@@ -58,10 +61,15 @@ class AuroPane extends LitElement {
 
   static get properties() {
     return {
+      ariaHidden: {
+        type: String,
+        attribute: "aria-hidden"
+      },
       date: { type: String },
       disabled: { type: Boolean },
       price: { type: String },
-      selected: { type: Boolean }
+      selected: { type: Boolean },
+      tabIndex: { type: Number },
     };
   }
 
@@ -134,7 +142,11 @@ class AuroPane extends LitElement {
     const parsedDate = this.parseDateString();
 
     return html`
-      <button class="${classMap(buttonClasses)}" ?disabled="${this.disabled}">
+      <button 
+        class="${classMap(buttonClasses)}" 
+        ?disabled="${this.disabled}"
+        tabindex="${ifDefined(this.tabIndex ? this.tabIndex : undefined)}" 
+        aria-hidden="${ifDefined(this.ariaHidden ? this.ariaHidden : undefined)}">
         <span class="day-of-week child">${parsedDate.day}</span>
         <span class="date child">${parsedDate.month} ${parsedDate.date}</span>
         ${this.getPrice()}
