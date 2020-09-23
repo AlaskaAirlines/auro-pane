@@ -94,5 +94,5 @@ function getButtonText(el) {
 
 function isPanePricedClassPresent(el) {
   const button = el.shadowRoot.querySelector('button');
-  return button.classList.contains('pane--priced');
+  return button.classList.contains('pane-priced');
 }
