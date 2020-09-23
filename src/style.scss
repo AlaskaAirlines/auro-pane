@@ -19,7 +19,7 @@
     border-color: var(--auro-color-border-active-on-light);
   }
 
-  .pane--selected {
+  .pane.isSelected {
     // hardcode the token to prevent ShadyCSS from breaking IE11
     // see https://auro.alaskaair.com/support/shadycss
     box-shadow: inset 0 0 0 3px #fff;
@@ -45,8 +45,6 @@
   height: 5.625rem;
   min-width: 4.25rem;
 
-  font-family: var(--auro-font-family-default);
-  font-weight: var(--auro-text-body-default-weight);
   background: var(--auro-color-base-gray-100);
   border: 2px solid;
   border-color: var(--auro-color-base-gray-200);
@@ -91,12 +89,12 @@
   }
 }
 
-.pane--selected {
+.pane.isSelected {
   background: var(--auro-color-ui-active-on-light);
   border-color: var(--auro-color-ui-active-on-light);
 }
 
-.pane--priced {
+.pane-priced {
   height: 6rem;
   min-width: 4.5rem;
   border-radius: 2.75rem;
@@ -110,7 +108,7 @@
     grid-template-rows: 1.5rem 1.25rem 1.625rem;
   }
 
-  .day-of-week {
+  .dayOfTheWeek {
     color: var(--auro-color-text-primary-on-light);
     font-size: var(--auro-text-body-size-default);
     line-height: var(--auro-text-body-height-default);
@@ -123,13 +121,13 @@
 }
 
 .pane:active:not([disabled]),
-.pane--selected {
+.pane.isSelected {
   .child {
     color: var(--auro-color-base-white);
   }
 }
 
-.day-of-week {
+.dayOfTheWeek {
   color: var(--auro-color-ui-default-on-light);
   font-size: var(--auro-text-body-size-lg);
   line-height: var(--auro-text-body-height-lg);

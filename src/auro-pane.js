@@ -134,9 +134,9 @@ class AuroPane extends LitElement {
   render() {
     const buttonClasses = {
       'pane': true,
-      'pane--selected': this.selected,
+      'isSelected': this.selected,
       'pane--disabled': this.disabled,
-      'pane--priced': this.price !== undefined
+      'pane-priced': this.price !== undefined
     };
 
     const parsedDate = this.parseDateString();
@@ -147,7 +147,7 @@ class AuroPane extends LitElement {
         ?disabled="${this.disabled}"
         tabindex="${ifDefined(this.tabIndex ? this.tabIndex : undefined)}" 
         aria-hidden="${ifDefined(this.ariaHidden ? this.ariaHidden : undefined)}">
-        <span class="day-of-week child">${parsedDate.day}</span>
+        <span class="dayOfTheWeek child">${parsedDate.day}</span>
         <span class="date child">${parsedDate.month} ${parsedDate.date}</span>
         ${this.getPrice()}
       </button>
