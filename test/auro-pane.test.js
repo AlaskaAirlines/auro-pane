@@ -11,7 +11,7 @@ describe('auro-pane', () => {
     await expect(el).to.be.accessible();
   });
 
-  it('defines the custom element', async () => {
+  it('is defined', async () => {
     const el = await !!customElements.get("auro-pane");
 
     await expect(el).to.be.true;
