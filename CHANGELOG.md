@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [1.0.1](https://github.com/AlaskaAirlines/auro-pane/compare/v1.0.0...v1.0.1) (2020-10-01)
+
+
+### Bug Fixes
+
+* address issue with font inheritance https://bit.ly/2EPuiE4 ([7dafc2e](https://github.com/AlaskaAirlines/auro-pane/commit/7dafc2ebb319a4d9794ce976e312d0c730f55a51))
+
 # 1.0.0 (2020-09-24)
 
 
