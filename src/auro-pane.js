@@ -18,6 +18,7 @@ import styleCss from './style-css.js';
  * @attr {String} ariaHidden - Sets aria-hidden on the inner button.
  * @attr {String} date - Sets date for parsing and display. Format should be yyyy-mm-dd.
  * @attr {Boolean} disabled - Disables the pane and overrides price to be --.
+ * @attr {Boolean} fixed - uses px values instead of rem for fonts.
  * @attr {String} price - Sets price for display. Displayed as is.
  * @attr {Boolean} selected - Sets pane state to selected.
  * @attr {Number} tabIndex - Sets tabindex on the inner button.
@@ -67,6 +68,7 @@ class AuroPane extends LitElement {
       },
       date: { type: String },
       disabled: { type: Boolean },
+      fixed: { type: Boolean },
       price: { type: String },
       selected: { type: Boolean },
       tabIndex: { type: Number },
@@ -136,7 +138,8 @@ class AuroPane extends LitElement {
       'pane': true,
       'isSelected': this.selected,
       'pane--disabled': this.disabled,
-      'pane-priced': this.price !== undefined
+      'pane-priced': this.price !== undefined,
+      'fixed': this.fixed,
     };
 
     const parsedDate = this.parseDateString();

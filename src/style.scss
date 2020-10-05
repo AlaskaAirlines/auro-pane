@@ -14,6 +14,46 @@
   display: inline-block;
 }
 
+:host([fixed]) {
+  .pane {
+    @include auro_breakpoint--sm {
+      font-size: 16px;
+    }
+  }
+  .pane-priced {
+    .dayOfTheWeek {
+      font-size: 16px;
+      @include auro_breakpoint--sm {
+        font-size: 18px;
+      }
+    }
+  }
+  .dayOfTheWeek {
+    font-size: 18px;
+    @include auro_breakpoint--sm {
+      font-size: 18px;
+    }
+  }
+  .date {
+    font-size: 14px;
+    @include auro_breakpoint--sm {
+      font-size: 16px;
+    }
+  }
+  .price {
+    font-size: 14px;
+    @include auro_breakpoint--sm {
+      font-size: 18px;
+    }
+  }
+  .price--long {
+    font-size: 12px;
+    @include auro_breakpoint--sm {
+      font-size: 16px;
+    }
+  }
+}
+
 :host(.focus-visible) {
   .pane {
     border-color: var(--auro-color-border-active-on-light);

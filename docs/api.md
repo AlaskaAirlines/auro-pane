@@ -9,6 +9,7 @@ auro-pane displays shoulder date information
 | `ariaHidden` | `aria-hidden` | `String`  | Sets aria-hidden on the inner button.            |
 | `date`       | `date`        | `String`  | Sets date for parsing and display. Format should be yyyy-mm-dd. |
 | `disabled`   | `disabled`    | `Boolean` | Disables the pane and overrides price to be --.  |
+| `fixed`      | `fixed`       | `Boolean` | uses px values instead of rem for fonts.         |
 | `price`      | `price`       | `String`  | Sets price for display. Displayed as is.         |
 | `selected`   | `selected`    | `Boolean` | Sets pane state to selected.                     |
 | `tabIndex`   | `tabIndex`    | `Number`  | Sets tabindex on the inner button.               |
