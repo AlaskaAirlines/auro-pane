@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+# [1.1.0](https://github.com/AlaskaAirlines/auro-pane/compare/v1.0.1...v1.1.0) (2020-10-06)
+
+
+### Features
+
+* add fixed property ([2d90b61](https://github.com/AlaskaAirlines/auro-pane/commit/2d90b61a032d69f47e0bcb7af6d5423c1d3e01ee))
+
 ## [1.0.1](https://github.com/AlaskaAirlines/auro-pane/compare/v1.0.0...v1.0.1) (2020-10-01)
 
 
