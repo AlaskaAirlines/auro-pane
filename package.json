@@ -66,6 +66,7 @@
     "postcss": "^7.0.32",
     "postcss-custom-properties": "^9.1.1",
     "postcss-discard-comments": "^4.0.2",
+    "postcss-rem-to-pixel": "^4.1.2",
     "postcss-remove-rules": "^1.0.0",
     "postcss-selector-replace": "^1.0.2",
     "semantic-release": "^17.1.1",
