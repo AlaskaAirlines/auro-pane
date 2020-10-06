@@ -10,6 +10,7 @@ import { ifDefined } from 'lit-html/directives/if-defined';
 // Import touch detection lib
 import 'focus-visible/dist/focus-visible.min.js';
 import styleCss from './style-css.js';
+import styleCssFixed from './style-fixed-css.js';
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
@@ -78,6 +79,7 @@ class AuroPane extends LitElement {
   static get styles() {
     return css`
       ${styleCss}
+      ${styleCssFixed}
     `;
   }
 
@@ -138,8 +140,7 @@ class AuroPane extends LitElement {
       'pane': true,
       'isSelected': this.selected,
       'pane--disabled': this.disabled,
-      'pane-priced': this.price !== undefined,
-      'fixed': this.fixed,
+      'pane-priced': this.price !== undefined
     };
 
     const parsedDate = this.parseDateString();
