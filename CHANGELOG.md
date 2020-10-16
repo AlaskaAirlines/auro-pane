@@ -1,5 +1,13 @@
 # Semantic Release Automated Changelog
 
+## [1.1.1](https://github.com/AlaskaAirlines/auro-pane/compare/v1.1.0...v1.1.1) (2020-10-16)
+
+
+### Bug Fixes
+
+* import missing ([535b787](https://github.com/AlaskaAirlines/auro-pane/commit/535b787c2b5dbbb21cb1e91f341ac693243f47b7))
+* ndash for non-unicode support ([7f90e5d](https://github.com/AlaskaAirlines/auro-pane/commit/7f90e5ddab38e717f3315ab63122bae311626064))
+
 # [1.1.0](https://github.com/AlaskaAirlines/auro-pane/compare/v1.0.1...v1.1.0) (2020-10-06)
 
 
