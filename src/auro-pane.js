@@ -121,7 +121,7 @@ class AuroPane extends LitElement {
         'child': true
       };
 
-      return html`<span class="${classMap(priceClasses)}">${this.disabled ? "––" : this.price}</span>`
+      return html`<span class="${classMap(priceClasses)}">${this.disabled ? unsafeHTML('&ndash;&ndash;') : this.price}</span>`
     }
 
     return html``;
