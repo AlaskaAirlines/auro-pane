@@ -6,6 +6,7 @@
 import { LitElement, html, css } from 'lit-element';
 import { classMap } from 'lit-html/directives/class-map';
 import { ifDefined } from 'lit-html/directives/if-defined';
+import {unsafeHTML} from 'lit-html/directives/unsafe-html.js';
 
 // Import touch detection lib
 import 'focus-visible/dist/focus-visible.min.js';
