@@ -160,7 +160,6 @@ class AuroPane extends LitElement {
   }
 }
 
-/* istanbul ignore else */
 // define the name of the custom component
 if (!customElements.get('auro-pane')) {
   customElements.define('auro-pane', AuroPane);
