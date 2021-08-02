@@ -60,6 +60,9 @@ class AuroPane extends LitElement {
       'Nov',
       'Dec'
     ];
+
+    this.disabled = false;
+    this.selected = false;
   }
 
   static get properties() {
@@ -70,7 +73,6 @@ class AuroPane extends LitElement {
       },
       date: { type: String },
       disabled: { type: Boolean },
-      fixed: { type: Boolean },
       price: { type: String },
       selected: { type: Boolean },
       tabIndex: { type: Number },
