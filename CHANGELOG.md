@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [1.1.2](https://github.com/AlaskaAirlines/auro-pane/compare/v1.1.1...v1.1.2) (2021-08-03)
+
+
+### Bug Fixes
+
+* default boolean props to false [#11](https://github.com/AlaskaAirlines/auro-pane/issues/11) ([ca9824c](https://github.com/AlaskaAirlines/auro-pane/commit/ca9824cb05ce93bc4a3d44ba358ddf273dda91c6))
+
 ## [1.1.1](https://github.com/AlaskaAirlines/auro-pane/compare/v1.1.0...v1.1.1) (2020-10-16)
 
 
