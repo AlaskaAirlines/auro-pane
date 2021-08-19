@@ -18,8 +18,9 @@
   "main": "index.js",
   "license": "Apache-2.0",
   "dependencies": {
-    "lit-element": "^2.4.0",
-    "chalk": "^4.1.0"
+    "chalk": "^4.1.0",
+    "dayjs": "^1.10.6",
+    "lit-element": "^2.4.0"
   },
   "peerDependencies": {
     "@alaskaairux/orion-design-tokens": "^2.12.1",

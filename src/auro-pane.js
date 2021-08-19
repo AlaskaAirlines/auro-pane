@@ -6,7 +6,8 @@
 import { LitElement, html, css } from 'lit-element';
 import { classMap } from 'lit-html/directives/class-map';
 import { ifDefined } from 'lit-html/directives/if-defined';
-import {unsafeHTML} from 'lit-html/directives/unsafe-html.js';
+import { unsafeHTML } from 'lit-html/directives/unsafe-html.js';
+import dayjs from 'dayjs/esm';
 
 // Import touch detection lib
 import 'focus-visible/dist/focus-visible.min.js';
@@ -29,37 +30,6 @@ import styleCssFixed from './style-fixed-css.js';
 class AuroPane extends LitElement {
   constructor() {
     super();
-
-    /**
-     * @private
-     */
-    this.weekdays = [
-      'Sun',
-      'Mon',
-      'Tue',
-      'Wed',
-      'Thu',
-      'Fri',
-      'Sat'
-    ];
-
-    /**
-     * @private
-     */
-    this.months = [
-      'Jan',
-      'Feb',
-      'Mar',
-      'Apr',
-      'May',
-      'Jun',
-      'Jul',
-      'Aug',
-      'Sep',
-      'Oct',
-      'Nov',
-      'Dec'
-    ];
 
     this.disabled = false;
     this.selected = false;
@@ -92,19 +62,13 @@ class AuroPane extends LitElement {
    * @returns {Object} object containing day, date, and month
    */
   parseDateString() {
-    const dateFormatLength = 10;
+    const parsedDate = dayjs(this.date);
 
-    if (this.date && this.date.length === dateFormatLength) {
-      // Using substring instead of date parsing due to browser inconsistencies
-      const year = this.date.substring(0, 4),
-        month = this.date.substring(5, 7),
-        date = this.date.substring(8),
-        parsedDate = new Date(year, month - 1, date);
-
+    if (parsedDate.isValid()) {
       return {
-        day: this.weekdays[parsedDate.getUTCDay()],
-        date: parsedDate.getUTCDate(),
-        month: this.months[parsedDate.getUTCMonth()]
+        day: parsedDate.format('ddd'),
+        date: parsedDate.format('D'),
+        month: parsedDate.format('MMM')
       };
     }
 
