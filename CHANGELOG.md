@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [1.1.3](https://github.com/AlaskaAirlines/auro-pane/compare/v1.1.2...v1.1.3) (2021-08-19)
+
+
+### Bug Fixes
+
+* correct date formatting in UTC+ timezones [#14](https://github.com/AlaskaAirlines/auro-pane/issues/14) ([db68120](https://github.com/AlaskaAirlines/auro-pane/commit/db681201ea05106f1da1ec630eeaeeffb1633072))
+
 ## [1.1.2](https://github.com/AlaskaAirlines/auro-pane/compare/v1.1.1...v1.1.2) (2021-08-03)
 
 
