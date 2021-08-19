@@ -21,6 +21,7 @@ describe('auro-pane', () => {
     ["2020-09-09", "Wed Sep 9"],
     ["2020-01-11", "Sat Jan 11"],
     ["invalid date", ""],
+    [null, ""],
   ]
 
   dateTestCases.forEach(async function ([date, expected]) {
