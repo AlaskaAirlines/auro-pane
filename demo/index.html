@@ -67,6 +67,29 @@
         </script>
       </template>
     </demo-snippet>
+    <h2>MD Panes</h2>
+    <demo-snippet>
+      <template>
+        <auro-pane date="2020-11-08" md></auro-pane>
+        <auro-pane date="2020-11-09" md ></auro-pane>
+        <auro-pane date="2020-11-10"  md selected></auro-pane>
+        <auro-pane date="2020-11-11" md ></auro-pane>
+        <auro-pane date="2020-11-12" md ></auro-pane>
+        <auro-pane date="2020-11-13" md  disabled></auro-pane>
+        <auro-pane date="2020-11-14" md ></auro-pane>
+        <script>
+          const panes = document.querySelectorAll('auro-pane:not([price])');
+          let selectedPane = document.querySelector('auro-pane:not([price])[selected]');
+          panes.forEach((pane) => {
+            pane.addEventListener('click', () => {
+              selectedPane.selected = false;
+              pane.selected = true;
+              selectedPane = pane;
+            });
+          });
+        </script>
+      </template>
+    </demo-snippet>
 
   </div>
 </body>
