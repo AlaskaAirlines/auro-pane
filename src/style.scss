@@ -173,3 +173,13 @@
     line-height: var(--auro-text-body-height-default);
   }
 }
+
+:host([md]) {
+  .pane {
+    font-size: var(--auro-text-body-size-default);
+    grid-template-rows: 1.625rem, 1.25rem;
+    padding-top: var(--auro-size-md);
+    height: 5.625rem;
+    min-width: 4.25rem;
+  }
+}
