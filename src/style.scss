@@ -19,167 +19,181 @@
     border-color: var(--auro-color-border-active-on-light);
   }
 
-  .pane.isSelected {
+  .isSelected {
     // hardcode the token to prevent ShadyCSS from breaking IE11
     // see https://auro.alaskaair.com/support/shadycss
     box-shadow: inset 0 0 0 3px #fff;
   }
 }
 
-.pane {
-  @include auro_transition(all, 0.15s, ease);
+@mixin sm{
+  .pane {
+    @include auro_transition(all, 0.15s, ease);
 
-  // fallback for browsers that don't support grid
-  // also Safari, which does not support display: grid on buttons
-  display: flex; 
-  flex-direction: column;
-  align-items: center;
+    // fallback for browsers that don't support grid
+    // also Safari, which does not support display: grid on buttons
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
 
-  @supports (display: grid) {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 1.625rem 1.25rem;
-  }
-  
-  padding-top: 1.375rem;
-  height: 5.625rem;
-  min-width: 4.25rem;
-  font-family: var(--auro-font-family-default);
-  font-weight: var(--auro-text-body-default-weight);
+    @supports (display: grid) {
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: 1.625rem 1.25rem;
+    }
+    
+    padding-top: 1.375rem;
+    height: 5.625rem;
+    min-width: 4.25rem;
+    font-family: var(--auro-font-family-default);
+    font-weight: var(--auro-text-body-default-weight);
 
-  background: var(--auro-color-base-gray-100);
-  border: 2px solid;
-  border-color: var(--auro-color-base-gray-200);
-  border-radius: 2.5rem;
-  cursor: pointer;
+    background: var(--auro-color-base-gray-100);
+    border: 2px solid;
+    border-color: var(--auro-color-base-gray-200);
+    border-radius: 2.5rem;
+    cursor: pointer;
 
-  @include auro_breakpoint--sm {
-    font-size: var(--auro-text-body-size-default);
-    grid-template-rows: 1.75rem 1.5rem;
-    padding-top: 1.625rem;
-    height: 6.5rem;
-    min-width: 5rem;
-  }
+    @media (hover: hover) {
+      &:hover {
+        background: var(--auro-color-border-active-on-light);
+        border-color: var(--auro-color-border-active-on-light);
 
-  @media (hover: hover) {
-    &:hover {
-      background: var(--auro-color-border-active-on-light);
-      border-color: var(--auro-color-border-active-on-light);
+        .child {
+          color: var(--auro-color-base-white);
+        }
+      }
+    }
+
+    &:active {
+      background: var(--auro-color-ui-active-on-light);
+      border-color: var(--auro-color-ui-active-on-light);
+      transform: scale(0.95);
+    }
+
+    &:disabled {
+      background: none;
+      border-color: transparent;
+      cursor: not-allowed;
+      transform: unset;
 
       .child {
-        color: var(--auro-color-base-white);
+        pointer-events: none;
+        color: var(--auro-color-text-secondary-on-light);
       }
     }
   }
 
-  &:active {
+  .isSelected {
     background: var(--auro-color-ui-active-on-light);
     border-color: var(--auro-color-ui-active-on-light);
-    transform: scale(0.95);
   }
 
-  &:disabled {
-    background: none;
-    border-color: transparent;
-    cursor: not-allowed;
-    transform: unset;
+  .pane-priced {
+    height: 6rem;
+    min-width: 4.5rem;
+    border-radius: 2.75rem;
+    grid-template-rows: 1.375rem 1.25rem 1.25rem;
+    padding-top: var(--auro-size-md);
 
-    .child {
-      pointer-events: none;
-      color: var(--auro-color-text-secondary-on-light);
+    .dayOfTheWeek {
+      color: var(--auro-color-text-primary-on-light);
+      font-size: var(--auro-text-body-size-default);
+      line-height: var(--auro-text-body-height-default);
     }
   }
-}
 
-.pane.isSelected {
-  background: var(--auro-color-ui-active-on-light);
-  border-color: var(--auro-color-ui-active-on-light);
-}
-
-.pane-priced {
-  height: 6rem;
-  min-width: 4.5rem;
-  border-radius: 2.75rem;
-  grid-template-rows: 1.375rem 1.25rem 1.25rem;
-  padding-top: var(--auro-size-md);
-
-  @include auro_breakpoint--sm {
-    height: 7.5rem;
-    min-width: 5.5rem;
-    padding-top: var(--auro-size-lg);
-    grid-template-rows: 1.5rem 1.25rem 1.625rem;
+  .pane:active:not([disabled]),
+  .isSelected {
+    .child {
+      color: var(--auro-color-base-white);
+    }
   }
 
   .dayOfTheWeek {
-    color: var(--auro-color-text-primary-on-light);
-    font-size: var(--auro-text-body-size-default);
-    line-height: var(--auro-text-body-height-default);
+    color: var(--auro-color-ui-default-on-light);
+    font-size: var(--auro-text-body-size-lg);
+    line-height: var(--auro-text-body-height-lg);
+  }
 
+  .date {
+    color: var(--auro-color-text-secondary-on-light);
+    font-size: var(--auro-text-body-size-sm);
+    line-height: var(--auro-text-body-height-sm);
+  }
+
+  .price {
+    color: var(--auro-color-ui-default-on-light);
+    font-size: var(--auro-text-body-size-sm);
+    line-height: var(--auro-text-body-height-sm);
+    margin-top: var(--auro-size-xxs);
+  }
+
+  .price--long {
+    font-size: var(--auro-text-body-size-xs);
+    line-height: var(--auro-text-body-height-xs);
+  }
+}
+
+:host(:not([sm])){
+  @include sm;
+
+  .pane {
+    @include auro_breakpoint--sm {
+      font-size: var(--auro-text-body-size-default);
+      grid-template-rows: 1.75rem 1.5rem;
+      padding-top: 1.625rem;
+      height: 6.5rem;
+      min-width: 5rem;
+    }
+  }
+
+  .pane-priced {
+    @include auro_breakpoint--sm {
+      height: 7.5rem;
+      min-width: 5.5rem;
+      padding-top: var(--auro-size-lg);
+      grid-template-rows: 1.5rem 1.25rem 1.625rem;
+    }
+
+    .dayOfTheWeek {
+      @include auro_breakpoint--sm {
+        font-size: var(--auro-text-body-size-lg);
+        line-height: var(--auro-text-body-height-lg);
+      }
+    }
+  }
+
+  .dayOfTheWeek {
+    @include auro_breakpoint--sm {
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+      letter-spacing: var(--auro-text-heading-default-spacing);
+    }
+  }
+
+  .date {
+    @include auro_breakpoint--sm {
+      font-size: var(--auro-text-body-size-default);
+      line-height: var(--auro-text-body-height-default);
+    }
+  }
+
+  .price {
     @include auro_breakpoint--sm {
       font-size: var(--auro-text-body-size-lg);
       line-height: var(--auro-text-body-height-lg);
     }
   }
-}
 
-.pane:active:not([disabled]),
-.pane.isSelected {
-  .child {
-    color: var(--auro-color-base-white);
+  .price--long {
+    @include auro_breakpoint--sm {
+      font-size: var(--auro-text-body-size-sm);
+      line-height: var(--auro-text-body-height-default);
+    }
   }
 }
 
-.dayOfTheWeek {
-  color: var(--auro-color-ui-default-on-light);
-  font-size: var(--auro-text-body-size-lg);
-  line-height: var(--auro-text-body-height-lg);
-
-  @include auro_breakpoint--sm {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-    letter-spacing: var(--auro-text-heading-default-spacing);
-  }
-}
-
-.date {
-  color: var(--auro-color-text-secondary-on-light);
-  font-size: var(--auro-text-body-size-sm);
-  line-height: var(--auro-text-body-height-sm);
-
-  @include auro_breakpoint--sm {
-    font-size: var(--auro-text-body-size-default);
-    line-height: var(--auro-text-body-height-default);
-  }
-}
-
-.price {
-  color: var(--auro-color-ui-default-on-light);
-  font-size: var(--auro-text-body-size-sm);
-  line-height: var(--auro-text-body-height-sm);
-  margin-top: var(--auro-size-xxs);
-
-  @include auro_breakpoint--sm {
-    font-size: var(--auro-text-body-size-lg);
-    line-height: var(--auro-text-body-height-lg);
-  }
-}
-
-.price--long {
-  font-size: var(--auro-text-body-size-xs);
-  line-height: var(--auro-text-body-height-xs);
-  
-  @include auro_breakpoint--sm {
-    font-size: var(--auro-text-body-size-sm);
-    line-height: var(--auro-text-body-height-default);
-  }
-}
-
-:host([md]) {
-  .pane {
-    font-size: var(--auro-text-body-size-default);
-    grid-template-rows: 1.625rem, 1.25rem;
-    padding-top: var(--auro-size-md);
-    height: 5.625rem;
-    min-width: 4.25rem;
-  }
+:host([sm]) {
+  @include sm;
 }

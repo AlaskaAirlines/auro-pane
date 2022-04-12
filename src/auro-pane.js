@@ -24,7 +24,7 @@ import styleCssFixed from './style-fixed-css.js';
  * @attr {Boolean} fixed - uses px values instead of rem for fonts.
  * @attr {String} price - Sets price for display. Displayed as is.
  * @attr {Boolean} selected - Sets pane state to selected.
- * @attr {Boolean} md - Sticks the component to the mobile breakpoint.
+ * @attr {Boolean} sm - Locks the component to `sm` variant.
  * @attr {Number} tabIndex - Sets tabindex on the inner button.
  */
 
