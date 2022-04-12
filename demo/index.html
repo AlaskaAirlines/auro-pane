@@ -67,24 +67,25 @@
         </script>
       </template>
     </demo-snippet>
-    <h2>MD Panes</h2>
+    <h2>Mobile-locked Panes</h2>
     <demo-snippet>
       <template>
-        <auro-pane date="2020-11-08" md></auro-pane>
-        <auro-pane date="2020-11-09" md ></auro-pane>
-        <auro-pane date="2020-11-10"  md selected></auro-pane>
-        <auro-pane date="2020-11-11" md ></auro-pane>
-        <auro-pane date="2020-11-12" md ></auro-pane>
-        <auro-pane date="2020-11-13" md  disabled></auro-pane>
-        <auro-pane date="2020-11-14" md ></auro-pane>
+        <auro-pane date="2020-11-09" price="$288" sm></auro-pane>
+        <auro-pane date="2020-11-10" price="$20,000" sm></auro-pane>
+        <auro-pane date="2020-11-11" price="$360" sm></auro-pane>
+        <auro-pane date="2020-11-12" price="$279" sm></auro-pane>
+        <auro-pane date="2020-11-13" price="$490" sm disabled></auro-pane>
+        <auro-pane date="2020-11-14" price="$750" sm></auro-pane>
         <script>
-          const panes = document.querySelectorAll('auro-pane:not([price])');
-          let selectedPane = document.querySelector('auro-pane:not([price])[selected]');
-          panes.forEach((pane) => {
+          const pricePanesSm = document.querySelectorAll('auro-pane[price]');
+          let selectedPricePaneSm = document.querySelector('auro-pane[price][selected]');
+          pricePanesSm.forEach((pane) => {
             pane.addEventListener('click', () => {
-              selectedPane.selected = false;
+              if (selectedPricePaneSm) {
+                selectedPricePaneSm.selected = false;
+              }
               pane.selected = true;
-              selectedPane = pane;
+              selectedPricePaneSm = pane;
             });
           });
         </script>
