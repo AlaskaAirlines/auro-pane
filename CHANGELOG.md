@@ -1,5 +1,13 @@
 # Semantic Release Automated Changelog
 
+# [1.2.0](https://github.com/AlaskaAirlines/auro-pane/compare/v1.1.3...v1.2.0) (2022-04-19)
+
+
+### Features
+
+* **md:** add md breakpoint to stick panes at a smaller size ([7a93b90](https://github.com/AlaskaAirlines/auro-pane/commit/7a93b90dfdafae1b491ecf7797581cd45772ef1f))
+* **mobile:** add mobile attr to lock panes at a smaller size ([e1d1895](https://github.com/AlaskaAirlines/auro-pane/commit/e1d1895dbc4e62052021e14a0961ee05dc7d088c))
+
 ## [1.1.3](https://github.com/AlaskaAirlines/auro-pane/compare/v1.1.2...v1.1.3) (2021-08-19)
 
 
