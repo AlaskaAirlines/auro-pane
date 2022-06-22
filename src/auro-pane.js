@@ -43,9 +43,9 @@ class AuroPane extends LitElement {
         attribute: "aria-hidden"
       },
       date: { type: String },
-      disabled: { type: Boolean },
+      disabled: { type: Boolean, reflect: true },
       price: { type: String },
-      selected: { type: Boolean },
+      selected: { type: Boolean, reflect: true },
       tabIndex: { type: Number },
     };
   }
