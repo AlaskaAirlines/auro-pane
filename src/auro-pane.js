@@ -45,7 +45,10 @@ class AuroPane extends LitElement {
       date: { type: String },
       disabled: { type: Boolean, reflect: true },
       price: { type: String },
-      selected: { type: Boolean, reflect: true },
+      selected: {
+        type: Boolean,
+        reflect: true
+      },
       tabIndex: { type: Number },
     };
   }
