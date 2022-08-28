@@ -18,7 +18,7 @@
   "main": "index.js",
   "license": "Apache-2.0",
   "dependencies": {
-    "chalk": "^4.1.0",
+    "chalk": "^4.1.2",
     "dayjs": "^1.10.6",
     "lit-element": "^2.4.0"
   },
