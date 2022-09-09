@@ -14,18 +14,6 @@
   display: inline-block;
 }
 
-:host(.focus-visible) {
-  .pane {
-    border-color: var(--auro-color-border-active-on-light);
-  }
-
-  .isSelected {
-    // hardcode the token to prevent ShadyCSS from breaking IE11
-    // see https://auro.alaskaair.com/support/shadycss
-    box-shadow: inset 0 0 0 3px #fff;
-  }
-}
-
 @mixin sm{
   .pane {
     @include auro_transition(all, 0.15s, ease);
@@ -196,4 +184,16 @@
 
 :host([sm]) {
   @include sm;
+}
+
+:host(.focus-visible) {
+  .pane {
+    border-color: var(--auro-color-border-active-on-light);
+  }
+
+  .isSelected {
+    // hardcode the token to prevent ShadyCSS from breaking IE11
+    // see https://auro.alaskaair.com/support/shadycss
+    box-shadow: inset 0 0 0 3px #fff;
+  }
 }
