@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [1.2.1](https://github.com/AlaskaAirlines/auro-pane/compare/v1.2.0...v1.2.1) (2022-09-16)
+
+
+### Bug Fixes
+
+* **focus-states:** fix keyboard focus state styles ([162009b](https://github.com/AlaskaAirlines/auro-pane/commit/162009b502311da257a5f8f24da60347b1470cd9))
+
 # [1.2.0](https://github.com/AlaskaAirlines/auro-pane/compare/v1.1.3...v1.2.0) (2022-04-19)
 
 
