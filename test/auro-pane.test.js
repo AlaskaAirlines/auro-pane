@@ -43,12 +43,12 @@ describe('auro-pane', () => {
     expect(isPanePricedClassPresent(el)).to.be.true;
   })
 
-  it('does not display price when disabled', async () => {
+  it('displays price when disabled', async () => {
     const el = await fixture(html`
       <auro-pane date="2020-09-09" price="$100" disabled></auro-pane>
     `);
 
-    expect(getButtonText(el)).to.equal("Wed Sep 9 ––");
+    expect(getButtonText(el)).to.equal("Wed Sep 9 $100");
     expect(isPanePricedClassPresent(el)).to.be.true;
   })
 
@@ -57,7 +57,7 @@ describe('auro-pane', () => {
       <auro-pane date="2020-09-09" price="" disabled></auro-pane>
     `);
 
-    expect(getButtonText(el)).to.equal("Wed Sep 9 ––");
+    expect(getButtonText(el)).to.equal("Wed Sep 9");
     expect(isPanePricedClassPresent(el)).to.be.true;
   })
 
