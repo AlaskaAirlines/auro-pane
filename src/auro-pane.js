@@ -6,7 +6,6 @@
 import { LitElement, html, css } from 'lit-element';
 import { classMap } from 'lit-html/directives/class-map';
 import { ifDefined } from 'lit-html/directives/if-defined';
-import { unsafeHTML } from 'lit-html/directives/unsafe-html.js';
 import dayjs from 'dayjs/esm';
 
 // Import touch detection lib
@@ -89,7 +88,7 @@ class AuroPane extends LitElement {
         'child': true
       };
 
-      return html`<span class="${classMap(priceClasses)}">${this.disabled ? unsafeHTML('&ndash;&ndash;') : this.price}</span>`
+      return html`<span class="${classMap(priceClasses)}">${this.price}</span>`
     }
 
     return html``;
