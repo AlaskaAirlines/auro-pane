@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [1.2.2](https://github.com/AlaskaAirlines/auro-pane/compare/v1.2.1...v1.2.2) (2022-12-27)
+
+
+### Bug Fixes
+
+* **disabled:** show price in disabled state [#30](https://github.com/AlaskaAirlines/auro-pane/issues/30) ([e0066c0](https://github.com/AlaskaAirlines/auro-pane/commit/e0066c06ca3a84849d49fae18a2a64d68e5ec9e8))
+
 ## [1.2.1](https://github.com/AlaskaAirlines/auro-pane/compare/v1.2.0...v1.2.1) (2022-09-16)
 
 
