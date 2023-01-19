@@ -52,12 +52,12 @@ describe('auro-pane', () => {
     expect(isPanePricedClassPresent(el)).to.be.true;
   })
 
-  it('allows empty price when disabled', async () => {
+  it('displays two dashes when price attribute is empty', async () => {
     const el = await fixture(html`
-      <auro-pane date="2020-09-09" price="" disabled></auro-pane>
+      <auro-pane date="2020-09-09" price=""></auro-pane>
     `);
 
-    expect(getButtonText(el)).to.equal("Wed Sep 9");
+    expect(getButtonText(el)).to.equal("Wed Sep 9 --");
     expect(isPanePricedClassPresent(el)).to.be.true;
   })
 
