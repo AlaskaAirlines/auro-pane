@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [1.2.3](https://github.com/AlaskaAirlines/auro-pane/compare/v1.2.2...v1.2.3) (2023-01-23)
+
+
+### Bug Fixes
+
+* **price:** use dashes when price attribute is empty [#35](https://github.com/AlaskaAirlines/auro-pane/issues/35) ([94e5173](https://github.com/AlaskaAirlines/auro-pane/commit/94e5173d306bb16f2875e4b7a68381890c46c5ec))
+
 ## [1.2.2](https://github.com/AlaskaAirlines/auro-pane/compare/v1.2.1...v1.2.2) (2022-12-27)
 
 
