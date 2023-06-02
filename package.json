@@ -19,7 +19,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "chalk": "^4.1.0",
-    "dayjs": "^1.10.6",
+    "dayjs": "^1.11.7",
     "lit-element": "^2.4.0"
   },
   "peerDependencies": {
