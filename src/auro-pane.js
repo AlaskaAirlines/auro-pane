@@ -84,7 +84,7 @@ class AuroPane extends LitElement {
     if (this.price !== undefined) {
       const priceClasses = {
         'price': true,
-        'price--long': this.price.length > 6,
+        'price--long': this.price.length > 8,
         'child': true,
         'price--empty': this.price === ''
       };

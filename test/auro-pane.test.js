@@ -52,6 +52,14 @@ describe('auro-pane', () => {
     expect(isPanePricedClassPresent(el)).to.be.true;
   })
 
+  it('does not not display the smaller text for less than 8 characters in the price', async () => {
+    const el = await fixture(html`
+      <auro-pane date="2020-09-09" price="12.5k +" disabled></auro-pane>
+    `);
+    expect(getButtonText(el)).to.equal("Wed Sep 9 12.5k +");
+    expect(isPriceLongClassPresent(el)).to.not.be.true;
+  })
+
   it('displays two dashes when price attribute is empty', async () => {
     const el = await fixture(html`
       <auro-pane date="2020-09-09" price=""></auro-pane>
@@ -96,4 +104,9 @@ function getButtonText(el) {
 function isPanePricedClassPresent(el) {
   const button = el.shadowRoot.querySelector('button');
   return button.classList.contains('pane-priced');
+}
+
+function isPriceLongClassPresent(el) {
+  const button = el.shadowRoot.querySelector('button');
+  return button.classList.contains('price--long');
 }
