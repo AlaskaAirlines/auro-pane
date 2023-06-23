@@ -93,7 +93,7 @@ class AuroPane extends LitElement {
         this.price = '--';
       }
 
-      return html`<span class="${classMap(priceClasses)}">${this.price}</span>`
+      return html`<span class="${classMap(priceClasses)}" part="price-slot">${this.price}</span>`
     }
 
     return html``;
