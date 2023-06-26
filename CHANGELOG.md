@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [1.2.4](https://github.com/AlaskaAirlines/auro-pane/compare/v1.2.3...v1.2.4) (2023-06-26)
+
+
+### Performance Improvements
+
+* **price-part:** add a css part to expose price text styles ([768bd6d](https://github.com/AlaskaAirlines/auro-pane/commit/768bd6d6f459b659000966452eba7b545e144a4f))
+
 ## [1.2.3](https://github.com/AlaskaAirlines/auro-pane/compare/v1.2.2...v1.2.3) (2023-01-23)
 
 
