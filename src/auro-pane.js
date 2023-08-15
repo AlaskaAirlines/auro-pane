@@ -13,7 +13,6 @@ import dayjs from 'dayjs/esm';
 
 // Import touch detection lib
 import styleCss from './style-css.js';
-import styleCssFixed from './style-fixed-css.js';
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
@@ -29,7 +28,7 @@ import styleCssFixed from './style-fixed-css.js';
  * @attr {Number} tabIndex - Sets tabindex on the inner button.
  */
 
-class AuroPane extends LitElement {
+export class AuroPane extends LitElement {
   constructor() {
     super();
 
@@ -54,7 +53,6 @@ class AuroPane extends LitElement {
   static get styles() {
     return css`
       ${styleCss}
-      ${styleCssFixed}
     `;
   }
 
