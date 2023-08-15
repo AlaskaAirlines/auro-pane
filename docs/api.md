@@ -1,27 +1,15 @@
 # auro-pane
 
-auro-pane displays shoulder date information
+The auro-pane element provides users a way to ... (it would be great if you fill this out).
 
 ## Attributes
 
-| Attribute | Type      | Description                              |
-|-----------|-----------|------------------------------------------|
-| `fixed`   | `Boolean` | uses px values instead of rem for fonts. |
-| `sm`      | `Boolean` | Locks the component to `sm` variant.     |
+| Attribute | Type      | Description                               |
+|-----------|-----------|-------------------------------------------|
+| `fixed`   | `Boolean` | Uses fixed pixel values for element shape |
 
 ## Properties
 
-| Property     | Attribute     | Type      | Default | Description                                      |
-|--------------|---------------|-----------|---------|--------------------------------------------------|
-| `ariaHidden` | `aria-hidden` | `String`  |         | Sets aria-hidden on the inner button.            |
-| `date`       | `date`        | `String`  |         | Sets date for parsing and display. Format should be yyyy-mm-dd. |
-| `disabled`   | `disabled`    | `Boolean` | false   | Disables the pane and overrides price to be --.  |
-| `price`      | `price`       | `String`  |         | Sets price for display. Displayed as is.         |
-| `selected`   | `selected`    | `Boolean` | false   | Sets pane state to selected.                     |
-| `tabIndex`   | `tabIndex`    | `Number`  |         | Sets tabindex on the inner button.               |
-
-## Methods
-
-| Method  | Type       | Description                           |
-|---------|------------|---------------------------------------|
-| `focus` | `(): void` | Programatically focuses the component |
+| Property   | Attribute  | Type     | Description                                      |
+|------------|------------|----------|--------------------------------------------------|
+| `cssClass` | `cssClass` | `String` | Applies designated CSS class to demo element - you want to delete me! |
