@@ -3,49 +3,57 @@
 
 // ---------------------------------------------------------------------
 
-@import './node_modules/@alaskaairux/orion-design-tokens/dist/tokens/SCSSVariables';
-@import './node_modules/@alaskaairux/orion-design-tokens/dist/tokens/SassCustomProperties';
+/* stylelint-disable declaration-empty-line-before, max-nesting-depth, selector-max-class, selector-class-pattern, selector-max-combinators, selector-max-compound-selectors, no-descending-specificity, scss/double-slash-comment-empty-line-before, order/properties-order */
 
-@import './node_modules/@alaskaairux/orion-web-core-style-sheets/dist/breakpoints';
-@import './node_modules/@alaskaairux/orion-web-core-style-sheets/dist/core';
-@import './node_modules/@alaskaairux/orion-web-core-style-sheets/dist/animation';
+@import './../node_modules/@alaskaairux/design-tokens/dist/tokens/SCSSVariables';
+@import './../node_modules/@alaskaairux/design-tokens/dist/tokens/SassCustomProperties';
+
+@import './../node_modules/@aurodesignsystem/webcorestylesheets/dist/breakpoints';
+@import './../node_modules/@aurodesignsystem/webcorestylesheets/dist/core';
+@import './../node_modules/@aurodesignsystem/webcorestylesheets/dist/animation';
 
 :host {
   display: inline-block;
 }
 
-@mixin sm{
+@mixin sm {
   .pane {
-    @include auro_transition(all, 0.15s, ease);
-
+    @include auro_transition(all, .15s, ease);
     // fallback for browsers that don't support grid
     // also Safari, which does not support display: grid on buttons
-    display: flex; 
-    flex-direction: column;
-    align-items: center;
 
-    @supports (display: grid) {
-      display: grid;
-      grid-template-columns: auto;
-      grid-template-rows: 1.625rem 1.25rem;
-    }
-    
-    padding-top: 1.375rem;
-    height: 5.625rem;
+    display: flex;
     min-width: 4.25rem;
-    font-family: var(--auro-font-family-default);
-    font-weight: var(--auro-text-body-default-weight);
+    height: 5.625rem;
 
-    background: var(--auro-color-base-gray-100);
+    align-items: center;
+    flex-direction: column;
+
+    padding-top: 1.375rem;
+
     border: 2px solid;
     border-color: var(--auro-color-base-gray-200);
     border-radius: 2.5rem;
+
+    background: var(--auro-color-base-gray-100);
+
     cursor: pointer;
+
+    font-family: var(--auro-font-family-default);
+    font-weight: var(--auro-text-body-default-weight);
+
+    @supports (display: grid) {
+      display: grid;
+
+      grid-template-columns: auto;
+      grid-template-rows: 1.625rem 1.25rem;
+    }
 
     @media (hover: hover) {
       &:hover {
-        background: var(--auro-color-border-active-on-light);
         border-color: var(--auro-color-border-active-on-light);
+
+        background: var(--auro-color-border-active-on-light);
 
         .child {
           color: var(--auro-color-base-white);
@@ -54,67 +62,83 @@
     }
 
     &:active {
-      background: var(--auro-color-ui-active-on-light);
       border-color: var(--auro-color-ui-active-on-light);
-      transform: scale(0.95);
+
+      background: var(--auro-color-ui-active-on-light);
+
+      transform: scale(.95);
+    }
+
+    &:not([disabled]) {
+      &.isSelected {
+        .child {
+          color: var(--auro-color-base-white);
+        }
+      }
     }
 
     &:disabled {
-      background: none;
       border-color: transparent;
+
+      background: none;
+
       cursor: not-allowed;
+
       transform: unset;
 
       .child {
-        pointer-events: none;
         color: var(--auro-color-text-secondary-on-light);
+
+        pointer-events: none;
       }
     }
   }
 
   .isSelected {
-    background: var(--auro-color-ui-active-on-light);
     border-color: var(--auro-color-ui-active-on-light);
+
+    background: var(--auro-color-ui-active-on-light);
   }
 
   .pane-priced {
-    height: 6rem;
     min-width: 4.5rem;
-    border-radius: 2.75rem;
-    grid-template-rows: 1.375rem 1.25rem 1.25rem;
+    height: 6rem;
+
     padding-top: var(--auro-size-md);
+
+    border-radius: 2.75rem;
+
+    grid-template-rows: 1.375rem 1.25rem 1.25rem;
 
     .dayOfTheWeek {
       color: var(--auro-color-text-primary-on-light);
+
       font-size: var(--auro-text-body-size-default);
       line-height: var(--auro-text-body-height-default);
     }
   }
 
-  .pane:active:not([disabled]),
-  .isSelected {
-    .child {
-      color: var(--auro-color-base-white);
-    }
-  }
-
   .dayOfTheWeek {
     color: var(--auro-color-ui-default-on-light);
+
     font-size: var(--auro-text-body-size-lg);
     line-height: var(--auro-text-body-height-lg);
   }
 
   .date {
     color: var(--auro-color-text-secondary-on-light);
+
     font-size: var(--auro-text-body-size-sm);
     line-height: var(--auro-text-body-height-sm);
   }
 
   .price {
+    margin-top: var(--auro-size-xxs);
+
     color: var(--auro-color-ui-default-on-light);
+
     font-size: var(--auro-text-body-size-sm);
     line-height: var(--auro-text-body-height-sm);
-    margin-top: var(--auro-size-xxs);
   }
 
   .price--long {
@@ -127,24 +151,29 @@
   }
 }
 
-:host(:not([sm])){
+:host(:not([sm])) {
   @include sm;
 
   .pane {
     @include auro_breakpoint--sm {
-      font-size: var(--auro-text-body-size-default);
-      grid-template-rows: 1.75rem 1.5rem;
-      padding-top: 1.625rem;
-      height: 6.5rem;
       min-width: 5rem;
+      height: 6.5rem;
+
+      padding-top: 1.625rem;
+
+      font-size: var(--auro-text-body-size-default);
+
+      grid-template-rows: 1.75rem 1.5rem;
     }
   }
 
   .pane-priced {
     @include auro_breakpoint--sm {
-      height: 7.5rem;
       min-width: 5.5rem;
+      height: 7.5rem;
+
       padding-top: var(--auro-size-lg);
+
       grid-template-rows: 1.5rem 1.25rem 1.625rem;
     }
 
@@ -160,6 +189,7 @@
     @include auro_breakpoint--sm {
       font-size: 1.25rem;
       line-height: 1.75rem;
+
       letter-spacing: var(--auro-text-heading-default-spacing);
     }
   }
@@ -190,7 +220,7 @@
   @include sm;
 }
 
-:host(.focus-visible) {
+:host(:focus) {
   .pane {
     border-color: var(--auro-color-border-active-on-light);
   }

@@ -3,31 +3,31 @@
 
 // ---------------------------------------------------------------------
 
-import { LitElement, html, css } from 'lit-element';
-import { classMap } from 'lit-html/directives/class-map';
-import { ifDefined } from 'lit-html/directives/if-defined';
+/* eslint-disable jsdoc/no-undefined-types */
+
+import { LitElement, html, css } from "lit";
+import { classMap } from 'lit/directives/class-map.js';
+import { ifDefined } from 'lit/directives/if-defined.js';
+
 import dayjs from 'dayjs/esm';
 
 // Import touch detection lib
-import 'focus-visible/dist/focus-visible.min.js';
 import styleCss from './style-css.js';
-import styleCssFixed from './style-fixed-css.js';
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
- * auro-pane displays shoulder date information
+ * The auro-pane component displays shoulder date information.
  *
  * @attr {String} ariaHidden - Sets aria-hidden on the inner button.
  * @attr {String} date - Sets date for parsing and display. Format should be yyyy-mm-dd.
- * @attr {Boolean} disabled - Disables the pane and overrides price to be --.
- * @attr {Boolean} fixed - uses px values instead of rem for fonts.
+ * @attr {Boolean} disabled - Disables the pane.
  * @attr {String} price - Sets price for display. Displayed as is.
  * @attr {Boolean} selected - Sets pane state to selected.
  * @attr {Boolean} sm - Locks the component to `sm` variant.
  * @attr {Number} tabIndex - Sets tabindex on the inner button.
  */
 
-class AuroPane extends LitElement {
+export class AuroPane extends LitElement {
   constructor() {
     super();
 
@@ -52,14 +52,13 @@ class AuroPane extends LitElement {
   static get styles() {
     return css`
       ${styleCss}
-      ${styleCssFixed}
     `;
   }
 
   /**
-   * Internal method to parse the date attribute
+   * Internal method to parse the date attribute.
    * @private
-   * @returns {Object} object containing day, date, and month
+   * @returns {Object} Object containing day, date, and month.
    */
   parseDateString() {
     const parsedDate = dayjs(this.date);
@@ -76,15 +75,15 @@ class AuroPane extends LitElement {
   }
 
   /**
-   * Internal method that determines how to display the price attribute
+   * Internal method that determines how to display the price attribute.
    * @private
-   * @returns {TemplateResult} price HTML
+   * @returns {TemplateResult} Price HTML.
    */
   getPrice() {
     if (this.price !== undefined) {
       const priceClasses = {
         'price': true,
-        'price--long': this.price.length > 6,
+        'price--long': this.price.length > 6, // eslint-disable-line no-magic-numbers
         'child': true,
         'price--empty': this.price === ''
       };
@@ -93,14 +92,14 @@ class AuroPane extends LitElement {
         this.price = '--';
       }
 
-      return html`<span class="${classMap(priceClasses)}" part="price-slot">${this.price}</span>`
+      return html`<span class="${classMap(priceClasses)}" part="price-slot">${this.price}</span>`;
     }
 
     return html``;
   }
 
   /**
-   * Programatically focuses the component
+   * Programatically focuses the component.
    * @return {void}
    */
   focus() {
@@ -118,10 +117,10 @@ class AuroPane extends LitElement {
     const parsedDate = this.parseDateString();
 
     return html`
-      <button 
-        class="${classMap(buttonClasses)}" 
+      <button
+        class="${classMap(buttonClasses)}"
         ?disabled="${this.disabled}"
-        tabindex="${ifDefined(this.tabIndex ? this.tabIndex : undefined)}" 
+        tabindex="${ifDefined(this.tabIndex ? this.tabIndex : undefined)}"
         aria-hidden="${ifDefined(this.ariaHidden ? this.ariaHidden : undefined)}">
         <span class="dayOfTheWeek child">${parsedDate.day}</span>
         <span class="date child">${parsedDate.month} ${parsedDate.date}</span>

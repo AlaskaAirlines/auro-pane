@@ -42,15 +42,20 @@ upstream        https://github.com/AlaskaAirlines/auro-pane.git (push)
 
 #### Sync upstream
 
-To sync your master brach with your upstream master branch, there are two ways you can do this.
-
-One way is to fetch and merge. This will work if your `master` branch shares the same history as the upstream brach sans merged updates since fork or last sync.
+To sync your `master` branch with the upstream `master` branch, there are two ways you can do this. The preferred method is to fetch and rebase. Please do not merge down.
 
 ```bash
 $ git checkout master
 
 $ git fetch upstream
-$ git merge upstream/master
+$ git rebase upstream/master
+```
+
+Then to sync your feature brach,
+
+```bash
+$ git checkout feature-branch
+$ git rebase master
 ```
 
 #### Brute force
@@ -64,7 +69,7 @@ $ git reset --hard upstream/master
 Just to make sure that all things are synced correctly, run the following:
 
 ```bash
-$ git checkout main
+$ git checkout master
 
 $ git fetch upstream
 $ git merge upstream/master
