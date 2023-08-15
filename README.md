@@ -88,7 +88,9 @@ import "@aurodesignsystem/auro-pane";
 <!-- The below code snippet is automatically added from ./../apiExamples/basic.html -->
 
 ```html
-<auro-pane>Hello World</auro-pane>
+<auro-pane date="2020-09-20"></auro-pane>
+<auro-pane date="2020-09-21" selected></auro-pane>
+<auro-pane date="2020-09-22" disabled></auro-pane>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 
@@ -133,7 +135,9 @@ The `<auro-pane>` element should be used in situations where users may:
 <!-- The below code snippet is automatically added from ./../apiExamples/basic.html -->
 
 ```html
-<auro-pane>Hello World</auro-pane>
+<auro-pane date="2020-09-20"></auro-pane>
+<auro-pane date="2020-09-21" selected></auro-pane>
+<auro-pane date="2020-09-22" disabled></auro-pane>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 

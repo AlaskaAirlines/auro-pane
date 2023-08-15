@@ -61,7 +61,9 @@ toggleDialogClose = (elName) => {
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
-  <auro-pane>Hello World</auro-pane>
+  <auro-pane date="2020-09-20"></auro-pane>
+  <auro-pane date="2020-09-21" selected></auro-pane>
+  <auro-pane date="2020-09-22" disabled></auro-pane>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion lowProfile justifyRight>
@@ -70,7 +72,9 @@ toggleDialogClose = (elName) => {
 <!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
 
 ```html
-<auro-pane>Hello World</auro-pane>
+<auro-pane date="2020-09-20"></auro-pane>
+<auro-pane date="2020-09-21" selected></auro-pane>
+<auro-pane date="2020-09-22" disabled></auro-pane>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>

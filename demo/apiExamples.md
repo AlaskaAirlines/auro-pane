@@ -3,19 +3,31 @@
 
 # auro-pane
 
-The auro-pane element provides users a way to ... (it would be great if you fill this out).
+The auro-pane component displays shoulder date information.
 
 ## Attributes
 
-| Attribute | Type      | Description                               |
-|-----------|-----------|-------------------------------------------|
-| [fixed](#fixed)   | `Boolean` | Uses fixed pixel values for element shape |
+| Attribute | Type      | Description                              |
+|-----------|-----------|------------------------------------------|
+| [fixed](#fixed)   | `Boolean` | uses px values instead of rem for fonts. |
+| [sm](#sm)      | `Boolean` | Locks the component to `sm` variant.     |
 
 ## Properties
 
-| Property   | Attribute  | Type     | Description                                      |
-|------------|------------|----------|--------------------------------------------------|
-| [cssClass](#cssClass) | `cssClass` | `String` | Applies designated CSS class to demo element - you want to delete me! |
+| Property     | Attribute     | Type      | Default | Description                                      |
+|--------------|---------------|-----------|---------|--------------------------------------------------|
+| [ariaHidden](#ariaHidden) | `aria-hidden` | `String`  |         | Sets aria-hidden on the inner button.            |
+| [date](#date)       | `date`        | `String`  |         | Sets date for parsing and display. Format should be yyyy-mm-dd. |
+| [disabled](#disabled)   | `disabled`    | `Boolean` | false   | Disables the pane and overrides price to be --.  |
+| [price](#price)      | `price`       | `String`  |         | Sets price for display. Displayed as is.         |
+| [selected](#selected)   | `selected`    | `Boolean` | false   | Sets pane state to selected.                     |
+| [tabIndex](#tabIndex)   | `tabIndex`    | `Number`  |         | Sets tabindex on the inner button.               |
+
+## Methods
+
+| Method  | Type       | Description                            |
+|---------|------------|----------------------------------------|
+| [focus](#focus) | `(): void` | Programatically focuses the component. |
 <!-- AURO-GENERATED-CONTENT:END -->
 
 ## API Examples
@@ -27,7 +39,9 @@ The auro-pane element provides users a way to ... (it would be great if you fill
     <div class="exampleWrapper">
       <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
       <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
-      <auro-pane>Hello World</auro-pane>
+      <auro-pane date="2020-09-20"></auro-pane>
+      <auro-pane date="2020-09-21" selected></auro-pane>
+      <auro-pane date="2020-09-22" disabled></auro-pane>
       <!-- AURO-GENERATED-CONTENT:END -->
     </div>
 <auro-accordion lowProfile justifyRight>
@@ -36,7 +50,9 @@ The auro-pane element provides users a way to ... (it would be great if you fill
 <!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
 
 ```html
-<auro-pane>Hello World</auro-pane>
+<auro-pane date="2020-09-20"></auro-pane>
+<auro-pane date="2020-09-21" selected></auro-pane>
+<auro-pane date="2020-09-22" disabled></auro-pane>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
@@ -49,7 +65,9 @@ Explanation and use description.
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
-  <auro-pane>Hello World</auro-pane>
+  <auro-pane date="2020-09-20"></auro-pane>
+  <auro-pane date="2020-09-21" selected></auro-pane>
+  <auro-pane date="2020-09-22" disabled></auro-pane>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion lowProfile justifyRight>
@@ -58,7 +76,9 @@ Explanation and use description.
 <!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
 
 ```html
-<auro-pane>Hello World</auro-pane>
+<auro-pane date="2020-09-20"></auro-pane>
+<auro-pane date="2020-09-21" selected></auro-pane>
+<auro-pane date="2020-09-22" disabled></auro-pane>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
@@ -71,7 +91,9 @@ Explanation and use description.
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
-  <auro-pane>Hello World</auro-pane>
+  <auro-pane date="2020-09-20"></auro-pane>
+  <auro-pane date="2020-09-21" selected></auro-pane>
+  <auro-pane date="2020-09-22" disabled></auro-pane>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion lowProfile justifyRight>
@@ -80,7 +102,9 @@ Explanation and use description.
 <!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
 
 ```html
-<auro-pane>Hello World</auro-pane>
+<auro-pane date="2020-09-20"></auro-pane>
+<auro-pane date="2020-09-21" selected></auro-pane>
+<auro-pane date="2020-09-22" disabled></auro-pane>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
@@ -93,7 +117,9 @@ Explanation and use description.
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
-  <auro-pane>Hello World</auro-pane>
+  <auro-pane date="2020-09-20"></auro-pane>
+  <auro-pane date="2020-09-21" selected></auro-pane>
+  <auro-pane date="2020-09-22" disabled></auro-pane>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion lowProfile justifyRight>
@@ -102,7 +128,9 @@ Explanation and use description.
 <!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
 
 ```html
-<auro-pane>Hello World</auro-pane>
+<auro-pane date="2020-09-20"></auro-pane>
+<auro-pane date="2020-09-21" selected></auro-pane>
+<auro-pane date="2020-09-22" disabled></auro-pane>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
@@ -115,7 +143,9 @@ Explanation and use description.
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
-  <auro-pane>Hello World</auro-pane>
+  <auro-pane date="2020-09-20"></auro-pane>
+  <auro-pane date="2020-09-21" selected></auro-pane>
+  <auro-pane date="2020-09-22" disabled></auro-pane>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion lowProfile justifyRight>
@@ -124,7 +154,9 @@ Explanation and use description.
 <!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
 
 ```html
-<auro-pane>Hello World</auro-pane>
+<auro-pane date="2020-09-20"></auro-pane>
+<auro-pane date="2020-09-21" selected></auro-pane>
+<auro-pane date="2020-09-22" disabled></auro-pane>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
@@ -137,7 +169,9 @@ Explanation and use description.
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
-  <auro-pane>Hello World</auro-pane>
+  <auro-pane date="2020-09-20"></auro-pane>
+  <auro-pane date="2020-09-21" selected></auro-pane>
+  <auro-pane date="2020-09-22" disabled></auro-pane>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion lowProfile justifyRight>
@@ -146,7 +180,9 @@ Explanation and use description.
 <!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
 
 ```html
-<auro-pane>Hello World</auro-pane>
+<auro-pane date="2020-09-20"></auro-pane>
+<auro-pane date="2020-09-21" selected></auro-pane>
+<auro-pane date="2020-09-22" disabled></auro-pane>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
