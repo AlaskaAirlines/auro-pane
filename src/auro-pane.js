@@ -3,6 +3,8 @@
 
 // ---------------------------------------------------------------------
 
+/* eslint-disable jsdoc/no-undefined-types */
+
 import { LitElement, html, css } from "lit";
 import { classMap } from 'lit/directives/class-map.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
@@ -15,7 +17,7 @@ import styleCssFixed from './style-fixed-css.js';
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
- * auro-pane displays shoulder date information
+ * The auro-pane component displays shoulder date information.
  *
  * @attr {String} ariaHidden - Sets aria-hidden on the inner button.
  * @attr {String} date - Sets date for parsing and display. Format should be yyyy-mm-dd.
@@ -57,9 +59,9 @@ class AuroPane extends LitElement {
   }
 
   /**
-   * Internal method to parse the date attribute
+   * Internal method to parse the date attribute.
    * @private
-   * @returns {Object} object containing day, date, and month
+   * @returns {Object} Object containing day, date, and month.
    */
   parseDateString() {
     const parsedDate = dayjs(this.date);
@@ -76,15 +78,15 @@ class AuroPane extends LitElement {
   }
 
   /**
-   * Internal method that determines how to display the price attribute
+   * Internal method that determines how to display the price attribute.
    * @private
-   * @returns {TemplateResult} price HTML
+   * @returns {TemplateResult} Price HTML.
    */
   getPrice() {
     if (this.price !== undefined) {
       const priceClasses = {
         'price': true,
-        'price--long': this.price.length > 6,
+        'price--long': this.price.length > 6, // eslint-disable-line no-magic-numbers
         'child': true,
         'price--empty': this.price === ''
       };
@@ -93,14 +95,14 @@ class AuroPane extends LitElement {
         this.price = '--';
       }
 
-      return html`<span class="${classMap(priceClasses)}" part="price-slot">${this.price}</span>`
+      return html`<span class="${classMap(priceClasses)}" part="price-slot">${this.price}</span>`;
     }
 
     return html``;
   }
 
   /**
-   * Programatically focuses the component
+   * Programatically focuses the component.
    * @return {void}
    */
   focus() {
