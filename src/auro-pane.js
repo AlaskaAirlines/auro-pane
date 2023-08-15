@@ -3,13 +3,13 @@
 
 // ---------------------------------------------------------------------
 
-import { LitElement, html, css } from 'lit-element';
-import { classMap } from 'lit-html/directives/class-map';
-import { ifDefined } from 'lit-html/directives/if-defined';
+import { LitElement, html, css } from "lit";
+import { classMap } from 'lit/directives/class-map.js';
+import { ifDefined } from 'lit/directives/if-defined.js';
+
 import dayjs from 'dayjs/esm';
 
 // Import touch detection lib
-import 'focus-visible/dist/focus-visible.min.js';
 import styleCss from './style-css.js';
 import styleCssFixed from './style-fixed-css.js';
 
@@ -118,10 +118,10 @@ class AuroPane extends LitElement {
     const parsedDate = this.parseDateString();
 
     return html`
-      <button 
-        class="${classMap(buttonClasses)}" 
+      <button
+        class="${classMap(buttonClasses)}"
         ?disabled="${this.disabled}"
-        tabindex="${ifDefined(this.tabIndex ? this.tabIndex : undefined)}" 
+        tabindex="${ifDefined(this.tabIndex ? this.tabIndex : undefined)}"
         aria-hidden="${ifDefined(this.ariaHidden ? this.ariaHidden : undefined)}">
         <span class="dayOfTheWeek child">${parsedDate.day}</span>
         <span class="date child">${parsedDate.month} ${parsedDate.date}</span>
