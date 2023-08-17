@@ -3,7 +3,7 @@ repository:
   # See https://github.com/apps/settings for app settings
 
   # A short description of the repository that will show up on GitHub
-  description: Custom element that ....
+  description: Custom element that displays a button with selectable shoulder dates and associated prices.
 
   # A URL with more information about the repository
   homepage: https://auro.alaskaair.com/components/auro/pane
