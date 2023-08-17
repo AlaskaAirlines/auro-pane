@@ -8,11 +8,7 @@ This file is generated based on a template fetched from `./docs/partials/demo.md
 
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=./description.md) -->
 <!-- The below content is automatically added from ./description.md -->
-`<auro-pane>` is a [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) for the purpose of ...
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis in tellus nec pellentesque. Integer bibendum ligula sit amet vehicula gravida. Maecenas accumsan, ligula vitae molestie iaculis, tellus mi laoreet ex [install instructions](https://auro.alaskaair.com/components/auro/button/install), ac malesuada velit dolor vel mi. Cras et rutrum urna. Sed mattis mi eu tortor ullamcorper, egestas bibendum mauris cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus viverra eros eget neque commodo vulputate. In tempus eu velit at dictum.
-
-Nulla at augue facilisis `odio lobortis` molestie vitae a nulla.
+`<auro-pane>` is a [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) displaying selectable shoulder dates and associated prices.
 <!-- AURO-GENERATED-CONTENT:END -->
 
 ## auro-pane use cases
@@ -21,42 +17,13 @@ Nulla at augue facilisis `odio lobortis` molestie vitae a nulla.
 <!-- The below content is automatically added from ./useCases.md -->
 The `<auro-pane>` element should be used in situations where users may:
 
-* ...
-* ...
-* ...
+* Select a date to see available flight options
+* See multiple dates with price and availability information
 <!-- AURO-GENERATED-CONTENT:END -->
 
-## Additional Information
-
-> Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam fermentum libero ipsum, ac tempor sapien blandit in. Nam tincidunt non felis molestie varius.
-
-|convallis|tristique|nisl dignissim|eleifend|
-|---|---|---|---|
-|√|√|||
-|||√|√|
-
-Aenean at blandit lorem. Fusce imperdiet mi nec gravida maximus. Quisque nisl libero, condimentum in nisi a, imperdiet lacinia arcu.
-
-```javascript
-toggleDialog = (elName) => {
-  let dialog = document.querySelector(elName);
-  const html = document.querySelector('html');
-
-  html.style.overflow = 'hidden';
-  dialog.removeAttribute("open");
-  dialog.setAttribute("open", true);
-}
-
-toggleDialogClose = (elName) => {
-  let dialog = document.querySelector(elName);
-  const html = document.querySelector('html');
-
-  html.style.overflow = '';
-  dialog.removeAttribute("open");
-}
-```
-
 ## Example(s)
+
+## Basic Example
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
@@ -78,7 +45,52 @@ toggleDialogClose = (elName) => {
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
-Having a closing statement about your example helps to really complete the thought with your reader.
+
+### Date and Price
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
+  <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
+  <auro-pane date="2020-09-20"></auro-pane>
+  <auro-pane date="2020-09-21" selected></auro-pane>
+  <auro-pane date="2020-09-22" disabled></auro-pane>
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion lowProfile justifyRight>
+  <span slot="trigger">See code</span>
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/basic.html) -->
+<!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
+
+```html
+<auro-pane date="2020-09-20"></auro-pane>
+<auro-pane date="2020-09-21" selected></auro-pane>
+<auro-pane date="2020-09-22" disabled></auro-pane>
+```
+<!-- AURO-GENERATED-CONTENT:END -->
+</auro-accordion>
+
+### Small
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/small.html) -->
+  <!-- The below content is automatically added from ./../../apiExamples/small.html -->
+  <auro-pane date="2020-09-20" price="$500" sm></auro-pane>
+  <auro-pane date="2020-09-21" price="$501" selected="true" sm></auro-pane>
+  <auro-pane date="2020-09-22" price="$480" disabled="true" sm></auro-pane>
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion lowProfile justifyRight>
+  <span slot="trigger">See code</span>
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/small.html) -->
+<!-- The below code snippet is automatically added from ./../../apiExamples/small.html -->
+
+```html
+<auro-pane date="2020-09-20" price="$500" sm></auro-pane>
+<auro-pane date="2020-09-21" price="$501" selected="true" sm></auro-pane>
+<auro-pane date="2020-09-22" price="$480" disabled="true" sm></auro-pane>
+```
+<!-- AURO-GENERATED-CONTENT:END -->
+</auro-accordion>
 
 ## Recommended Use and Version Control
 
