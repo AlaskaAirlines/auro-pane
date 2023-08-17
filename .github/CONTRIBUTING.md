@@ -18,7 +18,7 @@ Guidelines for bug reports:
 
 1. BEFORE submitting an issue, make sure that you are **using the latest version** of the component you are working with and/or see if you can reproduce the error in the Auro doc site.
 1. Check if the issue has already been reported. Go to any Auro repo's issue page and use Github's search features to see if a similar issue has been submitted.
-1. Check if the issue has been fixed — try to reproduce it using the latest main or feature branch in the repository
+1. Check if the issue has been fixed — try to reproduce it using the latest master or feature branch in the repository
 1. Isolate the problem — ideally create a reduced test case and a live example
 
 Please allow up to 48 hours to receive a response from the Auro team post issue submission.
@@ -35,7 +35,7 @@ Please **DO NOT** start any work on a potential pull request until you have cons
 
 No one other than repository managers have direct access to any repository. For non-team members, pull requests must originate from a [forked repo](https://auro.alaskaair.com/contributing/upstream) in your own Github account.
 
-All new work that is to be considered for merging with the `main` branch must start from a new feature branch of work. This feature branch should be in response to either a [reported bug](https://auro.alaskaair.com/bugs) or a [requested features](https://auro.alaskaair.com/help-wanted).
+All new work that is to be considered for merging with the `master` branch must start from a new feature branch of work. This feature branch should be in response to either a [reported bug](https://auro.alaskaair.com/bugs) or a [requested features](https://auro.alaskaair.com/help-wanted).
 
 Unsolicited pull requests **will take longer** to respond to. We ask for your patience. To help expedite any pull request, we ask that you **submit an issue first**. This will help the team understand the problem you are trying to solve before submitting the solution.
 
@@ -53,21 +53,21 @@ jdoe/cleanUpNpmApi/#80
 
 We ask that we keep our repo's history linear. This helps maintain a easy to understand version history and is crucial to our semantic versioning strategy. If you find yourself unable to push to the remote, please **DO NOT* use the `$ git pull` command. If this is discovered during a review, the pull request will be rejected. Please see the following instructions on rebasing below.
 
-### Rebase on main
+### Rebase on master
 
-To maintain repository history health, it is best practice to [rebase branches off of an updated main versus merging down](https://www.atlassian.com/git/tutorials/merging-vs-rebasing).
+To maintain repository history health, it is best practice to [rebase branches off of an updated master versus merging down](https://www.atlassian.com/git/tutorials/merging-vs-rebasing).
 
 If you have push access to the repo
 
 ```
-$ git checkout main
+$ git checkout master
 $ git pull
 $ git checkout [feature branch]
-$ git rebase main
+$ git rebase master
 $ git push origin [feature branch] --force
 ```
 
-If you are working off a forked branch, please see [Maintaining your fork's upstream relationship](https://auro.alaskaair.com/contributing/upstream) to sync your main branch and then follow the outlined steps.
+If you are working off a forked branch, please see [Maintaining your fork's upstream relationship](https://auro.alaskaair.com/contributing/upstream) to sync your master branch and then follow the outlined steps.
 
 ## Conventional Commits
 
@@ -165,4 +165,4 @@ Pull request response time depends on the scope of the pull request.
 
 The reviewer has the option to leave comments, ask questions and reject the pull request if warranted.
 
-Once a reviewer has approved the work, the pull request can then be merged into the main branch.
+Once a reviewer has approved the work, the pull request can then be merged into the master branch.
