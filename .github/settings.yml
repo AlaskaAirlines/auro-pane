@@ -21,7 +21,7 @@ repository:
   has_downloads: true
 
   # Updates the default branch for this repository.
-  default_branch: main
+  default_branch: master
 
   # Either `true` to enable automatic deletion of branches on merge, or `false` to disable
   delete_branch_on_merge: true
@@ -39,7 +39,7 @@ repository:
   allow_rebase_merge: true
 
 branches:
-  - name: main
+  - name: master
     # https://developer.github.com/v3/repos/branches/#update-branch-protection
     # Branch Protection settings. Set to null to disable
     protection:
