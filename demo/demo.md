@@ -23,7 +23,7 @@ The `<auro-pane>` element should be used in situations where users may:
 
 ## Example(s)
 
-## Basic Example
+## Basic
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
@@ -46,25 +46,25 @@ The `<auro-pane>` element should be used in situations where users may:
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
-### Date and Price
+### Display date and price
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
-  <auro-pane date="2020-09-20"></auro-pane>
-  <auro-pane date="2020-09-21" selected></auro-pane>
-  <auro-pane date="2020-09-22" disabled></auro-pane>
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/dateAndPrice.html) -->
+  <!-- The below content is automatically added from ./../../apiExamples/dateAndPrice.html -->
+  <auro-pane date="2020-09-20" price="$500"></auro-pane>
+  <auro-pane date="2020-09-21" price="$501" selected="true"></auro-pane>
+  <auro-pane date="2020-09-22" price="$480" disabled="true"></auro-pane>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/basic.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/dateAndPrice.html) -->
+<!-- The below code snippet is automatically added from ./../../apiExamples/dateAndPrice.html -->
 
 ```html
-<auro-pane date="2020-09-20"></auro-pane>
-<auro-pane date="2020-09-21" selected></auro-pane>
-<auro-pane date="2020-09-22" disabled></auro-pane>
+<auro-pane date="2020-09-20" price="$500"></auro-pane>
+<auro-pane date="2020-09-21" price="$501" selected="true"></auro-pane>
+<auro-pane date="2020-09-22" price="$480" disabled="true"></auro-pane>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>

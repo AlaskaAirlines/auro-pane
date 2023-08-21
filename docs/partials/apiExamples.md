@@ -37,9 +37,9 @@ Using the `fixed` attribute will render fonts in `px` instead of `rem`.
 
 </auro-accordion>
 
-#### small
+#### sm
 
-Use the `small` attribute to render a reduced size version of `auro-pane`.
+Use the `sm` attribute to render a reduced size version of `auro-pane`.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/smallSingle.html) -->

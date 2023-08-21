@@ -16,7 +16,7 @@ This file is generated based on a template fetched from `./docs/partials/demo.md
 
 ## Example(s)
 
-## Basic Example
+## Basic
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
@@ -31,17 +31,17 @@ This file is generated based on a template fetched from `./docs/partials/demo.md
 
 </auro-accordion>
 
-### Date and Price
+### Display date and price
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/dateAndPrice.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/basic.html) -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/dateAndPrice.html) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>
