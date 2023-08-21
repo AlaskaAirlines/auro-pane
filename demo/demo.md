@@ -106,12 +106,22 @@ registerComponent('custom-pane');
 This will create a new custom element that you can use in your HTML that will function identically to the `auro-pane` element.
 
 <div class="exampleWrapper">
-  <custom-header display="display">Salutations World!</custom-header>
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/customRegistration.html) -->
+  <!-- The below content is automatically added from ./../../apiExamples/customRegistration.html -->
+  <custom-pane date="2020-09-20"></custom-pane>
+  <custom-pane date="2020-09-21" selected></custom-pane>
+  <custom-pane date="2020-09-22" disabled></custom-pane>
+  <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
-  ```html
-  <custom-header display="display">Salutations World!</custom-header>
-  ```
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/customRegistration.html) -->
+<!-- The below code snippet is automatically added from ./../../apiExamples/customRegistration.html -->
 
+```html
+<custom-pane date="2020-09-20"></custom-pane>
+<custom-pane date="2020-09-21" selected></custom-pane>
+<custom-pane date="2020-09-22" disabled></custom-pane>
+```
+<!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
