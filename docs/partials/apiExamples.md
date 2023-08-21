@@ -21,22 +21,6 @@
 
 ### Attribute Examples
 
-#### fixed
-
-Using the `fixed` attribute will render fonts in `px` instead of `rem`.
-
-<div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/fixed.html) -->
-  <!-- AURO-GENERATED-CONTENT:END -->
-</div>
-<auro-accordion lowProfile justifyRight>
-  <span slot="trigger">See code</span>
-
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/fixed.html) -->
-<!-- AURO-GENERATED-CONTENT:END -->
-
-</auro-accordion>
-
 #### sm
 
 Use the `sm` attribute to render a reduced size version of `auro-pane`.

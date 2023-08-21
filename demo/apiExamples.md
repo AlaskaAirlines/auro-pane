@@ -7,10 +7,9 @@ The auro-pane component displays shoulder date information.
 
 ## Attributes
 
-| Attribute | Type      | Description                              |
-|-----------|-----------|------------------------------------------|
-| [fixed](#fixed)   | `Boolean` | uses px values instead of rem for fonts. |
-| [sm](#sm)      | `Boolean` | Locks the component to `sm` variant.     |
+| Attribute | Type      | Description                          |
+|-----------|-----------|--------------------------------------|
+| [sm](#sm)      | `Boolean` | Locks the component to `sm` variant. |
 
 ## Properties
 
@@ -54,31 +53,6 @@ The auro-pane component displays shoulder date information.
 </auro-accordion>
 
 ### Attribute Examples
-
-#### fixed
-
-Using the `fixed` attribute will render fonts in `px` instead of `rem`.
-
-<div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/fixed.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/fixed.html -->
-  <div style="font-size: 40px;">
-    <auro-pane date="2020-09-20" fixed></auro-pane>
-  </div>
-  <!-- AURO-GENERATED-CONTENT:END -->
-</div>
-<auro-accordion lowProfile justifyRight>
-  <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/fixed.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/fixed.html -->
-
-```html
-<div style="font-size: 40px;">
-  <auro-pane date="2020-09-20" fixed></auro-pane>
-</div>
-```
-<!-- AURO-GENERATED-CONTENT:END -->
-</auro-accordion>
 
 #### sm
 
