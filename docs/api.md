@@ -4,10 +4,9 @@ The auro-pane component displays shoulder date information.
 
 ## Attributes
 
-| Attribute | Type      | Description                              |
-|-----------|-----------|------------------------------------------|
-| `fixed`   | `Boolean` | uses px values instead of rem for fonts. |
-| `sm`      | `Boolean` | Locks the component to `sm` variant.     |
+| Attribute | Type      | Description                          |
+|-----------|-----------|--------------------------------------|
+| `sm`      | `Boolean` | Locks the component to `sm` variant. |
 
 ## Properties
 

@@ -21,7 +21,6 @@ import styleCss from './style-css.js';
  * @attr {String} ariaHidden - Sets aria-hidden on the inner button.
  * @attr {String} date - Sets date for parsing and display. Format should be yyyy-mm-dd.
  * @attr {Boolean} disabled - Disables the pane.
- * @attr {Boolean} fixed - uses px values instead of rem for fonts.
  * @attr {String} price - Sets price for display. Displayed as is.
  * @attr {Boolean} selected - Sets pane state to selected.
  * @attr {Boolean} sm - Locks the component to `sm` variant.
