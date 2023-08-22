@@ -33,6 +33,8 @@ This file is generated based on a template fetched from `./docs/partials/demo.md
 
 ### Display date and price
 
+Default using both `date` and `price` attributes.
+
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/dateAndPrice.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
@@ -46,7 +48,9 @@ This file is generated based on a template fetched from `./docs/partials/demo.md
 
 </auro-accordion>
 
-### Small
+### Small - Use sm size
+
+Use the `sm` attribute to render the small UI that is consistent with mobile and desktop.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/small.html) -->
