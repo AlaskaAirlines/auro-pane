@@ -48,6 +48,8 @@ The `<auro-pane>` element should be used in situations where users may:
 
 ### Display date and price
 
+Default using both `date` and `price` attributes.
+
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/dateAndPrice.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/dateAndPrice.html -->
@@ -69,7 +71,9 @@ The `<auro-pane>` element should be used in situations where users may:
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
-### Small
+### Small - Use sm size
+
+Use the `sm` attribute to render the small UI that is consistent with mobile and desktop.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/small.html) -->
