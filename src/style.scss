@@ -220,7 +220,7 @@
   @include sm;
 }
 
-:host(.focus-visible) {
+:host(:focus) {
   .pane {
     border-color: var(--auro-color-border-active-on-light);
   }

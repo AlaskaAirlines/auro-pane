@@ -208,26 +208,41 @@ Sets tabindex on the inner button.
 
 ### Method Examples
 
-#### <a name="methodName"></a>`methodName`<a href="#auro-pane" style="float: right; font-size: 1rem; font-weight: 100;">back to top</a>
-Explanation and use description.
+#### focus
+
+Focuses the pane button.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
-  <auro-pane date="2020-09-20"></auro-pane>
-  <auro-pane date="2020-09-21" selected></auro-pane>
-  <auro-pane date="2020-09-22" disabled></auro-pane>
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/focus.html) -->
+  <!-- The below content is automatically added from ./../../apiExamples/focus.html -->
+  <auro-button id="focusExampleBtn">Focus Pane</auro-button>
+  <br />
+  <auro-pane id="focusExample" date="2020-09-20"></auro-pane>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/basic.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/focus.html) -->
+<!-- The below code snippet is automatically added from ./../../apiExamples/focus.html -->
 
 ```html
-<auro-pane date="2020-09-20"></auro-pane>
-<auro-pane date="2020-09-21" selected></auro-pane>
-<auro-pane date="2020-09-22" disabled></auro-pane>
+<auro-button id="focusExampleBtn">Focus Pane</auro-button>
+<br />
+<auro-pane id="focusExample" date="2020-09-20"></auro-pane>
+```
+<!-- AURO-GENERATED-CONTENT:END -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/focus.js) -->
+<!-- The below code snippet is automatically added from ./../../apiExamples/focus.js -->
+
+```js
+export function focusExample() {
+  const focusExample = document.querySelector('#focusExample');
+  const focusExampleBtn = document.querySelector('#focusExampleBtn');
+
+  focusExampleBtn.addEventListener('click', () => {
+    focusExample.focus();
+  });
+}
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
