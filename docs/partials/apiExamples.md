@@ -139,18 +139,21 @@ Sets tabindex on the inner button.
 
 ### Method Examples
 
-#### `methodName`
+#### focus
 
-Explanation and use description.
+Focuses the pane button.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/focus.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/basic.html) -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/focus.html) -->
+<!-- AURO-GENERATED-CONTENT:END -->
+
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/focus.js) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>
