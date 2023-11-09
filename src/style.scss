@@ -5,12 +5,15 @@
 
 /* stylelint-disable declaration-empty-line-before, max-nesting-depth, selector-max-class, selector-class-pattern, selector-max-combinators, selector-max-compound-selectors, no-descending-specificity, scss/double-slash-comment-empty-line-before, order/properties-order */
 
-@import './../node_modules/@alaskaairux/design-tokens/dist/tokens/SCSSVariables';
-@import './../node_modules/@alaskaairux/design-tokens/dist/tokens/SassCustomProperties';
+@import './../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables';
+@import './../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SassCustomProperties';
 
-@import './../node_modules/@aurodesignsystem/webcorestylesheets/dist/breakpoints';
-@import './../node_modules/@aurodesignsystem/webcorestylesheets/dist/core';
-@import './../node_modules/@aurodesignsystem/webcorestylesheets/dist/animation';
+// Support for fallback values
+@import './../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables.scss';
+
+@import './../node_modules/@aurodesignsystem/webcorestylesheets/src/breakpoints';
+@import './../node_modules/@aurodesignsystem/webcorestylesheets/src/core';
+@import './../node_modules/@aurodesignsystem/webcorestylesheets/src/animation';
 
 :host {
   display: inline-block;
@@ -32,15 +35,15 @@
     padding-top: 1.375rem;
 
     border: 2px solid;
-    border-color: var(--auro-color-base-gray-200);
+    border-color: var(--ds-color-brand-gray-200, $ds-color-brand-gray-200);
     border-radius: 2.5rem;
 
-    background: var(--auro-color-base-gray-100);
+    background: var(--ds-color-brand-gray-100, $ds-color-brand-gray-100);
 
     cursor: pointer;
 
-    font-family: var(--auro-font-family-default);
-    font-weight: var(--auro-text-body-default-weight);
+    font-family: var(--ds-font-family-default, $ds-font-family-default);
+    font-weight: var(--ds-text-body-default-weight, $ds-text-body-default-weight);
 
     @supports (display: grid) {
       display: grid;
@@ -51,20 +54,20 @@
 
     @media (hover: hover) {
       &:hover {
-        border-color: var(--auro-color-border-active-on-light);
+        border-color: var(--ds-color-border-active-default, $ds-color-border-active-default);
 
-        background: var(--auro-color-border-active-on-light);
+        background: var(--ds-color-border-active-default, $ds-color-border-active-default);
 
         .child {
-          color: var(--auro-color-base-white);
+          color: var(--ds-color-base-white, $ds-color-base-white);
         }
       }
     }
 
     &:active {
-      border-color: var(--auro-color-ui-active-on-light);
+      border-color: var(--ds-color-ui-active-default, $ds-color-ui-active-default);
 
-      background: var(--auro-color-ui-active-on-light);
+      background: var(--ds-color-ui-active-default, $ds-color-ui-active-default);
 
       transform: scale(.95);
     }
@@ -72,7 +75,7 @@
     &:not([disabled]) {
       &.isSelected {
         .child {
-          color: var(--auro-color-base-white);
+          color: var(--ds-color-base-white, $ds-color-base-white);
         }
       }
     }
@@ -87,7 +90,7 @@
       transform: unset;
 
       .child {
-        color: var(--auro-color-text-secondary-on-light);
+        color: var(--ds-color-text-secondary-default, $ds-color-text-secondary-default);
 
         pointer-events: none;
       }
@@ -95,59 +98,59 @@
   }
 
   .isSelected {
-    border-color: var(--auro-color-ui-active-on-light);
+    border-color: var(--ds-color-ui-active-default, $ds-color-ui-active-default);
 
-    background: var(--auro-color-ui-active-on-light);
+    background: var(--ds-color-ui-active-default, $ds-color-ui-active-default);
   }
 
   .pane-priced {
     min-width: 4.5rem;
     height: 6rem;
 
-    padding-top: var(--auro-size-md);
+    padding-top: var(--ds-size-200, $ds-size-200);
 
     border-radius: 2.75rem;
 
     grid-template-rows: 1.375rem 1.25rem 1.25rem;
 
     .dayOfTheWeek {
-      color: var(--auro-color-text-primary-on-light);
+      color: var(--ds-color-text-primary-default, $ds-color-text-primary-default);
 
-      font-size: var(--auro-text-body-size-default);
-      line-height: var(--auro-text-body-height-default);
+      font-size: var(--ds-text-body-size-default, $ds-text-body-size-default);
+      line-height: var(--ds-text-body-height-default, $ds-text-body-height-default);
     }
   }
 
   .dayOfTheWeek {
-    color: var(--auro-color-ui-default-on-light);
+    color: var(--ds-color-ui-default-default, $ds-color-ui-default-default);
 
-    font-size: var(--auro-text-body-size-lg);
-    line-height: var(--auro-text-body-height-lg);
+    font-size: var(--ds-text-body-size-lg, $ds-text-body-size-lg);
+    line-height: var(--ds-text-body-height-lg, $ds-text-body-height-lg);
   }
 
   .date {
-    color: var(--auro-color-text-secondary-on-light);
+    color: var(--ds-color-text-secondary-default, $ds-color-text-secondary-default);
 
-    font-size: var(--auro-text-body-size-sm);
-    line-height: var(--auro-text-body-height-sm);
+    font-size: var(--ds-text-body-size-sm, $ds-text-body-size-sm);
+    line-height: var(--ds-text-body-height-sm, $ds-text-body-height-sm);
   }
 
   .price {
-    margin-top: var(--auro-size-xxs);
+    margin-top: var(--ds-size-50, $ds-size-50);
 
-    color: var(--auro-color-ui-default-on-light);
+    color: var(--ds-color-ui-default-default, $ds-color-ui-default-default);
 
-    font-size: var(--auro-text-body-size-sm);
-    line-height: var(--auro-text-body-height-sm);
+    font-size: var(--ds-text-body-size-sm, $ds-text-body-size-sm);
+    line-height: var(--ds-text-body-height-sm, $ds-text-body-height-sm);
   }
 
   .price--long {
-    font-size: var(--auro-text-body-size-xs);
-    line-height: var(--auro-text-body-height-xs);
+    font-size: var(--ds-text-body-size-xs, $ds-text-body-size-xs);
+    line-height: var(--ds-text-body-height-xs, $ds-text-body-height-xs);
   }
 
   .price--empty {
-    color: var(--auro-color-text-secondary-on-light);
+    color: var(--ds-color-text-secondary-default, $ds-color-text-secondary-default);
   }
 }
 
@@ -161,7 +164,7 @@
 
       padding-top: 1.625rem;
 
-      font-size: var(--auro-text-body-size-default);
+      font-size: var(--ds-text-body-size-default, $ds-text-body-size-default);
 
       grid-template-rows: 1.75rem 1.5rem;
     }
@@ -172,15 +175,15 @@
       min-width: 5.5rem;
       height: 7.5rem;
 
-      padding-top: var(--auro-size-lg);
+      padding-top: var(--ds-size-300, $ds-size-300);
 
       grid-template-rows: 1.5rem 1.25rem 1.625rem;
     }
 
     .dayOfTheWeek {
       @include auro_breakpoint--sm {
-        font-size: var(--auro-text-body-size-lg);
-        line-height: var(--auro-text-body-height-lg);
+        font-size: var(--ds-text-body-size-lg, $ds-text-body-size-lg);
+        line-height: var(--ds-text-body-height-lg, $ds-text-body-height-lg);
       }
     }
   }
@@ -190,28 +193,28 @@
       font-size: 1.25rem;
       line-height: 1.75rem;
 
-      letter-spacing: var(--auro-text-heading-default-spacing);
+      letter-spacing: var(--ds-text-heading-default-spacing, $ds-text-heading-default-spacing);
     }
   }
 
   .date {
     @include auro_breakpoint--sm {
-      font-size: var(--auro-text-body-size-default);
-      line-height: var(--auro-text-body-height-default);
+      font-size: var(--ds-text-body-size-default, $ds-text-body-size-default);
+      line-height: var(--ds-text-body-height-default, $ds-text-body-height-default);
     }
   }
 
   .price {
     @include auro_breakpoint--sm {
-      font-size: var(--auro-text-body-size-lg);
-      line-height: var(--auro-text-body-height-lg);
+      font-size: var(--ds-text-body-size-lg, $ds-text-body-size-lg);
+      line-height: var(--ds-text-body-height-lg, $ds-text-body-height-lg);
     }
   }
 
   .price--long {
     @include auro_breakpoint--sm {
-      font-size: var(--auro-text-body-size-sm);
-      line-height: var(--auro-text-body-height-default);
+      font-size: var(--ds-text-body-size-sm, $ds-text-body-size-sm);
+      line-height: var(--ds-text-body-height-default, $ds-text-body-height-default);
     }
   }
 }
@@ -222,7 +225,7 @@
 
 :host(:focus) {
   .pane {
-    border-color: var(--auro-color-border-active-on-light);
+    border-color: var(--ds-color-border-active-default, $ds-color-border-active-default);
   }
 
   .isSelected {
@@ -233,5 +236,5 @@
 }
 
 .price--empty {
-  color: var(--auro-color-text-secondary-on-light);
+  color: var(--ds-color-text-secondary-default, $ds-color-text-secondary-default);
 }
