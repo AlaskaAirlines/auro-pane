@@ -33,14 +33,12 @@ The auro-pane component displays shoulder date information.
 
 ### Basic
 
-<div class="twoColDemoRow">
-  <div>
-    <div class="exampleWrapper">
-      <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basicSingle.html) -->
-      <!-- The below content is automatically added from ./../../apiExamples/basicSingle.html -->
-      <auro-pane date="2020-09-20"></auro-pane>
-      <!-- AURO-GENERATED-CONTENT:END -->
-    </div>
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basicSingle.html) -->
+  <!-- The below content is automatically added from ./../../apiExamples/basicSingle.html -->
+  <auro-pane date="2020-09-20"></auro-pane>
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/basicSingle.html) -->
