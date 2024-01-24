@@ -41,7 +41,7 @@ The auro-pane component displays shoulder date information.
       <auro-pane date="2020-09-20"></auro-pane>
       <!-- AURO-GENERATED-CONTENT:END -->
     </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/basicSingle.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/basicSingle.html -->
@@ -64,7 +64,7 @@ Use the `sm` attribute to render a reduced size version of `auro-pane`.
   <auro-pane date="2020-09-20" price="$500" sm></auro-pane>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/smallSingle.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/smallSingle.html -->
@@ -87,7 +87,7 @@ Sets aria-hidden on the inner button.
   <auro-pane ariahidden></auro-pane>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/ariaHidden.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/ariaHidden.html -->
@@ -109,7 +109,7 @@ Sets date for parsing and display. Format should be yyyy-mm-dd. If no date is pr
   <auro-pane></auro-pane>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/date.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/date.html -->
@@ -131,7 +131,7 @@ Disables the pane.
   <auro-pane date="2020-09-20" price="$500" disabled></auro-pane>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/disabled.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/disabled.html -->
@@ -152,7 +152,7 @@ Sets price for display. Displayed as is.
   <auro-pane price="$500"></auro-pane>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/price.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/price.html -->
@@ -173,7 +173,7 @@ Sets pane state to selected.
   <auro-pane selected></auro-pane>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/selected.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/selected.html -->
@@ -194,7 +194,7 @@ Sets tabindex on the inner button.
   <auro-pane tabindex="0"></auro-pane>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/tabindex.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/tabindex.html -->
@@ -220,7 +220,7 @@ Focuses the pane button.
   <auro-pane id="focusExample" date="2020-09-20"></auro-pane>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/focus.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/focus.html -->

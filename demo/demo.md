@@ -33,7 +33,7 @@ The `<auro-pane>` element should be used in situations where users may:
   <auro-pane date="2020-09-22" disabled></auro-pane>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/basic.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
@@ -58,7 +58,7 @@ Default using both `date` and `price` attributes.
   <auro-pane date="2020-09-22" price="$480" disabled="true"></auro-pane>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/dateAndPrice.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/dateAndPrice.html -->
@@ -83,7 +83,7 @@ Use the `sm` attribute to render the small UI that is consistent with mobile and
   <auro-pane date="2020-09-22" price="$480" disabled="true" sm></auro-pane>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/small.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/small.html -->
@@ -117,7 +117,7 @@ This will create a new custom element that you can use in your HTML that will fu
   <custom-pane date="2020-09-22" disabled></custom-pane>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/customRegistration.html) -->
 <!-- The below code snippet is automatically added from ./../../apiExamples/customRegistration.html -->

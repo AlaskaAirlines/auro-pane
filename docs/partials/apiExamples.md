@@ -11,7 +11,7 @@
       <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basicSingle.html) -->
       <!-- AURO-GENERATED-CONTENT:END -->
     </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/basicSingle.html) -->
@@ -29,7 +29,7 @@ Use the `sm` attribute to render a reduced size version of `auro-pane`.
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/smallSingle.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/smallSingle.html) -->
@@ -47,7 +47,7 @@ Sets aria-hidden on the inner button.
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/ariaHidden.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/ariaHidden.html) -->
@@ -63,7 +63,7 @@ Sets date for parsing and display. Format should be yyyy-mm-dd. If no date is pr
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/date.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/date.html) -->
@@ -79,7 +79,7 @@ Disables the pane.
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/disabled.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/disabled.html) -->
@@ -95,7 +95,7 @@ Sets price for display. Displayed as is.
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/price.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/price.html) -->
@@ -111,7 +111,7 @@ Sets pane state to selected.
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/selected.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/selected.html) -->
@@ -127,7 +127,7 @@ Sets tabindex on the inner button.
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/tabindex.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/tabindex.html) -->
@@ -147,7 +147,7 @@ Focuses the pane button.
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/focus.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/focus.html) -->
