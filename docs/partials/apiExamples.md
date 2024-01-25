@@ -20,7 +20,7 @@
 
 ### Attribute Examples
 
-#### sm
+#### <a name="sm"></a>`sm`
 
 Use the `sm` attribute to render a reduced size version of `auro-pane`.
 
@@ -38,7 +38,7 @@ Use the `sm` attribute to render a reduced size version of `auro-pane`.
 
 ### Property Examples
 
-#### ariaHidden
+#### <a name="ariaHidden"></a>`ariaHidden`
 
 Sets aria-hidden on the inner button.
 
@@ -54,7 +54,7 @@ Sets aria-hidden on the inner button.
 
 </auro-accordion>
 
-#### date
+#### <a name="date"></a>`date`
 
 Sets date for parsing and display. Format should be yyyy-mm-dd. If no date is provided, the current date will be rendered.
 
@@ -70,7 +70,7 @@ Sets date for parsing and display. Format should be yyyy-mm-dd. If no date is pr
 
 </auro-accordion>
 
-#### disabled
+#### <a name="disabled"></a>`disabled`
 
 Disables the pane.
 
@@ -86,7 +86,7 @@ Disables the pane.
 
 </auro-accordion>
 
-#### price
+#### <a name="price"></a>`price`
 
 Sets price for display. Displayed as is.
 
@@ -102,7 +102,7 @@ Sets price for display. Displayed as is.
 
 </auro-accordion>
 
-#### selected
+#### <a name="selected"></a>`selected`
 
 Sets pane state to selected.
 
@@ -118,7 +118,7 @@ Sets pane state to selected.
 
 </auro-accordion>
 
-#### tabindex
+#### <a name="tabindex"></a>`tabindex`
 
 Sets tabindex on the inner button.
 
@@ -138,7 +138,7 @@ Sets tabindex on the inner button.
 
 ### Method Examples
 
-#### focus
+#### <a name="focus"></a>`focus`
 
 Focuses the pane button.
 
