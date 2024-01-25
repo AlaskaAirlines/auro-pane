@@ -52,7 +52,7 @@ The auro-pane component displays shoulder date information.
 
 ### Attribute Examples
 
-#### sm
+#### <a name="sm"></a>`sm`
 
 Use the `sm` attribute to render a reduced size version of `auro-pane`.
 
@@ -75,7 +75,7 @@ Use the `sm` attribute to render a reduced size version of `auro-pane`.
 
 ### Property Examples
 
-#### ariaHidden
+#### <a name="ariaHidden"></a>`ariaHidden`
 
 Sets aria-hidden on the inner button.
 
@@ -96,7 +96,7 @@ Sets aria-hidden on the inner button.
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
-#### date
+#### <a name="date"></a>`date`
 
 Sets date for parsing and display. Format should be yyyy-mm-dd. If no date is provided, the current date will be rendered.
 
@@ -119,7 +119,7 @@ Sets date for parsing and display. Format should be yyyy-mm-dd. If no date is pr
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
-#### disabled
+#### <a name="disabled"></a>`disabled`
 
 Disables the pane.
 
@@ -140,7 +140,7 @@ Disables the pane.
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
-#### price
+#### <a name="price"></a>`price`
 
 Sets price for display. Displayed as is.
 
@@ -161,7 +161,7 @@ Sets price for display. Displayed as is.
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
-#### selected
+#### <a name="selected"></a>`selected`
 
 Sets pane state to selected.
 
@@ -182,7 +182,7 @@ Sets pane state to selected.
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
-#### tabindex
+#### <a name="tabindex"></a>`tabindex`
 
 Sets tabindex on the inner button.
 
@@ -206,7 +206,7 @@ Sets tabindex on the inner button.
 
 ### Method Examples
 
-#### focus
+#### <a name="focus"></a>`focus`
 
 Focuses the pane button.
 
