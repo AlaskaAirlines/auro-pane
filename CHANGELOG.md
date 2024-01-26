@@ -1,5 +1,20 @@
 # Semantic Release Automated Changelog
 
+# [2.1.0](https://github.com/AlaskaAirlines/auro-pane/compare/v2.0.1...v2.1.0) (2024-01-26)
+
+
+### Features
+
+* **ssr:** add support for SSR projects [#51](https://github.com/AlaskaAirlines/auro-pane/issues/51) ([ea83d4b](https://github.com/AlaskaAirlines/auro-pane/commit/ea83d4bc21b2df9307d45f4dae9daf8289f1368b))
+
+
+### Performance Improvements
+
+* **accordion:** use new version of accordion ([da47501](https://github.com/AlaskaAirlines/auro-pane/commit/da47501cd3b3f7a37830a0a31754a21a5ef406a5))
+* **demo:** clean up demo imports and documentation ([6f2808c](https://github.com/AlaskaAirlines/auro-pane/commit/6f2808cf0b409c4d5a46f51ca026451481f9b092))
+* **deps:** update dependencies ([8121257](https://github.com/AlaskaAirlines/auro-pane/commit/81212570ba84b6c460b4d968a3551d9488fab5e0))
+* update to support node policy ([4b89a34](https://github.com/AlaskaAirlines/auro-pane/commit/4b89a34c839e6b3a1ba4f0250fde2c6981a24175))
+
 ## [2.0.1](https://github.com/AlaskaAirlines/auro-pane/compare/v2.0.0...v2.0.1) (2023-11-16)
 
 
