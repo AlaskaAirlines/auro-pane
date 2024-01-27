@@ -1,4 +1,4 @@
-import { AuroPane } from './src/auro-pane';
+import { AuroPane } from './src/auro-pane.js';
 
 /**
  * Register Custom Element.
