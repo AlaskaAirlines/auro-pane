@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.1.1](https://github.com/AlaskaAirlines/auro-pane/compare/v2.1.0...v2.1.1) (2024-01-27)
+
+
+### Performance Improvements
+
+* update index per SSR support ([f5637fd](https://github.com/AlaskaAirlines/auro-pane/commit/f5637fdab3e3ea18a6d8802458b5ade8cd6f2428))
+
 # [2.1.0](https://github.com/AlaskaAirlines/auro-pane/compare/v2.0.1...v2.1.0) (2024-01-26)
 
 
