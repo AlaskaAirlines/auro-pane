@@ -1,5 +1,13 @@
 # Semantic Release Automated Changelog
 
+## [2.1.2](https://github.com/AlaskaAirlines/auro-pane/compare/v2.1.1...v2.1.2) (2024-01-31)
+
+
+### Performance Improvements
+
+* alaskaairux ref updates ([426292f](https://github.com/AlaskaAirlines/auro-pane/commit/426292fec936d87e8a9b81f08063534483d77e64))
+* **cdn:** update links from unpkg to jsdelivr ([3dcaa38](https://github.com/AlaskaAirlines/auro-pane/commit/3dcaa38603a1296dba231968b7097b6903dbac5a))
+
 ## [2.1.1](https://github.com/AlaskaAirlines/auro-pane/compare/v2.1.0...v2.1.1) (2024-01-27)
 
 
