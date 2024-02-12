@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.1.5](https://github.com/AlaskaAirlines/auro-pane/compare/v2.1.4...v2.1.5) (2024-02-12)
+
+
+### Bug Fixes
+
+* update direct ref to dayjs file ([e64cb65](https://github.com/AlaskaAirlines/auro-pane/commit/e64cb65e09d954f18e77e2cb93f01800a0c1f04b))
+
 ## [2.1.4](https://github.com/AlaskaAirlines/auro-pane/compare/v2.1.3...v2.1.4) (2024-02-12)
 
 
