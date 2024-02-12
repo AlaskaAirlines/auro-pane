@@ -9,7 +9,7 @@ import { LitElement, html } from "lit";
 import { classMap } from 'lit/directives/class-map.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
 
-import dayjs from 'dayjs/esm';
+import dayjs from 'dayjs/esm/index.js';
 
 // Import touch detection lib
 import styleCss from './style-css.js';
