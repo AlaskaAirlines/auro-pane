@@ -48,9 +48,9 @@
       import { registerComponent } from "../index.js"
       registerComponent('custom-pane');
     </script>
-    <script src="./index.min.js"></script>
-    <script>
-      initPaneIndexExamples();
+    <script type="module">
+      import { initExamples } from "./index.min.js"
+      initExamples();
     </script>
   </body>
 </html>
