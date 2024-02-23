@@ -1,15 +1,17 @@
 import { focusExample } from './../apiExamples/focus.js';
 
-export function initPaneApiExamples(initCount) {
+/* eslint-disable jsdoc/require-jsdoc, no-magic-numbers, no-param-reassign */
+
+export function initExamples(initCount) {
   initCount = initCount || 0;
 
   try {
     focusExample();
-  } catch {
+  } catch (err) {
     if (initCount <= 20) {
       // setTimeout handles issue where content is sometimes loaded after the functions get called
       setTimeout(() => {
-        initPaneApiExamples(initCount + 1);
+        initExamples(initCount + 1);
       }, 100);
     }
   }

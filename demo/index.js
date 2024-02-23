@@ -1,15 +1,17 @@
 // import { example } from '../apiExamples/example';
 
-export function initPaneIndexExamples(initCount) {
+/* eslint-disable jsdoc/require-jsdoc, no-magic-numbers, no-param-reassign */
+
+export function initExamples(initCount) {
   initCount = initCount || 0;
 
   try {
     // example();
-  } catch {
+  } catch (err) {
     if (initCount <= 20) {
       // setTimeout handles issue where content is sometimes loaded after the functions get called
       setTimeout(() => {
-        initPaneIndexExamples(initCount + 1);
+        initExamples(initCount + 1);
       }, 100);
     }
   }
