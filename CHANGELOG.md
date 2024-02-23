@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.1.6](https://github.com/AlaskaAirlines/auro-pane/compare/v2.1.5...v2.1.6) (2024-02-23)
+
+
+### Performance Improvements
+
+* **docs:** update examples to use latest JS system ([c21ffc6](https://github.com/AlaskaAirlines/auro-pane/commit/c21ffc6da76123b5bc11dde7b486e0adc49fa917))
+
 ## [2.1.5](https://github.com/AlaskaAirlines/auro-pane/compare/v2.1.4...v2.1.5) (2024-02-12)
 
 
