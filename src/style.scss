@@ -22,16 +22,16 @@
     // also Safari, which does not support display: grid on buttons
 
     display: flex;
-    min-width: 4.25rem;
-    height: 5.625rem;
+    min-width: calc(var(--ds-size-800, $ds-size-800) + var(--ds-size-50, $ds-size-50));
+    height: calc(var(--ds-size-1000, $ds-size-1000) + var(--ds-size-25, $ds-size-25));
 
     align-items: center;
     flex-direction: column;
 
-    padding-top: 1.375rem;
+    padding-top: calc(var(--ds-size-200, $ds-size-200) + var(--ds-size-75, $ds-size-75));
 
-    border: 2px solid;
-    border-radius: 2.5rem;
+    border: var(--ds-size-25, $ds-size-25) solid;
+    border-radius: var(--ds-size-500, $ds-size-500);
 
     cursor: pointer;
 
@@ -42,7 +42,7 @@
       display: grid;
 
       grid-template-columns: auto;
-      grid-template-rows: 1.625rem 1.25rem;
+      grid-template-rows: calc(var(--ds-size-300, $ds-size-300) + var(--ds-size-25, $ds-size-25)) calc(var(--ds-size-200, $ds-size-200) + var(--ds-size-50, $ds-size-50));
     }
 
     &:active {
@@ -61,14 +61,14 @@
   }
 
   .pane-priced {
-    min-width: 4.5rem;
-    height: 6rem;
+    min-width: var(--ds-size-900, $ds-size-900);
+    height: calc(var(--ds-size-1000, $ds-size-1000) + var(--ds-size-200, $ds-size-200));
 
     padding-top: var(--ds-size-200, $ds-size-200);
 
-    border-radius: 2.75rem;
+    border-radius: calc(var(--ds-size-500, $ds-size-500) + var(--ds-size-25, $ds-size-25));
 
-    grid-template-rows: 1.375rem 1.25rem 1.25rem;
+    grid-template-rows: calc(var(--ds-size-200, $ds-size-200)) calc(var(--ds-size-200, $ds-size-200) + var(--ds-size-50, $ds-size-50)) calc(var(--ds-size-200, $ds-size-200) + var(--ds-size-50, $ds-size-50));
 
     .dayOfTheWeek {
       font-size: var(--ds-text-body-size-default, $ds-text-body-size-default);
@@ -104,25 +104,25 @@
 
   .pane {
     @include auro_breakpoint--sm {
-      min-width: 5rem;
-      height: 6.5rem;
+      min-width: var(--ds-size-1000, $ds-size-1000);
+      height: calc(var(--ds-size-1000, $ds-size-1000) + var(--ds-size-300, $ds-size-300));
 
-      padding-top: 1.625rem;
+      padding-top: calc(var(--ds-size-300, $ds-size-300) + var(--ds-size-25, $ds-size-25));
 
       font-size: var(--ds-text-body-size-default, $ds-text-body-size-default);
 
-      grid-template-rows: 1.75rem 1.5rem;
+      grid-template-rows: calc(var(--ds-size-300, $ds-size-300) + var(--ds-size-50, $ds-size-50)) var(--ds-size-300, $ds-size-300);
     }
   }
 
   .pane-priced {
     @include auro_breakpoint--sm {
-      min-width: 5.5rem;
-      height: 7.5rem;
+      min-width: calc(var(--ds-size-1000, $ds-size-1000) + var(--ds-size-100, $ds-size-100));
+      height: calc(var(--ds-size-1000, $ds-size-1000) + var(--ds-size-500, $ds-size-500));
 
       padding-top: var(--ds-size-300, $ds-size-300);
 
-      grid-template-rows: 1.5rem 1.25rem 1.625rem;
+      grid-template-rows: var(--ds-size-300, $ds-size-300) calc(var(--ds-size-200, $ds-size-200) + var(--ds-size-50, $ds-size-50)) calc(var(--ds-size-300, $ds-size-300) + var(--ds-size-25, $ds-size-25));
     }
 
     .dayOfTheWeek {
@@ -135,8 +135,8 @@
 
   .dayOfTheWeek {
     @include auro_breakpoint--sm {
-      font-size: 1.25rem;
-      line-height: 1.75rem;
+      font-size: calc(var(--ds-size-200, $ds-size-200) + var(--ds-size-50, $ds-size-50));
+      line-height: calc(var(--ds-size-300, $ds-size-300) + var(--ds-size-25, $ds-size-25));
 
       letter-spacing: var(--ds-text-heading-default-spacing, $ds-text-heading-default-spacing);
     }
