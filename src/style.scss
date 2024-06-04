@@ -31,10 +31,7 @@
     padding-top: 1.375rem;
 
     border: 2px solid;
-    border-color: var(--ds-color-brand-gray-200, $ds-color-brand-gray-200);
     border-radius: 2.5rem;
-
-    background: var(--ds-color-brand-gray-100, $ds-color-brand-gray-100);
 
     cursor: pointer;
 
@@ -48,55 +45,19 @@
       grid-template-rows: 1.625rem 1.25rem;
     }
 
-    @media (hover: hover) {
-      &:hover {
-        border-color: var(--ds-color-border-active-default, $ds-color-border-active-default);
-
-        background: var(--ds-color-border-active-default, $ds-color-border-active-default);
-
-        .child {
-          color: var(--ds-color-base-white, $ds-color-base-white);
-        }
-      }
-    }
-
     &:active {
-      border-color: var(--ds-color-ui-active-default, $ds-color-ui-active-default);
-
-      background: var(--ds-color-ui-active-default, $ds-color-ui-active-default);
-
       transform: scale(.95);
     }
 
-    &:not([disabled]) {
-      &.isSelected {
-        .child {
-          color: var(--ds-color-base-white, $ds-color-base-white);
-        }
-      }
-    }
-
     &:disabled {
-      border-color: transparent;
-
-      background: none;
-
       cursor: not-allowed;
 
       transform: unset;
 
       .child {
-        color: var(--ds-color-text-secondary-default, $ds-color-text-secondary-default);
-
         pointer-events: none;
       }
     }
-  }
-
-  .isSelected {
-    border-color: var(--ds-color-ui-active-default, $ds-color-ui-active-default);
-
-    background: var(--ds-color-ui-active-default, $ds-color-ui-active-default);
   }
 
   .pane-priced {
@@ -110,31 +71,23 @@
     grid-template-rows: 1.375rem 1.25rem 1.25rem;
 
     .dayOfTheWeek {
-      color: var(--ds-color-text-primary-default, $ds-color-text-primary-default);
-
       font-size: var(--ds-text-body-size-default, $ds-text-body-size-default);
       line-height: var(--ds-text-body-height-default, $ds-text-body-height-default);
     }
   }
 
   .dayOfTheWeek {
-    color: var(--ds-color-ui-default-default, $ds-color-ui-default-default);
-
     font-size: var(--ds-text-body-size-lg, $ds-text-body-size-lg);
     line-height: var(--ds-text-body-height-lg, $ds-text-body-height-lg);
   }
 
   .date {
-    color: var(--ds-color-text-secondary-default, $ds-color-text-secondary-default);
-
     font-size: var(--ds-text-body-size-sm, $ds-text-body-size-sm);
     line-height: var(--ds-text-body-height-sm, $ds-text-body-height-sm);
   }
 
   .price {
     margin-top: var(--ds-size-50, $ds-size-50);
-
-    color: var(--ds-color-ui-default-default, $ds-color-ui-default-default);
 
     font-size: var(--ds-text-body-size-sm, $ds-text-body-size-sm);
     line-height: var(--ds-text-body-height-sm, $ds-text-body-height-sm);
@@ -143,10 +96,6 @@
   .price--long {
     font-size: var(--ds-text-body-size-xs, $ds-text-body-size-xs);
     line-height: var(--ds-text-body-height-xs, $ds-text-body-height-xs);
-  }
-
-  .price--empty {
-    color: var(--ds-color-text-secondary-default, $ds-color-text-secondary-default);
   }
 }
 
@@ -217,20 +166,4 @@
 
 :host([sm]) {
   @include sm;
-}
-
-:host(:focus) {
-  .pane {
-    border-color: var(--ds-color-border-active-default, $ds-color-border-active-default);
-  }
-
-  .isSelected {
-    // hardcode the token to prevent ShadyCSS from breaking IE11
-    // see https://auro.alaskaair.com/support/shadycss
-    box-shadow: inset 0 0 0 3px #fff;
-  }
-}
-
-.price--empty {
-  color: var(--ds-color-text-secondary-default, $ds-color-text-secondary-default);
 }
