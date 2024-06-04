@@ -1,0 +1,84 @@
+// Copyright (c) 2020 Alaska Airlines. All right reserved. Licensed under the Apache-2.0 license
+// See LICENSE in the project root for license information.
+
+// ---------------------------------------------------------------------
+
+@import './../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables';
+
+/* stylelint-disable declaration-empty-line-before, max-nesting-depth, selector-max-class, no-descending-specificity, selector-class-pattern */
+
+@mixin sm {
+  .pane {
+    border-color: var(--ds-auro-pane-border-color);
+    background-color: var(--ds-auro-pane-container-color);
+
+    @media (hover: hover) {
+      &:hover {
+        --ds-auro-pane-border-color: var(--ds-color-border-ui-hover-default, #{$ds-color-border-ui-hover-default});
+        --ds-auro-pane-container-color: var(--ds-color-container-ui-primary-hover-default, #{$ds-color-container-ui-primary-hover-default});
+        --ds-auro-pane-day-of-week-text-color: var(--ds-color-text-primary-inverse, #{$ds-color-text-primary-inverse});
+        --ds-auro-pane-date-text-color: var(--ds-color-text-primary-inverse, #{$ds-color-text-primary-inverse});
+      }
+    }
+
+    &:active {
+      --ds-auro-pane-border-color: var(--ds-color-border-ui-active-default, #{$ds-color-border-ui-active-default});
+      --ds-auro-pane-container-color: var(--ds-color-container-ui-primary-active-default, #{$ds-color-container-ui-primary-active-default});
+    }
+
+    &:disabled {
+      --ds-auro-pane-border-color: transparent;
+      --ds-auro-pane-container-color: none;
+      --ds-auro-pane-day-of-week-text-color: var(--ds-color-text-ui-disabled-default, #{$ds-color-text-ui-disabled-default});
+      --ds-auro-pane-date-text-color: var(--ds-color-text-ui-disabled-default, #{$ds-color-text-ui-disabled-default});
+      --ds-auro-pane-price-text-color: var(--ds-color-text-ui-disabled-default, #{$ds-color-text-ui-disabled-default});
+    }
+  }
+
+  .isSelected {
+    --ds-auro-pane-border-color: var(--ds-color-border-ui-active-default, #{$ds-color-border-ui-active-default});
+    --ds-auro-pane-container-color: var(--ds-color-container-ui-primary-active-default, #{$ds-color-container-ui-primary-active-default});
+    --ds-auro-pane-day-of-week-text-color: var(--ds-color-text-primary-inverse, #{$ds-color-text-primary-inverse});
+    --ds-auro-pane-date-text-color: var(--ds-color-text-primary-inverse, #{$ds-color-text-primary-inverse});
+    --ds-auro-pane-price-text-color: var(--ds-color-text-primary-inverse, #{$ds-color-text-primary-inverse});
+  }
+
+  .dayOfTheWeek {
+    color: var(--ds-auro-pane-day-of-week-text-color);
+  }
+
+  .date {
+    color: var(--ds-auro-pane-date-text-color);
+  }
+
+  .price {
+    color: var(--ds-auro-pane-price-text-color);
+  }
+
+  .price--empty {
+    color: var(--ds-auro-pane-price-empty-text-color);
+  }
+}
+
+:host(:not([sm])) {
+  @include sm;
+}
+
+:host([sm]) {
+  @include sm;
+}
+
+:host(:focus) {
+  .pane {
+    border-color: var(--ds-color-border-active-default, $ds-color-border-active-default);
+  }
+
+  .isSelected {
+    --ds-auro-pane-container-color: var(--ds-color-container-ui-primary-focus-default, #{$ds-color-container-ui-primary-focus-default});
+    box-shadow: inset 0 0 0 3px var(--ds-auro-pane-boxshadow-color);
+  }
+}
+
+.price--empty {
+  color: var(--ds-auro-pane-price-empty-text-color);
+}

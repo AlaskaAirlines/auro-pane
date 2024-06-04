@@ -244,3 +244,25 @@ export function focusExample() {
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
+
+### Theme Support
+
+The component may be restyled using the following code sample and changing the values of the following token(s).
+
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../src/tokens.scss) -->
+<!-- The below code snippet is automatically added from ./../../src/tokens.scss -->
+
+```scss
+@import './../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables';
+
+:host {
+  --ds-auro-pane-border-color: var(--ds-color-border-tertiary-default, #{$ds-color-border-tertiary-default});
+  --ds-auro-pane-boxshadow-color: var(--ds-color-border-tertiary-default, #{$ds-color-border-tertiary-default});
+  --ds-auro-pane-container-color: var(--ds-color-container-secondary-default, #{$ds-color-container-secondary-default});
+  --ds-auro-pane-day-of-week-text-color: var(--ds-color-text-primary-default, #{$ds-color-text-primary-default});
+  --ds-auro-pane-date-text-color: var(--ds-color-text-secondary-default, #{$ds-color-text-secondary-default});
+  --ds-auro-pane-price-text-color: var(--ds-color-text-info-default, #{$ds-color-text-info-default});
+  --ds-auro-pane-price-empty-text-color: var(--ds-color-text-secondary-default, #{$ds-color-text-secondary-default});
+}
+```
+<!-- AURO-GENERATED-CONTENT:END -->
