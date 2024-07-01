@@ -11,8 +11,9 @@ import { ifDefined } from 'lit/directives/if-defined.js';
 
 import dayjs from 'dayjs/esm/index.js';
 
-// Import touch detection lib
 import styleCss from './style-css.js';
+import colorCss from "./color-css.js";
+import tokensCss from "./tokens-css.js";
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
@@ -50,7 +51,11 @@ export class AuroPane extends LitElement {
   }
 
   static get styles() {
-    return [styleCss];
+    return [
+      styleCss,
+      colorCss,
+      tokensCss
+    ];
   }
 
   /**
