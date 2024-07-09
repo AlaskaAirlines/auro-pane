@@ -1,5 +1,17 @@
 # Semantic Release Automated Changelog
 
+# [2.2.0-beta.1](https://github.com/AlaskaAirlines/auro-pane/compare/v2.1.6...v2.2.0-beta.1) (2024-07-09)
+
+
+### Features
+
+* refactor color token structure with tier 3 tokens [#59](https://github.com/AlaskaAirlines/auro-pane/issues/59) ([debc289](https://github.com/AlaskaAirlines/auro-pane/commit/debc289330787c327159c8f2e429e5c17c8c2365))
+
+
+### Performance Improvements
+
+* replace all hardcoded sizes with design tokens ([f39ef7c](https://github.com/AlaskaAirlines/auro-pane/commit/f39ef7c121b728989dab877f0ba9dde0e90badbd))
+
 ## [2.1.6](https://github.com/AlaskaAirlines/auro-pane/compare/v2.1.5...v2.1.6) (2024-02-23)
 
 
