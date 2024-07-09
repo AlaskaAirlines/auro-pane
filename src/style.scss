@@ -30,7 +30,8 @@
 
     padding-top: calc(var(--ds-size-200, $ds-size-200) + var(--ds-size-75, $ds-size-75));
 
-    border: var(--ds-size-25, $ds-size-25) solid;
+    border-width: var(--ds-size-25, $ds-size-25);
+    border-style: solid;
     border-radius: var(--ds-size-500, $ds-size-500);
 
     cursor: pointer;
