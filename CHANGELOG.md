@@ -1,5 +1,18 @@
 # Semantic Release Automated Changelog
 
+# [2.2.0-beta.2](https://github.com/AlaskaAirlines/auro-pane/compare/v2.2.0-beta.1...v2.2.0-beta.2) (2024-09-20)
+
+
+### Features
+
+* add tag name as attribute when custom registered ([45dd33a](https://github.com/AlaskaAirlines/auro-pane/commit/45dd33a83e2128e2f977ce52d619bc1417cb7573))
+
+
+### Performance Improvements
+
+* refactor custom component registration config ([38e8c3b](https://github.com/AlaskaAirlines/auro-pane/commit/38e8c3b5c579ed2937ee9906da3c52d8cd86b910))
+* update dependencies ([e75c9f6](https://github.com/AlaskaAirlines/auro-pane/commit/e75c9f62e22b325420836687b3db49d2afac220b))
+
 # [2.2.0-beta.1](https://github.com/AlaskaAirlines/auro-pane/compare/v2.1.6...v2.2.0-beta.1) (2024-07-09)
 
 
