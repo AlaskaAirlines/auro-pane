@@ -1,15 +1,4 @@
 import { AuroPane } from './src/auro-pane.js';
+import * as RuntimeUtils from '@aurodesignsystem/auro-library/scripts/utils/runtimeUtils.mjs';
 
-/**
- * Register Custom Element.
- * @param {Object} name - Name to use for custom element.
- * @returns {void}
- */
- const registerComponent = (name = 'custom-pane') => {
-  // alias definition
-  if (!customElements.get(name)) {
-    customElements.define(name, class extends AuroPane {});
-  }
-}
-
-export { registerComponent }
+RuntimeUtils.default.prototype.registerComponent('custom-pane', AuroPane);

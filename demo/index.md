@@ -103,8 +103,10 @@ There are two important parts of every Auro component. The <a href="https://deve
 To protect from versioning conflicts with other instances of the component being loaded, it is recommended to use our `registerComponent(name)` method and pass in a unique name.
 
 ```js
-import './node_modules/@aurodesignsystem/auro-pane';
-registerComponent('custom-pane');
+import { AuroPane } from './src/auro-pane.js';
+import * as RuntimeUtils from '@aurodesignsystem/auro-library/scripts/utils/runtimeUtils.mjs';
+
+RuntimeUtils.default.prototype.registerComponent('custom-pane', AuroPane);
 ```
 
 This will create a new custom element that you can use in your HTML that will function identically to the `auro-pane` element.
