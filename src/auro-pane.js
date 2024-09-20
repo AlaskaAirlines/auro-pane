@@ -9,6 +9,8 @@ import { LitElement, html } from "lit";
 import { classMap } from 'lit/directives/class-map.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
 
+import AuroLibraryRuntimeUtils from '@aurodesignsystem/auro-library/scripts/utils/runtimeUtils.mjs';
+
 import dayjs from 'dayjs/esm/index.js';
 
 import styleCss from './style-css.js';
@@ -34,6 +36,11 @@ export class AuroPane extends LitElement {
 
     this.disabled = false;
     this.selected = false;
+
+    /**
+     * @private
+     */
+    this.runtimeUtils = new AuroLibraryRuntimeUtils();
   }
 
   static get properties() {
@@ -56,6 +63,11 @@ export class AuroPane extends LitElement {
       colorCss,
       tokensCss
     ];
+  }
+
+  firstUpdated() {
+    // Add the tag name as an attribute if it is different than the component name
+    this.runtimeUtils.handleComponentTagRename(this, 'auro-pane');
   }
 
   /**
