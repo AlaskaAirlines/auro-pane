@@ -1,5 +1,17 @@
 # Semantic Release Automated Changelog
 
+# [3.0.0-beta.1](https://github.com/AlaskaAirlines/auro-pane/compare/v2.2.0-beta.2...v3.0.0-beta.1) (2024-09-24)
+
+
+### Performance Improvements
+
+* update dependencies ([1e80288](https://github.com/AlaskaAirlines/auro-pane/commit/1e80288840c29724dd6ec48887fb85b8723e0647))
+
+
+### BREAKING CHANGES
+
+* trigger major release for color theme support #59
+
 ## [2.1.6](https://github.com/AlaskaAirlines/auro-pane/compare/v2.1.5...v2.1.6) (2024-02-23)
 
 
