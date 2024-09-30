@@ -1,5 +1,26 @@
 # Semantic Release Automated Changelog
 
+# [3.0.0](https://github.com/AlaskaAirlines/auro-pane/compare/v2.1.6...v3.0.0) (2024-09-30)
+
+
+### Features
+
+* add tag name as attribute when custom registered ([9f0ded9](https://github.com/AlaskaAirlines/auro-pane/commit/9f0ded99f0032293eb4c6998175e16e66a5e8a56))
+* refactor color token structure with tier 3 tokens [#59](https://github.com/AlaskaAirlines/auro-pane/issues/59) ([11da447](https://github.com/AlaskaAirlines/auro-pane/commit/11da447e986f542798adf5abd1f04de1e1b2ea47))
+
+
+### Performance Improvements
+
+* refactor custom component registration config ([0883c87](https://github.com/AlaskaAirlines/auro-pane/commit/0883c87c2b55efa34dedc4fa9ea1b3f2f869bd10))
+* replace all hardcoded sizes with design tokens ([3207dd4](https://github.com/AlaskaAirlines/auro-pane/commit/3207dd41ebfc34326da0b4639a4587bef1bbe7e7))
+* update dependencies ([153479f](https://github.com/AlaskaAirlines/auro-pane/commit/153479f67672cf7e28cd69214d3ae2725021a1b6))
+* update dependencies ([fb6378f](https://github.com/AlaskaAirlines/auro-pane/commit/fb6378f80669ec36050523c2794719c43772a65f))
+
+
+### BREAKING CHANGES
+
+* trigger major release for color theme support #59
+
 ## [2.1.6](https://github.com/AlaskaAirlines/auro-pane/compare/v2.1.5...v2.1.6) (2024-02-23)
 
 
