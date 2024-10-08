@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [3.0.1](https://github.com/AlaskaAirlines/auro-pane/compare/v3.0.0...v3.0.1) (2024-10-08)
+
+
+### Bug Fixes
+
+* moves auro library to dependencies in package.json [#73](https://github.com/AlaskaAirlines/auro-pane/issues/73) ([fe034b5](https://github.com/AlaskaAirlines/auro-pane/commit/fe034b5ab074c97949153225ae2e285dfc14c631))
+
 # [3.0.0](https://github.com/AlaskaAirlines/auro-pane/compare/v2.1.6...v3.0.0) (2024-09-30)
 
 
