@@ -65,6 +65,18 @@ export class AuroPane extends LitElement {
     ];
   }
 
+  /**
+   * This will register this element with the browser.
+   * @param {string} [name="auro-pane"] - The name of element that you want to register to.
+   *
+   * @example
+   * AuroPane.register("custom-pane") // this will register this element to <custom-pane/>
+   *
+   */
+  static register(name = "auro-pane") {
+    AuroLibraryRuntimeUtils.prototype.registerComponent(name, AuroPane);
+  }
+
   firstUpdated() {
     // Add the tag name as an attribute if it is different than the component name
     this.runtimeUtils.handleComponentTagRename(this, 'auro-pane');
