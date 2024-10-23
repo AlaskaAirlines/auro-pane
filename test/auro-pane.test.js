@@ -1,5 +1,5 @@
 import { fixture, html, expect } from '@open-wc/testing';
-import '../src/auro-pane.js';
+import '../index.js';
 
 describe('auro-pane', () => {
   it('is accessible', async () => {
