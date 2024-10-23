@@ -1,4 +1,7 @@
 import { focusExample } from './../apiExamples/focus.js';
+import { AuroPane } from '../src/auro-pane.js';
+
+AuroPane.register();
 
 /* eslint-disable jsdoc/require-jsdoc, no-magic-numbers, no-param-reassign */
 
