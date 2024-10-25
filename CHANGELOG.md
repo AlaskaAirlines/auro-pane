@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+# [3.1.0](https://github.com/AlaskaAirlines/auro-pane/compare/v3.0.1...v3.1.0) (2024-10-25)
+
+
+### Features
+
+* **api:** add register static method [#75](https://github.com/AlaskaAirlines/auro-pane/issues/75) ([71ce5a1](https://github.com/AlaskaAirlines/auro-pane/commit/71ce5a1b52c80aa7fe324fa5174e2967dd23d452))
+
 ## [3.0.1](https://github.com/AlaskaAirlines/auro-pane/compare/v3.0.0...v3.0.1) (2024-10-08)
 
 
