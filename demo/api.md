@@ -104,6 +104,7 @@ Sets date for parsing and display. Format should be yyyy-mm-dd. If no date is pr
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/date.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/date.html -->
   <auro-pane date="2020-09-20"></auro-pane>
+  <auro-pane date="invalid date"></auro-pane>
   <auro-pane></auro-pane>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
@@ -114,6 +115,7 @@ Sets date for parsing and display. Format should be yyyy-mm-dd. If no date is pr
 
 ```html
 <auro-pane date="2020-09-20"></auro-pane>
+<auro-pane date="invalid date"></auro-pane>
 <auro-pane></auro-pane>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
@@ -148,6 +150,7 @@ Sets price for display. Displayed as is.
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/price.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/price.html -->
   <auro-pane price="$500"></auro-pane>
+  <auro-pane price=""></auro-pane>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
@@ -157,6 +160,7 @@ Sets price for display. Displayed as is.
 
 ```html
 <auro-pane price="$500"></auro-pane>
+<auro-pane price=""></auro-pane>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>

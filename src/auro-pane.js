@@ -11,7 +11,7 @@ import { ifDefined } from 'lit/directives/if-defined.js';
 
 import AuroLibraryRuntimeUtils from '@aurodesignsystem/auro-library/scripts/utils/runtimeUtils.mjs';
 
-import dayjs from 'dayjs/esm/index.js';
+import '@aurodesignsystem/auro-datetime';
 
 import styleCss from './style-css.js';
 import colorCss from "./color-css.js";
@@ -85,20 +85,20 @@ export class AuroPane extends LitElement {
   /**
    * Internal method to parse the date attribute.
    * @private
-   * @returns {Object} Object containing day, date, and month.
+   * @returns {String} ISO formatted date string.
    */
-  parseDateString() {
-    const parsedDate = dayjs(this.date);
+  isoDateString() {
+    let date = new Date(Date.now());
 
-    if (parsedDate.isValid()) {
-      return {
-        day: parsedDate.format('ddd'),
-        date: parsedDate.format('D'),
-        month: parsedDate.format('MMM')
-      };
+    if (this.date) {
+      date = new Date(this.date);
     }
 
-    return {};
+    if (date instanceof Date && !isNaN(date)) {
+      return date.toISOString();
+    }
+
+    return undefined;
   }
 
   /**
@@ -126,7 +126,7 @@ export class AuroPane extends LitElement {
   }
 
   /**
-   * Programatically focuses the component.
+   * Programmatically focuses the component.
    * @return {void}
    */
   focus() {
@@ -141,7 +141,7 @@ export class AuroPane extends LitElement {
       'pane-priced': this.price !== undefined
     };
 
-    const parsedDate = this.parseDateString();
+    const parsedDate = this.isoDateString();
 
     return html`
       <button
@@ -149,8 +149,13 @@ export class AuroPane extends LitElement {
         ?disabled="${this.disabled}"
         tabindex="${ifDefined(this.tabIndex ? this.tabIndex : undefined)}"
         aria-hidden="${ifDefined(this.ariaHidden ? this.ariaHidden : undefined)}">
-        <span class="dayOfTheWeek child">${parsedDate.day}</span>
-        <span class="date child">${parsedDate.month} ${parsedDate.date}</span>
+        <span class="dayOfTheWeek child">
+          <auro-datetime type="weekday" weekday="short" utc="${parsedDate}"></auro-datetime>
+        </span>
+        <span class="date child">
+          <auro-datetime type="month" weekday="short" utc="${parsedDate}"></auro-datetime>
+          <auro-datetime type="day" utc="${parsedDate}"></auro-datetime>
+        </span>
         ${this.getPrice()}
       </button>
     `;

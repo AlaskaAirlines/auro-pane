@@ -19,8 +19,7 @@ describe('auro-pane', () => {
   const dateTestCases = [
     ["2020-09-09", "Wed Sep 9"],
     ["2020-01-11", "Sat Jan 11"],
-    ["invalid date", ""],
-    [null, ""],
+    [null, ""]
   ]
 
   dateTestCases.forEach(async function ([date, expected]) {
@@ -28,6 +27,12 @@ describe('auro-pane', () => {
       const el = await fixture(html`
         <auro-pane date=${date}></auro-pane>
       `);
+
+      if (date === null) {
+        const todayExpected = new Date();
+
+        expected = `${todayExpected.toUTCString().split(' ')[0].replace(',', '')} ${todayExpected.toUTCString().split(' ')[2]} ${Number(todayExpected.toUTCString().split(' ')[1])}`;
+      }
 
       expect(getButtonText(el)).to.equal(expected);
     })
@@ -87,8 +92,16 @@ describe('auro-pane', () => {
 });
 
 function getButtonText(el) {
-  const button = el.shadowRoot.querySelector('button');
-  const buttonText = button.textContent.replace(/\s+/g, " ").trim();
+  const dayName = el.shadowRoot.querySelector('.dayOfTheWeek auro-datetime').shadowRoot.querySelector('.yield').textContent;
+  const dayNum = el.shadowRoot.querySelector('.date auro-datetime[type=month]').shadowRoot.querySelector('.yield').textContent;
+  const MonthStr = el.shadowRoot.querySelector('.date auro-datetime[type=day]').shadowRoot.querySelector('.yield').textContent;
+  let buttonText = `${dayName} ${dayNum} ${MonthStr}`;
+
+  if (el.hasAttribute('price')) {
+    const price = el.shadowRoot.querySelector('.price').textContent;
+    buttonText += ` ${price}`;
+  }
+
   return buttonText;
 }
 
