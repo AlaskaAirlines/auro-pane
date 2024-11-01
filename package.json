@@ -20,9 +20,8 @@
     "node": "^18 || ^20"
   },
   "dependencies": {
-    "@aurodesignsystem/auro-library": "^2.8.0",
-    "chalk": "^5.3.0",
-    "dayjs": "^1.11.13",
+    "@aurodesignsystem/auro-datetime": "^2.3.0",
+    "@aurodesignsystem/auro-library": "~2.8.0",
     "lit": "^3.2.0"
   },
   "peerDependencies": {
@@ -43,6 +42,7 @@
     "@web/dev-server": "^0.4.5",
     "@web/test-runner": "^0.19.0",
     "autoprefixer": "^10.4.20",
+    "chalk": "^5.3.0",
     "compression": "^1.7.4",
     "concat": "^1.0.3",
     "concurrently": "^9.0.1",
@@ -139,7 +139,7 @@
     "web components"
   ],
   "scripts": {
-    "build": "npm-run-all build:sass sass:render bundler types",
+    "build": "npm-run-all build:sass sass:render build:docs bundler types",
     "build:test": "npm-run-all test linters",
     "build:release": "npm-run-all build build:test build:api build:docs bundler postinstall",
     "build:ci": "npm-run-all sweep build:release",
