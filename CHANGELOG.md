@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [3.1.1](https://github.com/AlaskaAirlines/auro-pane/compare/v3.1.0...v3.1.1) (2024-11-01)
+
+
+### Performance Improvements
+
+* refactor dates to not use dayJs and use auro-datetime instead ([8102992](https://github.com/AlaskaAirlines/auro-pane/commit/810299227ba53d2c647a57c03397e5934f21376c))
+
 # [3.1.0](https://github.com/AlaskaAirlines/auro-pane/compare/v3.0.1...v3.1.0) (2024-10-25)
 
 
