@@ -1,4 +1,4 @@
-<!-- AURO-GENERATED-CONTENT:START (FILE:src=./../api.md) -->
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=../docs/api.md) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 ## API Examples
@@ -6,14 +6,14 @@
 ### Basic
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basicSingle.html) -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/basicSingle.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/basicSingle.html) -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/basicSingle.html) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>
@@ -25,13 +25,13 @@
 Use the `sm` attribute to render a reduced size version of `auro-pane`.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/smallSingle.html) -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/smallSingle.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/smallSingle.html) -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/smallSingle.html) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>
@@ -43,13 +43,13 @@ Use the `sm` attribute to render a reduced size version of `auro-pane`.
 Sets aria-hidden on the inner button.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/ariaHidden.html) -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/ariaHidden.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/ariaHidden.html) -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/ariaHidden.html) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>
@@ -59,13 +59,13 @@ Sets aria-hidden on the inner button.
 Sets date for parsing and display. Format should be yyyy-mm-dd. If no date is provided, the current date will be rendered.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/date.html) -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/date.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/date.html) -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/date.html) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>
@@ -75,13 +75,13 @@ Sets date for parsing and display. Format should be yyyy-mm-dd. If no date is pr
 Disables the pane.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/disabled.html) -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/disabled.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/disabled.html) -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/disabled.html) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>
@@ -91,13 +91,13 @@ Disables the pane.
 Sets price for display. Displayed as is.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/price.html) -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/price.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/price.html) -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/price.html) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>
@@ -107,13 +107,13 @@ Sets price for display. Displayed as is.
 Sets pane state to selected.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/selected.html) -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/selected.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/selected.html) -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/selected.html) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>
@@ -123,13 +123,13 @@ Sets pane state to selected.
 Sets tabindex on the inner button.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/tabindex.html) -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/tabindex.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/tabindex.html) -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/tabindex.html) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>
@@ -143,16 +143,16 @@ Sets tabindex on the inner button.
 Focuses the pane button.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/focus.html) -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/focus.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/focus.html) -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/focus.html) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/focus.js) -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/focus.js) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>
@@ -161,5 +161,5 @@ Focuses the pane button.
 
 The component may be restyled using the following code sample and changing the values of the following token(s).
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../src/tokens.scss) -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../src/tokens.scss) -->
 <!-- AURO-GENERATED-CONTENT:END -->
