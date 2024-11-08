@@ -6,12 +6,12 @@ This file is generated based on a template fetched from `./docs/partials/index.m
 
 # Pane
 
-<!-- AURO-GENERATED-CONTENT:START (FILE:src=./description.md) -->
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=../docs/partials/description.md) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 ## auro-pane use cases
 
-<!-- AURO-GENERATED-CONTENT:START (FILE:src=./useCases.md) -->
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=../docs/partials/useCases.md) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 ## Example(s)
@@ -19,14 +19,14 @@ This file is generated based on a template fetched from `./docs/partials/index.m
 ## Basic
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/basic.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/basic.html) -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/basic.html) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>
@@ -36,14 +36,14 @@ This file is generated based on a template fetched from `./docs/partials/index.m
 Default using both `date` and `price` attributes.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/dateAndPrice.html) -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/dateAndPrice.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/dateAndPrice.html) -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/dateAndPrice.html) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>
@@ -53,14 +53,14 @@ Default using both `date` and `price` attributes.
 Use the `sm` attribute to render the small UI that is consistent with mobile and desktop.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/small.html) -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/small.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/small.html) -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/small.html) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>
@@ -80,14 +80,14 @@ AuroPane.register('custom-pane');
 This will create a new custom element that you can use in your HTML that will function identically to the `auro-pane` element.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/customRegistration.html) -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/customRegistration.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/customRegistration.html) -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/customRegistration.html) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>

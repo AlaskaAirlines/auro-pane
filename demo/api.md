@@ -1,5 +1,5 @@
-<!-- AURO-GENERATED-CONTENT:START (FILE:src=./../api.md) -->
-<!-- The below content is automatically added from ./../api.md -->
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=../docs/api.md) -->
+<!-- The below content is automatically added from ../docs/api.md -->
 
 # auro-pane
 
@@ -34,15 +34,15 @@ The auro-pane component displays shoulder date information.
 ### Basic
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basicSingle.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/basicSingle.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/basicSingle.html) -->
+  <!-- The below content is automatically added from ../apiExamples/basicSingle.html -->
   <auro-pane date="2020-09-20"></auro-pane>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/basicSingle.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/basicSingle.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/basicSingle.html) -->
+<!-- The below code snippet is automatically added from ../apiExamples/basicSingle.html -->
 
 ```html
 <auro-pane date="2020-09-20"></auro-pane>
@@ -57,15 +57,15 @@ The auro-pane component displays shoulder date information.
 Use the `sm` attribute to render a reduced size version of `auro-pane`.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/smallSingle.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/smallSingle.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/smallSingle.html) -->
+  <!-- The below content is automatically added from ../apiExamples/smallSingle.html -->
   <auro-pane date="2020-09-20" price="$500" sm></auro-pane>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/smallSingle.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/smallSingle.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/smallSingle.html) -->
+<!-- The below code snippet is automatically added from ../apiExamples/smallSingle.html -->
 
 ```html
 <auro-pane date="2020-09-20" price="$500" sm></auro-pane>
@@ -80,15 +80,15 @@ Use the `sm` attribute to render a reduced size version of `auro-pane`.
 Sets aria-hidden on the inner button.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/ariaHidden.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/ariaHidden.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/ariaHidden.html) -->
+  <!-- The below content is automatically added from ../apiExamples/ariaHidden.html -->
   <auro-pane ariahidden></auro-pane>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/ariaHidden.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/ariaHidden.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/ariaHidden.html) -->
+<!-- The below code snippet is automatically added from ../apiExamples/ariaHidden.html -->
 
 ```html
 <auro-pane ariahidden></auro-pane>
@@ -101,8 +101,8 @@ Sets aria-hidden on the inner button.
 Sets date for parsing and display. Format should be yyyy-mm-dd. If no date is provided, the current date will be rendered.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/date.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/date.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/date.html) -->
+  <!-- The below content is automatically added from ../apiExamples/date.html -->
   <auro-pane date="2020-09-20"></auro-pane>
   <auro-pane date="invalid date"></auro-pane>
   <auro-pane></auro-pane>
@@ -110,8 +110,8 @@ Sets date for parsing and display. Format should be yyyy-mm-dd. If no date is pr
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/date.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/date.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/date.html) -->
+<!-- The below code snippet is automatically added from ../apiExamples/date.html -->
 
 ```html
 <auro-pane date="2020-09-20"></auro-pane>
@@ -126,15 +126,15 @@ Sets date for parsing and display. Format should be yyyy-mm-dd. If no date is pr
 Disables the pane.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/disabled.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/disabled.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/disabled.html) -->
+  <!-- The below content is automatically added from ../apiExamples/disabled.html -->
   <auro-pane date="2020-09-20" price="$500" disabled></auro-pane>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/disabled.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/disabled.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/disabled.html) -->
+<!-- The below code snippet is automatically added from ../apiExamples/disabled.html -->
 
 ```html
 <auro-pane date="2020-09-20" price="$500" disabled></auro-pane>
@@ -147,16 +147,16 @@ Disables the pane.
 Sets price for display. Displayed as is.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/price.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/price.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/price.html) -->
+  <!-- The below content is automatically added from ../apiExamples/price.html -->
   <auro-pane price="$500"></auro-pane>
   <auro-pane price=""></auro-pane>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/price.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/price.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/price.html) -->
+<!-- The below code snippet is automatically added from ../apiExamples/price.html -->
 
 ```html
 <auro-pane price="$500"></auro-pane>
@@ -170,15 +170,15 @@ Sets price for display. Displayed as is.
 Sets pane state to selected.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/selected.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/selected.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/selected.html) -->
+  <!-- The below content is automatically added from ../apiExamples/selected.html -->
   <auro-pane selected></auro-pane>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/selected.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/selected.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/selected.html) -->
+<!-- The below code snippet is automatically added from ../apiExamples/selected.html -->
 
 ```html
 <auro-pane selected></auro-pane>
@@ -191,15 +191,15 @@ Sets pane state to selected.
 Sets tabindex on the inner button.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/tabindex.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/tabindex.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/tabindex.html) -->
+  <!-- The below content is automatically added from ../apiExamples/tabindex.html -->
   <auro-pane tabindex="0"></auro-pane>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/tabindex.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/tabindex.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/tabindex.html) -->
+<!-- The below code snippet is automatically added from ../apiExamples/tabindex.html -->
 
 ```html
 <auro-pane tabindex="0"></auro-pane>
@@ -215,8 +215,8 @@ Sets tabindex on the inner button.
 Focuses the pane button.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/focus.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/focus.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/focus.html) -->
+  <!-- The below content is automatically added from ../apiExamples/focus.html -->
   <auro-button id="focusExampleBtn">Focus Pane</auro-button>
   <br />
   <auro-pane id="focusExample" date="2020-09-20"></auro-pane>
@@ -224,8 +224,8 @@ Focuses the pane button.
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/focus.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/focus.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/focus.html) -->
+<!-- The below code snippet is automatically added from ../apiExamples/focus.html -->
 
 ```html
 <auro-button id="focusExampleBtn">Focus Pane</auro-button>
@@ -233,8 +233,8 @@ Focuses the pane button.
 <auro-pane id="focusExample" date="2020-09-20"></auro-pane>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/focus.js) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/focus.js -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/focus.js) -->
+<!-- The below code snippet is automatically added from ../apiExamples/focus.js -->
 
 ```js
 export function focusExample() {
@@ -253,8 +253,8 @@ export function focusExample() {
 
 The component may be restyled using the following code sample and changing the values of the following token(s).
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../src/tokens.scss) -->
-<!-- The below code snippet is automatically added from ./../../src/tokens.scss -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../src/tokens.scss) -->
+<!-- The below code snippet is automatically added from ../src/tokens.scss -->
 
 ```scss
 @import './../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables';
