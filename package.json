@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@aurodesignsystem/auro-datetime": "^2.3.0",
-    "@aurodesignsystem/auro-library": "^3.0.1",
+    "@aurodesignsystem/auro-library": "^3.0.2",
     "lit": "^3.2.0"
   },
   "peerDependencies": {
