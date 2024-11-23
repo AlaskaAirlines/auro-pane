@@ -1,5 +1,18 @@
 # Semantic Release Automated Changelog
 
+## [3.1.2](https://github.com/AlaskaAirlines/auro-pane/compare/v3.1.1...v3.1.2) (2024-11-23)
+
+
+### Bug Fixes
+
+* update markdown partial pathing to consume new auro lib [#78](https://github.com/AlaskaAirlines/auro-pane/issues/78) ([e68d462](https://github.com/AlaskaAirlines/auro-pane/commit/e68d462b030967a8f96f248cde3945a1f0381e07))
+
+
+### Performance Improvements
+
+* add nodeResolve on rollup.config ([d64a175](https://github.com/AlaskaAirlines/auro-pane/commit/d64a175a2f40b6dbe5ec46fac4bfbe73d09e8950))
+* update library to 3.0.2 ([db281bb](https://github.com/AlaskaAirlines/auro-pane/commit/db281bbaf84edf7821f1cba9791051474f21ae0e))
+
 ## [3.1.1](https://github.com/AlaskaAirlines/auro-pane/compare/v3.1.0...v3.1.1) (2024-11-01)
 
 
