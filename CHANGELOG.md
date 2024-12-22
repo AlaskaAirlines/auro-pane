@@ -1,5 +1,13 @@
 # Semantic Release Automated Changelog
 
+## [3.1.3](https://github.com/AlaskaAirlines/auro-pane/compare/v3.1.2...v3.1.3) (2024-12-22)
+
+
+### Performance Improvements
+
+* change master branch to main ([31ebef4](https://github.com/AlaskaAirlines/auro-pane/commit/31ebef45b324c146c9b8514b7deb9295a1707620))
+* update node to version 22 ([643ada9](https://github.com/AlaskaAirlines/auro-pane/commit/643ada992f2c40d498250be65ddbf9895866eed6))
+
 ## [3.1.2](https://github.com/AlaskaAirlines/auro-pane/compare/v3.1.1...v3.1.2) (2024-11-23)
 
 
