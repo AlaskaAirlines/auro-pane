@@ -104,7 +104,7 @@
   @include sm;
 
   .pane {
-    @include auro_breakpoint--sm {
+    @include auro_grid-breakpoint--sm {
       min-width: var(--ds-size-1000, $ds-size-1000);
       height: calc(var(--ds-size-1000, $ds-size-1000) + var(--ds-size-300, $ds-size-300));
 
@@ -117,7 +117,7 @@
   }
 
   .pane-priced {
-    @include auro_breakpoint--sm {
+    @include auro_grid-breakpoint--sm {
       min-width: calc(var(--ds-size-1000, $ds-size-1000) + var(--ds-size-100, $ds-size-100));
       height: calc(var(--ds-size-1000, $ds-size-1000) + var(--ds-size-500, $ds-size-500));
 
@@ -127,7 +127,7 @@
     }
 
     .dayOfTheWeek {
-      @include auro_breakpoint--sm {
+      @include auro_grid-breakpoint--sm {
         font-size: var(--ds-text-body-size-lg, $ds-text-body-size-lg);
         line-height: var(--ds-text-body-height-lg, $ds-text-body-height-lg);
       }
@@ -135,7 +135,7 @@
   }
 
   .dayOfTheWeek {
-    @include auro_breakpoint--sm {
+    @include auro_grid-breakpoint--sm {
       font-size: calc(var(--ds-size-200, $ds-size-200) + var(--ds-size-50, $ds-size-50));
       line-height: calc(var(--ds-size-300, $ds-size-300) + var(--ds-size-25, $ds-size-25));
 
@@ -144,21 +144,21 @@
   }
 
   .date {
-    @include auro_breakpoint--sm {
+    @include auro_grid-breakpoint--sm {
       font-size: var(--ds-text-body-size-default, $ds-text-body-size-default);
       line-height: var(--ds-text-body-height-default, $ds-text-body-height-default);
     }
   }
 
   .price {
-    @include auro_breakpoint--sm {
+    @include auro_grid-breakpoint--sm {
       font-size: var(--ds-text-body-size-lg, $ds-text-body-size-lg);
       line-height: var(--ds-text-body-height-lg, $ds-text-body-height-lg);
     }
   }
 
   .price--long {
-    @include auro_breakpoint--sm {
+    @include auro_grid-breakpoint--sm {
       font-size: var(--ds-text-body-size-sm, $ds-text-body-size-sm);
       line-height: var(--ds-text-body-height-default, $ds-text-body-height-default);
     }
