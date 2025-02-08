@@ -1,5 +1,13 @@
 # Semantic Release Automated Changelog
 
+## [3.1.4](https://github.com/AlaskaAirlines/auro-pane/compare/v3.1.3...v3.1.4) (2025-02-08)
+
+
+### Performance Improvements
+
+* update dependencies ([39c5f9d](https://github.com/AlaskaAirlines/auro-pane/commit/39c5f9d94965479d1db48c52a4bbe6e66ef9abfe))
+* update mixin per new WCSS spec ([429ec9f](https://github.com/AlaskaAirlines/auro-pane/commit/429ec9fa224a9a1032fe47c7f73889e96084e5ef))
+
 ## [3.1.3](https://github.com/AlaskaAirlines/auro-pane/compare/v3.1.2...v3.1.3) (2024-12-22)
 
 
