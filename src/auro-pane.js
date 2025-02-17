@@ -3,11 +3,12 @@
 
 // ---------------------------------------------------------------------
 
-/* eslint-disable jsdoc/no-undefined-types */
+/* eslint-disable jsdoc/no-undefined-types, prefer-destructuring */
 
 import { LitElement, html } from "lit";
 import { classMap } from 'lit/directives/class-map.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
+import { format } from 'date-fns';
 
 import AuroLibraryRuntimeUtils from '@aurodesignsystem/auro-library/scripts/utils/runtimeUtils.mjs';
 
@@ -88,17 +89,19 @@ export class AuroPane extends LitElement {
    * @returns {String} ISO formatted date string.
    */
   isoDateString() {
-    let date = new Date(Date.now());
+    let date = format(new Date(Date.now()), 'yyyy-MM-dd');
 
     if (this.date) {
-      date = new Date(this.date);
+      date = this.date;
     }
 
-    if (date instanceof Date && !isNaN(date)) {
-      return date.toISOString();
-    }
+    const [
+      year,
+      month,
+      day
+    ] = date.split('-').map(Number);
 
-    return undefined;
+    return new Date(Date.UTC(year, month - 1, day)).toISOString();
   }
 
   /**
