@@ -1,5 +1,17 @@
 # Semantic Release Automated Changelog
 
+## [3.1.5](https://github.com/AlaskaAirlines/auro-pane/compare/v3.1.4...v3.1.5) (2025-02-17)
+
+
+### Bug Fixes
+
+* correct date utc handling in AuroPane class [#85](https://github.com/AlaskaAirlines/auro-pane/issues/85) ([106d608](https://github.com/AlaskaAirlines/auro-pane/commit/106d60810430f60461db21a6ddcd0e8876d43be7))
+
+
+### Performance Improvements
+
+* validate date format in AuroPane class ([d101a22](https://github.com/AlaskaAirlines/auro-pane/commit/d101a22ccdb76f4d19087d2076c441c3794cd498))
+
 ## [3.1.4](https://github.com/AlaskaAirlines/auro-pane/compare/v3.1.3...v3.1.4) (2025-02-08)
 
 
