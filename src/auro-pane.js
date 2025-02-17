@@ -95,11 +95,17 @@ export class AuroPane extends LitElement {
       date = this.date;
     }
 
+    const parts = date.split('-').map(Number);
+    const DATE_PARTS_LENGTH = 3;
+    if (parts.length !== DATE_PARTS_LENGTH || parts.some((num) => isNaN(num))) {
+      throw new Error("Invalid date format: expected 'yyyy-MM-dd'");
+    }
+
     const [
       year,
       month,
       day
-    ] = date.split('-').map(Number);
+    ] = parts;
 
     return new Date(Date.UTC(year, month - 1, day)).toISOString();
   }
