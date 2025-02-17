@@ -31,7 +31,7 @@ describe('auro-pane', () => {
       if (date === null) {
         const todayExpected = new Date();
 
-        expected = `${todayExpected.toUTCString().split(' ')[0].replace(',', '')} ${todayExpected.toUTCString().split(' ')[2]} ${Number(todayExpected.toUTCString().split(' ')[1])}`;
+        expected = `${todayExpected.toLocaleDateString('en-US', { weekday: 'short' })} ${todayExpected.toLocaleDateString('en-US', { month: 'short' })} ${todayExpected.toLocaleDateString('en-US', { day: 'numeric' })}`;
       }
 
       expect(getButtonText(el)).to.equal(expected);
