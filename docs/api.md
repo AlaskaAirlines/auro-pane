@@ -21,6 +21,6 @@ The auro-pane component displays shoulder date information.
 
 ## Methods
 
-| Method  | Type       | Description                            |
-|---------|------------|----------------------------------------|
-| `focus` | `(): void` | Programatically focuses the component. |
+| Method  | Type       | Description                             |
+|---------|------------|-----------------------------------------|
+| `focus` | `(): void` | Programmatically focuses the component. |
