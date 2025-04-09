@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [4.0.1](https://github.com/AlaskaAirlines/auro-pane/compare/v4.0.0...v4.0.1) (2025-04-09)
+
+
+### Performance Improvements
+
+* add wca script for docs api ([d135d2c](https://github.com/AlaskaAirlines/auro-pane/commit/d135d2c5eeaf3202e4c20da263f73bfffbab6e17))
+
 # [4.0.0](https://github.com/AlaskaAirlines/auro-pane/compare/v3.1.5...v4.0.0) (2025-02-28)
 
 
