@@ -5,7 +5,8 @@
 
 /* stylelint-disable declaration-empty-line-before, max-nesting-depth, selector-max-class, selector-class-pattern, selector-max-combinators, selector-max-compound-selectors, no-descending-specificity, scss/double-slash-comment-empty-line-before, order/properties-order */
 
-@import './../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables';
+@import "./../node_modules/@aurodesignsystem/design-tokens/dist/auro-classic/SCSSVariables";
+@import "./../node_modules/@aurodesignsystem/design-tokens/dist/alaska/SCSSVariables--alaska";
 
 @import './../node_modules/@aurodesignsystem/webcorestylesheets/src/breakpoints';
 @import './../node_modules/@aurodesignsystem/webcorestylesheets/src/core';
