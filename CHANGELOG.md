@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+# [4.1.0](https://github.com/AlaskaAirlines/auro-pane/compare/v4.0.1...v4.1.0) (2025-04-28)
+
+
+### Features
+
+* update to use new color theme tokens [#92](https://github.com/AlaskaAirlines/auro-pane/issues/92) ([43804b7](https://github.com/AlaskaAirlines/auro-pane/commit/43804b705f9c4c3d07fd235fe99feb1d8c69f60b))
+
 ## [4.0.1](https://github.com/AlaskaAirlines/auro-pane/compare/v4.0.0...v4.0.1) (2025-04-09)
 
 
