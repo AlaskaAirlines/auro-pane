@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [4.1.1](https://github.com/AlaskaAirlines/auro-pane/compare/v4.1.0...v4.1.1) (2025-05-02)
+
+
+### Bug Fixes
+
+* clenaup font declarations ([0c118d9](https://github.com/AlaskaAirlines/auro-pane/commit/0c118d92e6b69bfe7e4b66d4cf3e79c1b507dfbb))
+
 # [4.1.0](https://github.com/AlaskaAirlines/auro-pane/compare/v4.0.1...v4.1.0) (2025-04-28)
 
 
