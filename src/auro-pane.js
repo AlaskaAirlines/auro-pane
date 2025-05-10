@@ -3,7 +3,7 @@
 
 // ---------------------------------------------------------------------
 
-/* eslint-disable jsdoc/no-undefined-types, prefer-destructuring */
+/* eslint-disable jsdoc/no-undefined-types, prefer-destructuring, object-property-newline */
 
 import { LitElement, html } from "lit";
 import { classMap } from 'lit/directives/class-map.js';
@@ -51,9 +51,9 @@ export class AuroPane extends LitElement {
         attribute: "aria-hidden"
       },
       date: { type: String },
-      disabled: { type: Boolean },
+      disabled: { type: Boolean, reflect: true },
       price: { type: String },
-      selected: { type: Boolean },
+      selected: { type: Boolean, reflect: true },
       tabIndex: { type: Number },
     };
   }
