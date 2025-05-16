@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [4.1.2](https://github.com/AlaskaAirlines/auro-pane/compare/v4.1.1...v4.1.2) (2025-05-16)
+
+
+### Bug Fixes
+
+* add `reflect:true` on boolean props ([ba56588](https://github.com/AlaskaAirlines/auro-pane/commit/ba56588f4b90abc5a2b736ba62ff1ec574a28dd3))
+
 ## [4.1.1](https://github.com/AlaskaAirlines/auro-pane/compare/v4.1.0...v4.1.1) (2025-05-02)
 
 
