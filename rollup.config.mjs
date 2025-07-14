@@ -1,4 +1,5 @@
 import nodeResolve from '@rollup/plugin-node-resolve';
+import json from '@rollup/plugin-json';
 import serve from 'rollup-plugin-serve';
 
 const production = !process.env.ROLLUP_WATCH;
@@ -13,6 +14,7 @@ const modernConfig = {
   },
   plugins: [
     nodeResolve(),
+    json(),
     !production &&
       serve({
         open: true,
@@ -29,7 +31,7 @@ const indexExamplesConfig = {
     format: 'esm',
     dir: 'demo/'
   },
-  plugins: [nodeResolve()],
+  plugins: [nodeResolve(), json()],
 };
 
 const apiExamplesConfig = {
@@ -40,7 +42,7 @@ const apiExamplesConfig = {
     format: 'esm',
     dir: 'demo/'
   },
-  plugins: [nodeResolve()],
+  plugins: [nodeResolve(), json()],
 };
 
 export default [modernConfig, indexExamplesConfig, apiExamplesConfig];

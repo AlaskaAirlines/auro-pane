@@ -20,6 +20,8 @@
 
 ### Attribute Examples
 
+<span style="background-color: #ffebee; color: #c62828; padding: 2px 4px; border-radius: 3px; font-size: 0.75em;">DEPRECATED</span> - This attribute is deprecated and will be removed in a future version.
+
 #### <a name="sm"></a>`sm`
 
 Use the `sm` attribute to render a reduced size version of `auro-pane`.
@@ -40,7 +42,7 @@ Use the `sm` attribute to render a reduced size version of `auro-pane`.
 
 #### <a name="ariaHidden"></a>`ariaHidden`
 
-Sets aria-hidden on the inner button.
+Sets `aria-hidden` on the inner button.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/ariaHidden.html) -->
@@ -161,5 +163,5 @@ Focuses the pane button.
 
 The component may be restyled using the following code sample and changing the values of the following token(s).
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=../src/tokens.scss) -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../src/styles/tokens.scss) -->
 <!-- AURO-GENERATED-CONTENT:END -->
