@@ -14,20 +14,21 @@ import AuroLibraryRuntimeUtils from '@aurodesignsystem/auro-library/scripts/util
 
 import '@aurodesignsystem/auro-datetime';
 
-import styleCss from './style-css.js';
-import colorCss from "./color-css.js";
-import tokensCss from "./tokens-css.js";
+import styleCss from './styles/style-css.js';
+import colorCss from "./styles/color-css.js";
+import tokensCss from "./styles/tokens-css.js";
+
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
  * The auro-pane component displays shoulder date information.
  *
- * @attr {String} ariaHidden - Sets aria-hidden on the inner button.
+ * @attr {Boolean} ariaHidden - When true, sets aria-hidden="true" on the inner button. When false, no aria-hidden attribute is set.
  * @attr {String} date - Sets date for parsing and display. Format should be yyyy-mm-dd.
  * @attr {Boolean} disabled - Disables the pane.
  * @attr {String} price - Sets price for display. Displayed as is.
  * @attr {Boolean} selected - Sets pane state to selected.
- * @attr {Boolean} sm - Locks the component to `sm` variant.
+ * @attr {Boolean} sm - @deprecated Locks the component to `sm` variant. This attribute is deprecated and will be removed in a future version.
  * @attr {Number} tabIndex - Sets tabindex on the inner button.
  */
 
@@ -35,6 +36,7 @@ export class AuroPane extends LitElement {
   constructor() {
     super();
 
+    this.ariaHidden = false;
     this.disabled = false;
     this.selected = false;
 
@@ -47,13 +49,14 @@ export class AuroPane extends LitElement {
   static get properties() {
     return {
       ariaHidden: {
-        type: String,
+        type: Boolean,
         attribute: "aria-hidden"
       },
       date: { type: String },
       disabled: { type: Boolean, reflect: true },
       price: { type: String },
       selected: { type: Boolean, reflect: true },
+      sm: { type: Boolean },
       tabIndex: { type: Number },
     };
   }
@@ -113,22 +116,18 @@ export class AuroPane extends LitElement {
   /**
    * Internal method that determines how to display the price attribute.
    * @private
+   * @param {Object} priceClasses - CSS classes to apply to the price element.
    * @returns {TemplateResult} Price HTML.
    */
-  getPrice() {
+  getPrice(priceClasses) {
     if (this.price !== undefined) {
-      const priceClasses = {
-        'price': true,
-        'price--long': this.price.length > 6, // eslint-disable-line no-magic-numbers
-        'child': true,
-        'price--empty': this.price === ''
-      };
+      let displayPrice = this.price;
 
       if (this.price === '') {
-        this.price = '--';
+        displayPrice = '--';
       }
 
-      return html`<span class="${classMap(priceClasses)}" part="price-slot">${this.price}</span>`;
+      return html`<span class="${classMap(priceClasses)}" part="price-slot">${displayPrice}</span>`;
     }
 
     return html``;
@@ -143,29 +142,69 @@ export class AuroPane extends LitElement {
   }
 
   render() {
-    const buttonClasses = {
+    const PRICE_LENGTH_THRESHOLD = 6;
+    const isPriceLong = this.price && this.price.length > PRICE_LENGTH_THRESHOLD;
+    const isPriceEmpty = this.price === '';
+
+    // Base classes shared by all variants
+    const baseButtonClasses = {
       'pane': true,
       'isSelected': this.selected,
       'pane--disabled': this.disabled,
-      'pane-priced': this.price !== undefined
+      'pane-priced': this.price !== undefined,
+    };
+
+    const baseDayOfTheWeekClasses = {
+      'dayOfTheWeek': true,
+      'child': true,
+    };
+
+    const baseDateClasses = {
+      'date': true,
+    };
+
+    const basePriceClasses = {
+      'price': true,
+      'price--long': isPriceLong,
+      'child': true,
+      'price--empty': isPriceEmpty,
+    };
+
+    const variantClasses = {
+      button: {
+        ...baseButtonClasses
+      },
+      dayOfTheWeek: {
+        ...baseDayOfTheWeekClasses,
+        'body-default': true,
+      },
+      date: {
+        ...baseDateClasses,
+        'body-sm': true,
+      },
+      price: {
+        ...basePriceClasses,
+        'body-sm': !isPriceLong,
+        'body-xs': isPriceLong,
+      }
     };
 
     const parsedDate = this.isoDateString();
 
     return html`
       <button
-        class="${classMap(buttonClasses)}"
+        class="${classMap(variantClasses.button)}"
         ?disabled="${this.disabled}"
         tabindex="${ifDefined(this.tabIndex ? this.tabIndex : undefined)}"
-        aria-hidden="${ifDefined(this.ariaHidden ? this.ariaHidden : undefined)}">
-        <span class="dayOfTheWeek child">
+        aria-hidden="${ifDefined(this.ariaHidden ? 'true' : undefined)}">
+        <span class="${classMap(variantClasses.dayOfTheWeek)}">
           <auro-datetime type="weekday" weekday="short" utc="${parsedDate}"></auro-datetime>
         </span>
-        <span class="date child">
+        <span class="${classMap(variantClasses.date)}">
           <auro-datetime type="month" weekday="short" utc="${parsedDate}"></auro-datetime>
           <auro-datetime type="day" utc="${parsedDate}"></auro-datetime>
         </span>
-        ${this.getPrice()}
+        ${this.getPrice(variantClasses.price)}
       </button>
     `;
   }

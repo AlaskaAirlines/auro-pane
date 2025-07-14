@@ -50,6 +50,8 @@ Default using both `date` and `price` attributes.
 
 ### Small - Use sm size
 
+<span style="background-color: #ffebee; color: #c62828; padding: 2px 4px; border-radius: 3px; font-size: 0.75em;">DEPRECATED</span> - This attribute is deprecated and will be removed in a future version.
+
 Use the `sm` attribute to render the small UI that is consistent with mobile and desktop.
 
 <div class="exampleWrapper">
