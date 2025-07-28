@@ -165,7 +165,6 @@ export class AuroPane extends LitElement {
 
     const basePriceClasses = {
       'price': true,
-      'price--long': isPriceLong,
       'child': true,
       'price--empty': isPriceEmpty,
     };
