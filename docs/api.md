@@ -2,12 +2,6 @@
 
 The auro-pane component displays shoulder date information.
 
-## Attributes
-
-| Attribute | Type      | Description                          |
-|-----------|-----------|--------------------------------------|
-| `sm`      | `Boolean` | <span style="background-color: #ffebee; color: #c62828; padding: 2px 4px; border-radius: 3px; font-size: 0.75em;">DEPRECATED</span> - Locks the component to `sm` variant. This attribute is deprecated and will be removed in a future version. |
-
 ## Properties
 
 | Property     | Attribute     | Type      | Default | Description                                      |
@@ -17,6 +11,7 @@ The auro-pane component displays shoulder date information.
 | `disabled`   | `disabled`    | `Boolean` | false   | Disables the pane.                               |
 | `price`      | `price`       | `String`  |         | Sets price for display. Displayed as is.         |
 | `selected`   | `selected`    | `Boolean` | false   | Sets pane state to selected.                     |
+| `sm`         | `sm`          | `Boolean` |         | Locks the component to `sm` variant. This attribute is deprecated and will be removed in a future version. |
 | `tabIndex`   | `tabIndex`    | `Number`  |         | Sets tabindex on the inner button.               |
 
 ## Methods

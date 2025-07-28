@@ -28,7 +28,7 @@ import tokensCss from "./styles/tokens-css.js";
  * @attr {Boolean} disabled - Disables the pane.
  * @attr {String} price - Sets price for display. Displayed as is.
  * @attr {Boolean} selected - Sets pane state to selected.
- * @attr {Boolean} sm - @deprecated Locks the component to `sm` variant. This attribute is deprecated and will be removed in a future version.
+ * @attr {Boolean} sm - Locks the component to `sm` variant. This attribute is deprecated and will be removed in a future version.
  * @attr {Number} tabIndex - Sets tabindex on the inner button.
  */
 
