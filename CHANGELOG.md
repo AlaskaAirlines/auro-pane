@@ -1,5 +1,28 @@
 # Semantic Release Automated Changelog
 
+# [5.0.0](https://github.com/AlaskaAirlines/auro-pane/compare/v4.1.2...v5.0.0) (2025-07-30)
+
+
+* feat!: adding themable type classes ([92cf525](https://github.com/AlaskaAirlines/auro-pane/commit/92cf5251267efbd294cce4efd60adf19dca70eba))
+
+
+### Bug Fixes
+
+* remove [@deprecated](https://github.com/deprecated) tag from docs ([23de3a2](https://github.com/AlaskaAirlines/auro-pane/commit/23de3a2fe22a95f0301e91bfc33510d2e2e5e519))
+* remove empty css class ([ebf01c2](https://github.com/AlaskaAirlines/auro-pane/commit/ebf01c2251c63b3de0abb26c563eaa8fb01ba57d))
+* update docs head content ([4482903](https://github.com/AlaskaAirlines/auro-pane/commit/4482903eaa5e25261651b69644411b6f06126c5b))
+
+
+### BREAKING CHANGES
+
+* This commit adds themable type classes to the component.
+
+It also promoted the 'sm' variant to the default visual style. This effectively means the default 'lg' variant is no longer available, and the component will now always render in the 'sm' style.
+
+As a result, the 'sm' attribute is now deprecated and will be removed in a future version.
+
+This commit also corrects the 'ariaHidden' prop type from 'String' to 'Boolean', as it was being used as a Boolean in the test file & docs but incorrectly labeled.
+
 ## [4.1.2](https://github.com/AlaskaAirlines/auro-pane/compare/v4.1.1...v4.1.2) (2025-05-16)
 
 
