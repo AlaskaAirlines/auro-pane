@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [5.0.1](https://github.com/AlaskaAirlines/auro-pane/compare/v5.0.0...v5.0.1) (2025-08-14)
+
+
+### Bug Fixes
+
+* update auro-library to latest version ([acde571](https://github.com/AlaskaAirlines/auro-pane/commit/acde57156c198333324878d657978c38e6c88fa0))
+
 # [5.0.0](https://github.com/AlaskaAirlines/auro-pane/compare/v4.1.2...v5.0.0) (2025-07-30)
 
 
