@@ -1,7 +1,5 @@
 import { focusExample } from "./../apiExamples/focus.js";
-import { AuroPane } from "../src/auro-pane.js";
-
-AuroPane.register();
+import "../src/registered";
 
 export function initExamples(initCount) {
   // biome-ignore lint: no-unused-variables

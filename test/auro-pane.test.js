@@ -1,5 +1,5 @@
 import { expect, fixture, html } from "@open-wc/testing";
-import "../index.js";
+import "../src/registered";
 
 describe("auro-pane", () => {
   it("is accessible", async () => {
@@ -92,13 +92,13 @@ describe("auro-pane", () => {
 
 function getButtonText(el) {
   const dayName = el.shadowRoot
-    .querySelector(".dayOfTheWeek auro-datetime")
+    .querySelector(".dayOfTheWeek [auro-datetime]")
     .shadowRoot.querySelector(".yield").textContent;
   const dayNum = el.shadowRoot
-    .querySelector(".date auro-datetime[type=month]")
+    .querySelector(".date [auro-datetime][type=month]")
     .shadowRoot.querySelector(".yield").textContent;
   const MonthStr = el.shadowRoot
-    .querySelector(".date auro-datetime[type=day]")
+    .querySelector(".date [auro-datetime][type=day]")
     .shadowRoot.querySelector(".yield").textContent;
   let buttonText = `${dayName} ${dayNum} ${MonthStr}`;
 

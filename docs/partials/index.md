@@ -74,7 +74,7 @@ There are two important parts of every Auro component. The <a href="https://deve
 To protect from versioning conflicts with other instances of the component being loaded, it is recommended to use our `AuroPane.register(name)` method and pass in a unique name.
 
 ```js
-import { AuroPane } from './src/auro-pane.js';
+import { AuroPane } from '@aurodesignsystem/auro-pane/class';
 
 AuroPane.register('custom-pane');
 ```
