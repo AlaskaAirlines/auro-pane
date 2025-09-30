@@ -1,3 +1,3 @@
-import { AuroPane } from './src/auro-pane.js';
+import { AuroPane } from "./src/auro-pane.js";
 
 AuroPane.register();

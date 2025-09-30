@@ -1,5 +1,4 @@
-
-import { AuroPane } from '../../src/auro-pane.js';
+import { AuroPane } from "../../src/auro-pane.js";
 
 /**
  * The auro-pane component displays shoulder date information.
