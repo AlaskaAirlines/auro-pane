@@ -2,7 +2,7 @@
 
 /* eslint-disable jsdoc/require-jsdoc, no-magic-numbers, no-param-reassign */
 
-import { AuroPane } from "../src/auro-pane.js";
+import { AuroPane } from "../src/index";
 
 AuroPane.register();
 AuroPane.register("custom-pane");

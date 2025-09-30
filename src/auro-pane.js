@@ -5,17 +5,21 @@
 
 /* eslint-disable jsdoc/no-undefined-types, prefer-destructuring, object-property-newline */
 
+import { AuroDependencyVersioning } from "@aurodesignsystem/auro-library/scripts/runtime/dependencyTagVersioning.mjs";
 import AuroLibraryRuntimeUtils from "@aurodesignsystem/auro-library/scripts/utils/runtimeUtils.mjs";
+
 import { format } from "date-fns";
-import { html, LitElement } from "lit";
+import { LitElement } from "lit";
+import { html } from "lit/static-html.js";
 import { classMap } from "lit/directives/class-map.js";
 import { ifDefined } from "lit/directives/if-defined.js";
 
-import "@aurodesignsystem/auro-datetime";
+import { AuroDatetime } from "@aurodesignsystem/auro-datetime/class";
+import datetimeVersion from "./datetimeVersion.js";
 
-import colorCss from "./styles/color-css.js";
-import styleCss from "./styles/style-css.js";
-import tokensCss from "./styles/tokens-css.js";
+import colorCss from "./styles/color.scss";
+import styleCss from "./styles/style.scss";
+import tokensCss from "./styles/tokens.scss";
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
@@ -38,10 +42,17 @@ export class AuroPane extends LitElement {
     this.disabled = false;
     this.selected = false;
 
-    /**
-     * @private
-     */
+    const versioning = new AuroDependencyVersioning();
+
+    /** @private */
     this.runtimeUtils = new AuroLibraryRuntimeUtils();
+
+    /** @private */
+    this.datetimeTag = versioning.generateTag(
+      "auro-datetime",
+      datetimeVersion,
+      AuroDatetime
+    );
   }
 
   static get properties() {
@@ -191,11 +202,11 @@ export class AuroPane extends LitElement {
         tabindex="${ifDefined(this.tabIndex ? this.tabIndex : undefined)}"
         aria-hidden="${ifDefined(this.ariaHidden ? "true" : undefined)}">
         <span class="${classMap(variantClasses.dayOfTheWeek)}">
-          <auro-datetime type="weekday" weekday="short" utc="${parsedDate}"></auro-datetime>
+          <${this.datetimeTag} type="weekday" weekday="short" utc="${parsedDate}"></${this.datetimeTag}>
         </span>
         <span class="${classMap(variantClasses.date)}">
-          <auro-datetime type="month" weekday="short" utc="${parsedDate}"></auro-datetime>
-          <auro-datetime type="day" utc="${parsedDate}"></auro-datetime>
+          <${this.datetimeTag} type="month" weekday="short" utc="${parsedDate}"></${this.datetimeTag}>
+          <${this.datetimeTag} type="day" utc="${parsedDate}"></${this.datetimeTag}>
         </span>
         ${this.getPrice(variantClasses.price)}
       </button>
