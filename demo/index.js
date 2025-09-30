@@ -2,17 +2,18 @@
 
 /* eslint-disable jsdoc/require-jsdoc, no-magic-numbers, no-param-reassign */
 
-import { AuroPane } from '../src/auro-pane.js';
+import { AuroPane } from "../src/auro-pane.js";
 
 AuroPane.register();
-AuroPane.register('custom-pane');
+AuroPane.register("custom-pane");
 
 export function initExamples(initCount) {
+  // biome-ignore lint: no-unused-variables
   initCount = initCount || 0;
 
   try {
-    // example();
-  } catch (err) {
+    initExamples(initCount);
+  } catch (_err) {
     if (initCount <= 20) {
       // setTimeout handles issue where content is sometimes loaded after the functions get called
       setTimeout(() => {

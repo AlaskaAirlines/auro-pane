@@ -1,16 +1,16 @@
-import nodeResolve from '@rollup/plugin-node-resolve';
-import json from '@rollup/plugin-json';
-import serve from 'rollup-plugin-serve';
+import json from "@rollup/plugin-json";
+import nodeResolve from "@rollup/plugin-node-resolve";
+import serve from "rollup-plugin-serve";
 
 const production = !process.env.ROLLUP_WATCH;
 
 const modernConfig = {
   input: {
-    ['auro-pane__bundled']: './index.js',
+    "auro-pane__bundled": "./index.js",
   },
   output: {
-    format: 'esm',
-    dir: 'dist/'
+    format: "esm",
+    dir: "dist/",
   },
   plugins: [
     nodeResolve(),
@@ -18,29 +18,29 @@ const modernConfig = {
     !production &&
       serve({
         open: true,
-        openPage: '/docs/'
-      })
-  ]
+        openPage: "/docs/",
+      }),
+  ],
 };
 
 const indexExamplesConfig = {
   input: {
-    ['index.min']: './demo/index.js',
+    "index.min": "./demo/index.js",
   },
   output: {
-    format: 'esm',
-    dir: 'demo/'
+    format: "esm",
+    dir: "demo/",
   },
   plugins: [nodeResolve(), json()],
 };
 
 const apiExamplesConfig = {
   input: {
-    ['api.min']: './demo/api.js',
+    "api.min": "./demo/api.js",
   },
   output: {
-    format: 'esm',
-    dir: 'demo/'
+    format: "esm",
+    dir: "demo/",
   },
   plugins: [nodeResolve(), json()],
 };
