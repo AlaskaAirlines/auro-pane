@@ -1,4 +1,4 @@
-// Copyright (c) 2020 Alaska Airlines. All right reserved. Licensed under the Apache-2.0 license
+// Copyright (c) 2025 Alaska Airlines. All right reserved. Licensed under the Apache-2.0 license
 // See LICENSE in the project root for license information.
 
 // ---------------------------------------------------------------------
@@ -23,21 +23,17 @@ import tokensCss from "./styles/tokens.scss";
 
 // See https://git.io/JJ6SJ for "How to document your components using JSDoc"
 /**
- * The auro-pane component displays shoulder date information.
- *
- * @attr {Boolean} ariaHidden - When true, sets aria-hidden="true" on the inner button. When false, no aria-hidden attribute is set.
- * @attr {String} date - Sets date for parsing and display. Format should be yyyy-mm-dd.
- * @attr {Boolean} disabled - Disables the pane.
- * @attr {String} price - Sets price for display. Displayed as is.
- * @attr {Boolean} selected - Sets pane state to selected.
- * @attr {Boolean} sm - Locks the component to `sm` variant. This attribute is deprecated and will be removed in a future version.
- * @attr {Number} tabIndex - Sets tabindex on the inner button.
+ * The `auro-pane` element displays shoulder date information.
+ * @customElement auro-pane
  */
-
 export class AuroPane extends LitElement {
   constructor() {
     super();
 
+    this._initializeDefaults();
+  }
+
+  _initializeDefaults() {
     this.ariaHidden = false;
     this.disabled = false;
     this.selected = false;
@@ -57,15 +53,42 @@ export class AuroPane extends LitElement {
 
   static get properties() {
     return {
+      /**
+       * Sets aria-hidden="true" on the inner button.
+       */
       ariaHidden: {
         type: Boolean,
         attribute: "aria-hidden",
       },
+
+      /**
+       * Sets date for parsing and display. Format should be `yyyy-mm-dd`.
+       */
       date: { type: String },
+
+      /**
+       * Disables the pane.
+       */
       disabled: { type: Boolean, reflect: true },
+
+      /**
+       * Sets price for display. Displayed as is.
+       */
       price: { type: String },
+
+      /**
+       * Sets pane state to selected.
+       */
       selected: { type: Boolean, reflect: true },
+
+      /**
+       * DEPRECATED - Locks the component to `sm` variant.
+       */
       sm: { type: Boolean },
+
+      /**
+       * Sets tabindex on the inner button.
+       */
       tabIndex: { type: Number },
     };
   }
@@ -76,7 +99,7 @@ export class AuroPane extends LitElement {
 
   /**
    * This will register this element with the browser.
-   * @param {string} [name="auro-pane"] - The name of element that you want to register to.
+   * @param {string} [name="auro-pane"] - The name of the element that you want to register.
    *
    * @example
    * AuroPane.register("custom-pane") // this will register this element to <custom-pane/>
@@ -139,7 +162,6 @@ export class AuroPane extends LitElement {
 
   /**
    * Programmatically focuses the component.
-   * @return {void}
    */
   focus() {
     this.renderRoot.querySelector("button").focus();
