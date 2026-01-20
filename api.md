@@ -1,91 +1,65 @@
-<!-- AURO-GENERATED-CONTENT:START (FILE:src=../docs/api.md) -->
-<!-- The below content is automatically added from ../docs/api.md -->
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=./../docs/api.md) -->
+<!-- The below content is automatically added from ./../docs/api.md -->
 
 # auro-pane
 
-The auro-pane component displays shoulder date information.
+The `auro-pane` element displays shoulder date information.
 
-## Properties
+### Properties & Attributes
 
-| Property     | Attribute     | Type      | Default | Description                                      |
-|--------------|---------------|-----------|---------|--------------------------------------------------|
-| [ariaHidden](#ariaHidden) | `aria-hidden` | `Boolean` | false   | When true, sets aria-hidden="true" on the inner button. When false, no aria-hidden attribute is set. |
-| [date](#date)       | `date`        | `String`  |         | Sets date for parsing and display. Format should be yyyy-mm-dd. |
-| [disabled](#disabled)   | `disabled`    | `Boolean` | false   | Disables the pane.                               |
-| [price](#price)      | `price`       | `String`  |         | Sets price for display. Displayed as is.         |
-| [selected](#selected)   | `selected`    | `Boolean` | false   | Sets pane state to selected.                     |
-| [sm](#sm)         | `sm`          | `Boolean` |         | Locks the component to `sm` variant. This attribute is deprecated and will be removed in a future version. |
-| [tabIndex](#tabIndex)   | `tabIndex`    | `Number`  |         | Sets tabindex on the inner button.               |
+| Properties | Attributes  | Modifiers | Type    | Default | Description                                                       |
+| ---------- | ----------- | --------- | ------- | ------- | ----------------------------------------------------------------- |
+| ariaHidden | aria-hidden |           | boolean |         | Sets aria-hidden="true" on the inner button.                      |
+| date       | date        |           | string  |         | Sets date for parsing and display. Format should be `yyyy-mm-dd`. |
+| disabled   | disabled    |           | boolean |         | Disables the pane.                                                |
+| price      | price       |           | string  |         | Sets price for display. Displayed as is.                          |
+| selected   | selected    |           | boolean |         | Sets pane state to selected.                                      |
+| sm         | sm          |           | boolean |         | DEPRECATED - Locks the component to `sm` variant.                 |
+| tabIndex   | tabIndex    |           | number  |         | Sets tabindex on the inner button.                                |
 
-## Methods
+### Methods
 
-| Method  | Type       | Description                             |
-|---------|------------|-----------------------------------------|
-| [focus](#focus) | `(): void` | Programmatically focuses the component. |
+| Name     | Parameters                                                           | Return | Description                                       |
+| -------- | -------------------------------------------------------------------- | ------ | ------------------------------------------------- |
+| focus    | None                                                                 |        | Programmatically focuses the component.           |
+| register | `name` (string) - The name of the element that you want to register. |        | This will register this element with the browser. |
 <!-- AURO-GENERATED-CONTENT:END -->
 
-## API Examples
-
-### Basic
+## Basic
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/basicSingle.html) -->
-  <!-- The below content is automatically added from ../apiExamples/basicSingle.html -->
-  <auro-pane date="2020-09-20"></auro-pane>
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/basicSingle.html) -->
+  <!-- The below content is automatically added from ./../apiExamples/basicSingle.html -->
+  <auro-pane date="2025-09-20"></auro-pane>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/basicSingle.html) -->
-<!-- The below code snippet is automatically added from ../apiExamples/basicSingle.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/basicSingle.html) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/basicSingle.html -->
 
 ```html
-<auro-pane date="2020-09-20"></auro-pane>
+<auro-pane date="2025-09-20"></auro-pane>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
-### Attribute Examples
+## Property & Attribute Examples
 
-<span style="background-color: #ffebee; color: #c62828; padding: 2px 4px; border-radius: 3px; font-size: 0.75em;">DEPRECATED</span> - This attribute is deprecated and will be removed in a future version.
-
-#### <a name="sm"></a>`sm`
-
-Use the `sm` attribute to render a reduced size version of `auro-pane`.
-
-<div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/smallSingle.html) -->
-  <!-- The below content is automatically added from ../apiExamples/smallSingle.html -->
-  <auro-pane date="2020-09-20" price="$500" sm></auro-pane>
-  <!-- AURO-GENERATED-CONTENT:END -->
-</div>
-<auro-accordion alignRight>
-  <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/smallSingle.html) -->
-<!-- The below code snippet is automatically added from ../apiExamples/smallSingle.html -->
-
-```html
-<auro-pane date="2020-09-20" price="$500" sm></auro-pane>
-```
-<!-- AURO-GENERATED-CONTENT:END -->
-</auro-accordion>
-
-### Property Examples
-
-#### <a name="ariaHidden"></a>`ariaHidden`
+### Aria-Hidden
 
 Sets `aria-hidden` on the inner button.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/ariaHidden.html) -->
-  <!-- The below content is automatically added from ../apiExamples/ariaHidden.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/aria-hidden.html) -->
+  <!-- The below content is automatically added from ../apiExamples/aria-hidden.html -->
   <auro-pane aria-hidden></auro-pane>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/ariaHidden.html) -->
-<!-- The below code snippet is automatically added from ../apiExamples/ariaHidden.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/aria-hidden.html) -->
+<!-- The below code snippet is automatically added from ../apiExamples/aria-hidden.html -->
 
 ```html
 <auro-pane aria-hidden></auro-pane>
@@ -93,14 +67,14 @@ Sets `aria-hidden` on the inner button.
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
-#### <a name="date"></a>`date`
+### Date
 
-Sets date for parsing and display. Format should be yyyy-mm-dd. If no date is provided, the current date will be rendered.
+Sets date for parsing and display. Format should be `yyyy-mm-dd`. If no date is provided, the current date will be rendered.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/date.html) -->
   <!-- The below content is automatically added from ../apiExamples/date.html -->
-  <auro-pane date="2020-09-20"></auro-pane>
+  <auro-pane date="2025-09-20"></auro-pane>
   <auro-pane date="invalid date"></auro-pane>
   <auro-pane></auro-pane>
   <!-- AURO-GENERATED-CONTENT:END -->
@@ -111,21 +85,21 @@ Sets date for parsing and display. Format should be yyyy-mm-dd. If no date is pr
 <!-- The below code snippet is automatically added from ../apiExamples/date.html -->
 
 ```html
-<auro-pane date="2020-09-20"></auro-pane>
+<auro-pane date="2025-09-20"></auro-pane>
 <auro-pane date="invalid date"></auro-pane>
 <auro-pane></auro-pane>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
-#### <a name="disabled"></a>`disabled`
+### Disabled
 
 Disables the pane.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/disabled.html) -->
   <!-- The below content is automatically added from ../apiExamples/disabled.html -->
-  <auro-pane date="2020-09-20" price="$500" disabled></auro-pane>
+  <auro-pane date="2025-09-20" price="$500" disabled></auro-pane>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
@@ -134,12 +108,12 @@ Disables the pane.
 <!-- The below code snippet is automatically added from ../apiExamples/disabled.html -->
 
 ```html
-<auro-pane date="2020-09-20" price="$500" disabled></auro-pane>
+<auro-pane date="2025-09-20" price="$500" disabled></auro-pane>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
-#### <a name="price"></a>`price`
+### Price
 
 Sets price for display. Displayed as is.
 
@@ -162,7 +136,7 @@ Sets price for display. Displayed as is.
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
-#### <a name="selected"></a>`selected`
+### Selected
 
 Sets pane state to selected.
 
@@ -183,7 +157,36 @@ Sets pane state to selected.
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
-#### <a name="tabindex"></a>`tabindex`
+### Small
+
+<span style="background-color: #ffebee; color: #c62828; padding: 2px 4px; border-radius: 3px; font-size: 0.75em;">DEPRECATED</span> - This attribute is deprecated and will be removed in a future version.
+
+Use the `sm` attribute to render a reduced size version of `auro-pane`.
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/small.html) -->
+  <!-- The below content is automatically added from ../apiExamples/small.html -->
+  <auro-pane date="2025-09-20" price="$500" sm></auro-pane>
+  <auro-pane date="2025-09-21" price="$501" selected="true" sm></auro-pane>
+  <auro-pane date="2025-09-22" price="$480" disabled="true" sm></auro-pane>
+  <auro-pane date="2025-09-23" price="$9,999,999" sm></auro-pane> <!-- isPriceLong -->
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion alignRight>
+  <span slot="trigger">See code</span>
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/small.html) -->
+<!-- The below code snippet is automatically added from ../apiExamples/small.html -->
+
+```html
+<auro-pane date="2025-09-20" price="$500" sm></auro-pane>
+<auro-pane date="2025-09-21" price="$501" selected="true" sm></auro-pane>
+<auro-pane date="2025-09-22" price="$480" disabled="true" sm></auro-pane>
+<auro-pane date="2025-09-23" price="$9,999,999" sm></auro-pane> <!-- isPriceLong -->
+```
+<!-- AURO-GENERATED-CONTENT:END -->
+</auro-accordion>
+
+### Tab Index
 
 Sets tabindex on the inner button.
 
@@ -203,20 +206,19 @@ Sets tabindex on the inner button.
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
-</auro-accordion>
 
-### Method Examples
+## Method Examples
 
-#### <a name="focus"></a>`focus`
+### Focus
 
-Focuses the pane button.
+Sets focus to the inner button.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/focus.html) -->
   <!-- The below content is automatically added from ../apiExamples/focus.html -->
   <auro-button id="focusExampleBtn">Focus Pane</auro-button>
   <br />
-  <auro-pane id="focusExample" date="2020-09-20"></auro-pane>
+  <auro-pane id="focusExample" date="2025-09-20"></auro-pane>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
@@ -227,7 +229,7 @@ Focuses the pane button.
 ```html
 <auro-button id="focusExampleBtn">Focus Pane</auro-button>
 <br />
-<auro-pane id="focusExample" date="2020-09-20"></auro-pane>
+<auro-pane id="focusExample" date="2025-09-20"></auro-pane>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/focus.js) -->
@@ -246,12 +248,41 @@ export function focusExample() {
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
-### Theme Support
+## Common Usage Patterns & Functional Examples
 
-The component may be restyled using the following code sample and changing the values of the following token(s).
+### Date and Price
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=../src/styles/tokens.scss) -->
-<!-- The below code snippet is automatically added from ../src/styles/tokens.scss -->
+All states using both `date` and `price` attributes.
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=../apiExamples/date-and-price.html) -->
+  <!-- The below content is automatically added from ../apiExamples/date-and-price.html -->
+  <auro-pane date="2025-09-20" price="$500"></auro-pane>
+  <auro-pane date="2025-09-21" price="$501" selected="true"></auro-pane>
+  <auro-pane date="2025-09-22" price="$480" disabled="true"></auro-pane>
+  <auro-pane date="2025-09-23" price="$999,999"></auro-pane> <!-- isPriceLong -->
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion alignRight>
+  <span slot="trigger">See code</span>
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=../apiExamples/date-and-price.html) -->
+<!-- The below code snippet is automatically added from ../apiExamples/date-and-price.html -->
+
+```html
+<auro-pane date="2025-09-20" price="$500"></auro-pane>
+<auro-pane date="2025-09-21" price="$501" selected="true"></auro-pane>
+<auro-pane date="2025-09-22" price="$480" disabled="true"></auro-pane>
+<auro-pane date="2025-09-23" price="$999,999"></auro-pane> <!-- isPriceLong -->
+```
+<!-- AURO-GENERATED-CONTENT:END -->
+</auro-accordion>
+
+## Restyle Component with CSS Variables
+
+The component may be restyled by changing the values of the following token(s).
+
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../src/styles/tokens.scss) -->
+<!-- The below code snippet is automatically added from ./../src/styles/tokens.scss -->
 
 ```scss
 @use "@aurodesignsystem/design-tokens/dist/themes/alaska/SCSSVariables--alaska" as v;
